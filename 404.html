@@ -3,30 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página no encontrada</title>
-    
-    <meta http-equiv="refresh" content="3; url=https://ricardomatosr.github.io/">
-    
+    <title>Página no encontrada | Ricardo Matos</title>
     <style>
+        /* Estilos para que quede moderno y centrado */
         body {
-            font-family: monospace;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #1a1a1a; /* Fondo oscuro estilo 'dev' */
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
             text-align: center;
-            padding-top: 50px;
-            background-color: #f4f4f4;
-            color: #333;
         }
-        h1 { font-size: 50px; margin-bottom: 10px; }
-        p { font-size: 20px; }
-        .contador { font-weight: bold; color: #d35400; }
+
+        h1 {
+            font-size: 120px;
+            margin: 0;
+            font-weight: 900;
+            letter-spacing: -5px;
+            color: #d35400; /* Un toque de color naranja */
+            text-shadow: 4px 4px 0px #fff;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-top: 0px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #aaa;
+            margin-top: 20px;
+        }
+
+        /* Estilo para el número de la cuenta atrás */
+        #contador {
+            font-weight: bold;
+            color: #d35400;
+            font-size: 22px;
+        }
+
+        /* Estilo para el botón manual */
+        .btn-volver {
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: #fff;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-volver:hover {
+            background-color: #d35400;
+            color: white;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Error 404</h1>
-    <p>🚧 Ups, esta página no existe.</p>
-    <p>Te estamos llevando de vuelta al inicio...</p>
+    <h1>404</h1>
+    <h2>Houston, tenemos un problema.</h2>
+    <p>La página que buscas no existe o se ha movido.</p>
     
-    <p><a href="https://ricardomatosr.github.io/">Haz clic aquí si no te redirige automáticamente</a></p>
+    <p>Te redirigimos al inicio en <span id="contador">5</span> segundos...</p>
+
+    <a href="https://ricardomatosr.github.io/" class="btn-volver">Volver al Inicio ahora</a>
+
+
+    <script>
+        // Tiempo en segundos
+        let segundosRestantes = 5;
+        const elementoContador = document.getElementById('contador');
+
+        const cuentaAtras = setInterval(function() {
+            segundosRestantes--;
+            elementoContador.textContent = segundosRestantes;
+
+            if (segundosRestantes <= 0) {
+                clearInterval(cuentaAtras);
+                // REDIRECCIÓN A TU URL PRINCIPAL
+                window.location.href = "https://ricardomatosr.github.io/";
+            }
+        }, 1000); // Se ejecuta cada 1000 milisegundos (1 segundo)
+    </script>
 
 </body>
 </html>
