@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Matos | Portfolio de Desarrollo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="dark-mode">
+
+    <div id="dynamic-bg"></div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">MATOS_DEV<span class="dot">.</span></div>
+            <button id="theme-toggle" class="btn-theme" title="Cambiar Tema">
+                ☀/☾
+            </button>
+        </div>
+
+        <ul class="nav-links">
+            <li><span class="nav-num">01</span><a href="#inicio">// inicio</a></li>
+            <li><span class="nav-num">02</span><a href="#carta">// sobre_mi</a></li>
+            <li><span class="nav-num">03</span><a href="#cv">// cv</a></li>
+            <li><span class="nav-num">04</span><a href="#practicas">// prácticas</a></li>
+            <li><span class="nav-num">05</span><a href="#temario">// temario</a></li>
+            <li><span class="nav-num">06</span><a href="memoria.html" class="memoria-link">MEMORIA</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <div class="apartado_contacto_arriba_derecha">
+                
+                <div class="contenedor_email" style="position: relative;">
+                    <p id="boton_correo" class="texto_correo" title="Haz click para copiar">
+                        ricardo.matos@gmail.com
+                    </p>
+                    <span id="mensaje_copiado" class="alerta_copiado">¡Correo copiado!</span>
+                </div>
+                
+                <span class="separador_entre_correo_iconos">|</span>
+
+                <div class="mini_iconos">
+                    <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="https://github.com" target="_blank" title="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                    <a href="https://instagram.com/tu-usuario" target="_blank" title="Instagram" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <p class="greeting">Hola, mi nombre es</p>
+        <h1 class="name">Ricardo Matos Romero.</h1>
+        <h2 class="subtitle">- <span id="typing-text"></span> -</h2>
+        <p class="description">
+            Estudiante de Desarrollo de Aplicaciones Multiplataforma en el centro CES Juan Pablo II.
+            Transformando ideas en experiencias digitales.
+        </p>
+        <a href="#carta" class="btn-primary">Ver mi trabajo</a>
+    </section>
+
+    <section id="expertise" class="container">
+        <h3 class="section-title"><span>03.</span> My Expertise</h3>
+        
+        <div class="expertise-grid">
+            
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div class="icon-expert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    </div>
+                    <h4 class="expert-title underline-pink">Software<br>Development</h4>
+                </div>
+                
+                <div class="code-tag">&lt;h3&gt;</div>
+                <p class="expert-desc">
+                    Experiencia tanto en programación funcional como OOP: Python, Java, JavaScript, TypeScript y C#. Soluciones robustas y escalables.
+                </p>
+                <div class="code-tag">&lt;/h3&gt;</div>
+            </div>
+
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div class="icon-expert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    </div>
+                    <h4 class="expert-title underline-blue">Frontend Dev<br>React, NextJS</h4>
+                </div>
+
+                <div class="code-tag">&lt;h3&gt;</div>
+                <p class="expert-desc">
+                    Apasionado por UI/UX. Más de 2 años creando interfaces modernas con HTML, CSS, JS y frameworks reactivos.
+                </p>
+                <div class="code-tag">&lt;/h3&gt;</div>
+            </div>
+
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div class="icon-expert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    </div>
+                    <h4 class="expert-title underline-orange">Multiplatform<br>Android, iOS</h4>
+                </div>
+
+                <div class="code-tag">&lt;h3&gt;</div>
+                <p class="expert-desc">
+                    Habilidad para desarrollar aplicaciones móviles híbridas y soluciones cross-platform eficientes.
+                </p>
+                <div class="code-tag">&lt;/h3&gt;</div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="cv" class="container">
+        <h3 class="section-title"><span>02.</span> Curriculum Vitae</h3>
+        <div class="cv-grid">
+            <div class="cv-item">
+                <h4>🎓 Formación Académica</h4>
+                <p><strong>CFGS Desarrollo de Aplicaciones Multiplataforma</strong></p>
+                <p class="institution">CES Juan Pablo II</p>
+                <span class="date">2023 - Actualidad</span>
+            </div>
+            <div class="cv-item">
+                <h4>💻 Habilidades Técnicas</h4>
+                <ul class="tech-list">
+                    <li>HTML5 & CSS3 Avanzado</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>Git & GitHub</li>
+                    <li>Visual Studio Code</li>
+                    <li>Administración de Sistemas</li>
+                </ul>
+            </div>
+            <div class="cv-item">
+                <h4>🌍 Idiomas</h4>
+                <p>Español (Nativo)</p>
+                <p>Inglés (Nivel B2 - Conversacional)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="practicas" class="container">
+        <h3 class="section-title"><span>03.</span> Prácticas del Curso</h3>
+        <p class="section-desc">Selección de proyectos realizados durante el primer curso.</p>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="folder-icon">📂</div>
+                <h4>Landing Page HTML</h4>
+                <p>Estructura semántica completa para un portal de noticias ficticio, optimizando el SEO básico.</p>
+                <div class="tech-stack">
+                    <span>HTML</span><span>CSS</span>
+                </div>
+                <a href="#" class="project-link">Ver Código ↗</a>
+            </div>
+            <div class="project-card">
+                <div class="folder-icon">📂</div>
+                <h4>Proyecto Grupal Web</h4>
+                <p>Desarrollo colaborativo de una tienda online básica.</p>
+                <p class="group-members">Equipo: [Tu Nombre] & [Compañero]</p>
+                <div class="tech-stack">
+                    <span>HTML</span><span>CSS</span><span>Git</span>
+                </div>
+                <a href="#" class="project-link">Perfil de mi compañero ↗</a>
+            </div>
+            <div class="project-card">
+                <div class="folder-icon">📂</div>
+                <h4>Gestión de Formularios</h4>
+                <p>Implementación de validaciones nativas y diseño responsivo en formularios de registro.</p>
+                <div class="tech-stack">
+                    <span>Forms</span><span>CSS Flexbox</span>
+                </div>
+                <a href="#" class="project-link">Ver Práctica ↗</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="temario" class="container">
+        <h3 class="section-title"><span>04.</span> Temario: Sistemas Informáticos</h3>
+        <div class="syllabus-container">
+            <div class="term">
+                <h4>Primer Trimestre</h4>
+                <ul class="syllabus-list">
+                    <li><strong>Hardware:</strong> Arquitectura Von Neumann, placa base, buses y periféricos.</li>
+                    <li><strong>Representación de la Información:</strong> Sistemas binario, hexadecimal y codificación ASCII/Unicode.</li>
+                    <li><strong>Sistemas Operativos:</strong> Concepto de kernel, gestión de procesos y memoria.</li>
+                </ul>
+            </div>
+            <div class="term">
+                <h4>Segundo Trimestre</h4>
+                <ul class="syllabus-list">
+                    <li><strong>Redes Locales:</strong> Modelo OSI vs TCP/IP, direccionamiento IP y máscaras de subred.</li>
+                    <li><strong>Linux Básico:</strong> Gestión de usuarios, permisos (chmod, chown) y sistema de ficheros.</li>
+                    <li><strong>Seguridad Física y Lógica:</strong> SAI, RAID y políticas de backup.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="memoria" class="container memory-section">
+        <h3 class="section-title"><span>05.</span> Memoria del Proyecto</h3>
+        <div class="content-box memory-box">
+            <p>
+                Accede a la documentación detallada del desarrollo, incluyendo explicaciones del código CSS, 
+                decisiones de diseño y bibliografía, formateada según normativa (Verdana 11, interlineado 1.2).
+            </p>
+            <div class="memory-actions">
+                <a href="memoria.html" class="btn-primary">Leer Memoria Web</a>
+                <a href="#" class="btn-outline">Descargar PDF</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Diseñado y desarrollado por Ricardo Matos.</p>
+        <p class="credits">Inspirado en tamalsen.dev</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
