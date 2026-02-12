@@ -19,33 +19,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
-<body class="dark-mode">
+<body>
 
     <div id="dynamic-bg"></div>
 
     <nav class="navbar">
         <div class="nav-left">
             <div class="logo">MATOS_DEV<span class="dot">.</span></div>
-            <button id="theme-toggle" class="btn-theme" title="Cambiar Tema">
-                ☀/☾
-            </button>
         </div>
 
         <ul class="nav-links">
             <li><span class="nav-num">01</span><a href="#inicio">// inicio</a></li>
             <li><span class="nav-num">02</span><a href="#carta">// sobre_mi</a></li>
-            <li><span class="nav-num">03</span><a href="#cv">// cv</a></li>
-            <li><span class="nav-num">04</span><a href="#practicas">// prácticas</a></li>
-            <li><span class="nav-num">05</span><a href="#temario">// temario</a></li>
-            <li><span class="nav-num">06</span><a href="memoria.html" class="memoria-link">MEMORIA</a></li>
+            <li><span class="nav-num">03</span><a href="#expertise">// skills</a></li>
+            <li><span class="nav-num">04</span><a href="#cv">// cv</a></li>
+            <li><span class="nav-num">05</span><a href="#practicas">// prácticas</a></li>
+            <li><span class="nav-num">06</span><a href="#temario">// temario</a></li>
+            <li><span class="nav-num">DOC</span><a target="_blank" href="archivos/Portfolio Web Ricardo Matos.pdf" class="memoria-link">MEMORIA</a></li></a>
         </ul>
 
         <div class="nav-right">
             <div class="apartado_contacto_arriba_derecha">
-                
                 <div class="contenedor_email" style="position: relative;">
                     <p id="boton_correo" class="texto_correo" title="Haz click para copiar">
-                        ricardo.matos@gmail.com
+                        ricardomatos04@gmail.com
                     </p>
                     <span id="mensaje_copiado" class="alerta_copiado">¡Correo copiado!</span>
                 </div>
@@ -53,13 +50,13 @@
                 <span class="separador_entre_correo_iconos">|</span>
 
                 <div class="mini_iconos">
-                    <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+                    <a href="https://www.linkedin.com/feed/" target="_blank" title="LinkedIn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                     </a>
-                    <a href="https://github.com" target="_blank" title="GitHub">
+                    <a href="https://github.com/RicardoMatosR" target="_blank" title="GitHub">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                     </a>
-                    <a href="https://instagram.com/tu-usuario" target="_blank" title="Instagram" class="social-icon">
+                    <a href="https://www.instagram.com/ricardomaatos_/" target="_blank" title="Instagram" class="social-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                     </a>
                 </div>
@@ -68,21 +65,48 @@
     </nav>
 
     <section id="inicio" class="hero">
-        <p class="greeting">Hola, mi nombre es</p>
+        
+        <div class="console-badge">
+            <span class="console-prompt">>_</span> 
+            System.out.println("<span class="console-string">Portfolio</span>");
+        </div>
+
         <h1 class="name">Ricardo Matos Romero.</h1>
         <h2 class="subtitle">- <span id="typing-text"></span> -</h2>
-        <p class="description">
-            Estudiante de Desarrollo de Aplicaciones Multiplataforma en el centro CES Juan Pablo II.
-            Transformando ideas en experiencias digitales.
+
+        <p class="hero-slogan">
+            Código limpio. Diseño funcional. Soluciones eficientes.
         </p>
-        <a href="#carta" class="btn-primary">Ver mi trabajo</a>
+
+        <a href="#carta" class="scroll-down-link" title="Bajar">
+            <div class="circle-arrow">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                    <path d="M7 13l5 5 5-5M12 4v14" />
+                </svg>
+            </div>
+        </a>
+    </section>
+
+    <section id="carta" class="container">
+        <h3 class="section-title"><span>02.</span> Carta de Presentación</h3>
+        <div class="content-box">
+            <p>
+                Soy Ricardo Matos Romero, estudiante de <strong>Desarrollo de Aplicaciones Multiplataforma</strong> en CES Juan Pablo II y alumno de la escuela de programación <strong>42 Madrid</strong>. Me defino como un desarrollador apasionado, combinando la formación académica reglada con la metodología práctica y colaborativa de 42.
+            </p>
+            <br>
+            <p>
+                Cuento con una sólida base técnica en <strong>Java, JavaScript, SQL</strong> y un fuerte enfoque en desarrollo web con <strong>HTML5 y CSS3</strong>. Disfruto creando interfaces limpias y funcionales, cuidando tanto la lógica como el diseño.
+            </p>
+            <br>
+            <p>
+                Mi experiencia laboral en entornos corporativos internacionales, como la sede de <strong>Amazon</strong>, me ha permitido perfeccionar mi capacidad de comunicación en <strong>inglés (Nivel B2)</strong> y trabajar bajo altos estándares de exigencia. Busco mi primera oportunidad como desarrollador para aportar código de calidad y seguir creciendo en un equipo profesional.
+            </p>
+        </div>
     </section>
 
     <section id="expertise" class="container">
         <h3 class="section-title"><span>03.</span> My Expertise</h3>
-        
         <div class="expertise-grid">
-            
             <div class="expert-card">
                 <div class="expert-header">
                     <div class="icon-expert">
@@ -90,11 +114,8 @@
                     </div>
                     <h4 class="expert-title underline-pink">Software<br>Development</h4>
                 </div>
-                
                 <div class="code-tag">&lt;h3&gt;</div>
-                <p class="expert-desc">
-                    Experiencia tanto en programación funcional como OOP: Python, Java, JavaScript, TypeScript y C#. Soluciones robustas y escalables.
-                </p>
+                <p class="expert-desc">Experiencia tanto en programación funcional como OOP: Python, Java, JavaScript y C#.</p>
                 <div class="code-tag">&lt;/h3&gt;</div>
             </div>
 
@@ -105,11 +126,8 @@
                     </div>
                     <h4 class="expert-title underline-blue">Frontend Dev<br>React, NextJS</h4>
                 </div>
-
                 <div class="code-tag">&lt;h3&gt;</div>
-                <p class="expert-desc">
-                    Apasionado por UI/UX. Más de 2 años creando interfaces modernas con HTML, CSS, JS y frameworks reactivos.
-                </p>
+                <p class="expert-desc">Apasionado por UI/UX. Creación de interfaces modernas con HTML, CSS, JS y frameworks.</p>
                 <div class="code-tag">&lt;/h3&gt;</div>
             </div>
 
@@ -120,124 +138,280 @@
                     </div>
                     <h4 class="expert-title underline-orange">Multiplatform<br>Android, iOS</h4>
                 </div>
-
                 <div class="code-tag">&lt;h3&gt;</div>
-                <p class="expert-desc">
-                    Habilidad para desarrollar aplicaciones móviles híbridas y soluciones cross-platform eficientes.
-                </p>
+                <p class="expert-desc">Habilidad para desarrollar aplicaciones móviles híbridas y soluciones cross-platform.</p>
                 <div class="code-tag">&lt;/h3&gt;</div>
             </div>
-
         </div>
     </section>
 
     <section id="cv" class="container">
-        <h3 class="section-title"><span>02.</span> Curriculum Vitae</h3>
+        <h3 class="section-title"><span>04.</span> Curriculum Vitae</h3>
+        
         <div class="cv-grid">
             <div class="cv-item">
                 <h4>🎓 Formación Académica</h4>
-                <p><strong>CFGS Desarrollo de Aplicaciones Multiplataforma</strong></p>
-                <p class="institution">CES Juan Pablo II</p>
-                <span class="date">2023 - Actualidad</span>
+                <div style="margin-bottom: 20px;">
+                    <p><strong>CFGS Desarrollo de Aplicaciones Multiplataforma</strong></p>
+                    <p class="institution">CES Juan Pablo II</p>
+                    <span class="date">2023 - Actualidad</span>
+                </div>
+                <div>
+                    <p><strong>Estudiante de Programación</strong></p>
+                    <p class="institution">42 Madrid (Fundación Telefónica)</p>
+                    <span class="date">2024 - Actualidad</span>
+                </div>
             </div>
+
             <div class="cv-item">
-                <h4>💻 Habilidades Técnicas</h4>
+                <h4>💻 Stack Tecnológico</h4>
                 <ul class="tech-list">
-                    <li>HTML5 & CSS3 Avanzado</li>
-                    <li>JavaScript (ES6+)</li>
-                    <li>Git & GitHub</li>
-                    <li>Visual Studio Code</li>
-                    <li>Administración de Sistemas</li>
+                    <li><strong>Backend:</strong> Java, SQL (MySQL)</li>
+                    <li><strong>Frontend:</strong> JavaScript, HTML5, CSS3</li>
+                    <li><strong>Control de Versiones:</strong> Git & GitHub</li>
+                    <li><strong>IDEs:</strong> IntelliJ IDEA, Visual Studio Code</li>
+                    <li><strong>Metodologías:</strong> Scrum</li>
                 </ul>
             </div>
+
             <div class="cv-item">
                 <h4>🌍 Idiomas</h4>
-                <p>Español (Nativo)</p>
-                <p>Inglés (Nivel B2 - Conversacional)</p>
+                <p><strong>Español:</strong> Nativo</p>
+                <div style="margin-top: 10px;">
+                    <p><strong>Inglés:</strong> Nivel B2</p>
+                    <p style="font-size: 12px; color: var(--text-secondary); opacity: 0.8;">
+                        Common European Framework of Reference (CEFR)
+                    </p>
+                </div>
             </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a target="_blank" href="archivos/CV RICARDO MATOS 2026.pdf" download class="btn-primary">
+                📄 Descargar CV en PDF
+            </a>
         </div>
     </section>
 
     <section id="practicas" class="container">
-        <h3 class="section-title"><span>03.</span> Prácticas del Curso</h3>
-        <p class="section-desc">Selección de proyectos realizados durante el primer curso.</p>
+        <h3 class="section-title"><span>05.</span> Prácticas Destacadas</h3>
+        <p class="section-desc">Proyectos académicos donde aplico lógica, diseño y estructuras de datos.</p>
         
         <div class="projects-grid">
+            
             <div class="project-card">
-                <div class="folder-icon">📂</div>
-                <h4>Landing Page HTML</h4>
-                <p>Estructura semántica completa para un portal de noticias ficticio, optimizando el SEO básico.</p>
-                <div class="tech-stack">
-                    <span>HTML</span><span>CSS</span>
+                <div class="project-image">
+                    <img src="img_proyectos/rpg.jpg" alt="RPG Java" onerror="this.src='https://placehold.co/600x400/1a1a1a/00ffc3?text=RPG+Java'">
                 </div>
-                <a href="#" class="project-link">Ver Código ↗</a>
+                <div class="project-content">
+                    <h4>⚔️ RPG: La Leyenda</h4>
+                    <p class="project-cat">Java • POO • Herencia</p>
+                    <div class="project-footer">
+                        <a href="https://github.com/RicardoMatosR/RicardoMatos_PRO1/tree/main/T5/Juego%20Rol" target="_blank" class="footer-action">Ver Repositorio GitHub</a>
+                    </div>
+                </div>
             </div>
+
             <div class="project-card">
-                <div class="folder-icon">📂</div>
-                <h4>Proyecto Grupal Web</h4>
-                <p>Desarrollo colaborativo de una tienda online básica.</p>
-                <p class="group-members">Equipo: [Tu Nombre] & [Compañero]</p>
-                <div class="tech-stack">
-                    <span>HTML</span><span>CSS</span><span>Git</span>
+                <div class="project-image">
+                    <img src="img_proyectos/pong.jpg" alt="Pong Java" onerror="this.src='https://placehold.co/600x400/1a1a1a/00ffc3?text=Pong+Java'">
                 </div>
-                <a href="#" class="project-link">Perfil de mi compañero ↗</a>
+                <div class="project-content">
+                    <h4>🕹️ Pong Clásico</h4>
+                    <p class="project-cat">Java • Gráficos 2D</p>
+                    <div class="project-footer">
+                        <a href="https://github.com/RicardoMatosR/PongGame" target="_blank" class="footer-action">Ver Repositorio GitHub</a>
+                    </div>
+                </div>
             </div>
+
             <div class="project-card">
-                <div class="folder-icon">📂</div>
-                <h4>Gestión de Formularios</h4>
-                <p>Implementación de validaciones nativas y diseño responsivo en formularios de registro.</p>
-                <div class="tech-stack">
-                    <span>Forms</span><span>CSS Flexbox</span>
+                <div class="project-image">
+                    <img src="img_proyectos/web_equipo.jpg" alt="Web Equipo" onerror="this.src='https://placehold.co/600x400/1a1a1a/00ffc3?text=Web+Creativa'">
                 </div>
-                <a href="#" class="project-link">Ver Práctica ↗</a>
+                <div class="project-content">
+                    <h4>🎨 Web Design Team</h4>
+                    <p class="project-cat">HTML5 • CSS3 • Creatividad</p>
+                    <div class="project-footer">
+                        <a href="web_navidad/Contacto_Navidad.html" target="_blank" class="footer-action">Visitar Web</a>
+                        <span class="separator">|</span>
+                        <span class="footer-action interactivo" onclick="abrirModal('modal-web', 'pablo')">👥 Ver Equipo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="img_proyectos/bbdd.jpg" alt="Base de Datos" onerror="this.src='https://placehold.co/600x400/1a1a1a/00ffc3?text=Modelo+E-R'">
+                </div>
+                <div class="project-content">
+                    <h4>🗄️ Arquitectura BDD</h4>
+                    <p class="project-cat">Diseño E-R • SQL</p>
+                    <div class="project-footer">
+                        <a href="archivos/05_VUELOS_ER.dia" download class="footer-action">Descargar</a>
+                        <span class="separator">|</span>
+                        <span class="footer-action interactivo" onclick="abrirModal('modal-bd', 'youseff')">👥 Ver Equipo</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <div id="modal-web" class="modal-overlay" onclick="cerrarSiClickFuera(event)">
+        <div class="modal-caja">
+            <span class="btn-cerrar" onclick="cerrarModal('modal-web')">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-sidebar">
+                    <h3>Participantes</h3>
+                    <ul>
+                        <li onclick="cambiarMiembro(this, 'pablo')" class="seleccionado">Pablo</li>
+                        <li onclick="cambiarMiembro(this, 'christopher')">Christopher</li>
+                    </ul>
+                </div>
+                <div class="modal-info">
+                    <div id="pablo" class="info-miembro visible">
+                        <h2>Pablo</h2>
+                        <p class="bio">"Me encargué de la estructura semántica HTML y la accesibilidad."</p>
+                        <button class="btn-copiar" onclick="copiarEmail('pablo@correo.com', this)">📧 pablo@correo.com</button>
+                    </div>
+                    <div id="christopher" class="info-miembro">
+                        <h2>Christopher</h2>
+                        <p class="bio">"Diseñé las animaciones CSS y el sistema Flexbox."</p>
+                        <button class="btn-copiar" onclick="copiarEmail('christopher@correo.com', this)">📧 christopher@correo.com</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-bd" class="modal-overlay" onclick="cerrarSiClickFuera(event)">
+        <div class="modal-caja">
+            <span class="btn-cerrar" onclick="cerrarModal('modal-bd')">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-sidebar">
+                    <h3>Participantes</h3>
+                    <ul>
+                        <li onclick="cambiarMiembro(this, 'youseff')" class="seleccionado">Youseff</li>
+                        <li onclick="cambiarMiembro(this, 'stephan')">Stephan</li>
+                    </ul>
+                </div>
+                <div class="modal-info">
+                    <div id="youseff" class="info-miembro visible">
+                        <h2>Youseff</h2>
+                        <p class="bio">"Diseño del diagrama Entidad-Relación y normalización."</p>
+                        <button class="btn-copiar" onclick="copiarEmail('youseff@correo.com', this)">📧 youseff@correo.com</button>
+                    </div>
+                    <div id="stephan" class="info-miembro">
+                        <h2>Stephan</h2>
+                        <p class="bio">"Implementación de triggers y procedimientos almacenados."</p>
+                        <button class="btn-copiar" onclick="copiarEmail('stephan@correo.com', this)">📧 stephan@correo.com</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section id="temario" class="container">
-        <h3 class="section-title"><span>04.</span> Temario: Sistemas Informáticos</h3>
+        <h3 class="section-title"><span>06.</span> Temario Curso</h3>
+        
         <div class="syllabus-container">
             <div class="term">
-                <h4>Primer Trimestre</h4>
+                <div class="term-header">
+                    <span class="term-icon">☕</span>
+                    <h4>Programación</h4>
+                </div>
                 <ul class="syllabus-list">
-                    <li><strong>Hardware:</strong> Arquitectura Von Neumann, placa base, buses y periféricos.</li>
-                    <li><strong>Representación de la Información:</strong> Sistemas binario, hexadecimal y codificación ASCII/Unicode.</li>
-                    <li><strong>Sistemas Operativos:</strong> Concepto de kernel, gestión de procesos y memoria.</li>
+                    <li>1. Introducción a la programación</li>
+                    <li>2. Estructura de un programa informático</li>
+                    <li>3. Estructuras de control y flujo</li>
+                    <li>4. Estructuras de almacenamiento</li>
+                    <li>5. Orientación a Objetos (POO)</li>
+                    <li>6. Herencia y Polimorfismo</li>
+                    <li>7. Uso avanzado de clases</li>
+                    <li>8. Flujos de datos (Streams/Files)</li>
+                    <li>9. Conexión a Bases de Datos (JDBC)</li>
+                    <li>10. Frameworks: Spring Boot</li>
                 </ul>
             </div>
-            <div class="term">
-                <h4>Segundo Trimestre</h4>
-                <ul class="syllabus-list">
-                    <li><strong>Redes Locales:</strong> Modelo OSI vs TCP/IP, direccionamiento IP y máscaras de subred.</li>
-                    <li><strong>Linux Básico:</strong> Gestión de usuarios, permisos (chmod, chown) y sistema de ficheros.</li>
-                    <li><strong>Seguridad Física y Lógica:</strong> SAI, RAID y políticas de backup.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
 
-    <section id="memoria" class="container memory-section">
-        <h3 class="section-title"><span>05.</span> Memoria del Proyecto</h3>
-        <div class="content-box memory-box">
-            <p>
-                Accede a la documentación detallada del desarrollo, incluyendo explicaciones del código CSS, 
-                decisiones de diseño y bibliografía, formateada según normativa (Verdana 11, interlineado 1.2).
-            </p>
-            <div class="memory-actions">
-                <a href="memoria.html" class="btn-primary">Leer Memoria Web</a>
-                <a href="#" class="btn-outline">Descargar PDF</a>
+            <div class="term">
+                <div class="term-header">
+                    <span class="term-icon">🗄️</span>
+                    <h4>Bases de Datos</h4>
+                </div>
+                <ul class="syllabus-list">
+                    <li><strong>Diseño:</strong> Modelos Entidad-Relación (E/R) y Modelo Relacional.</li>
+                    <li><strong>Normalización:</strong> 1FN, 2FN, 3FN.</li>
+                    <li><strong>SQL:</strong> DDL, DML y consultas complejas (Queries).</li>
+                    <li><strong>MySQL:</strong> Administración y gestión.</li>
+                    <li><strong>PL/SQL:</strong> Triggers y procedimientos.</li>
+                </ul>
+            </div>
+
+            <div class="term">
+                <div class="term-header">
+                    <span class="term-icon">🌐</span>
+                    <h4>Lenguajes de Marcas</h4>
+                </div>
+                <ul class="syllabus-list">
+                    <li><strong>HTML5:</strong> Estructura semántica y DOM.</li>
+                    <li><strong>CSS3:</strong> Flexbox, Grid y diseño responsivo.</li>
+                    <li><strong>JavaScript:</strong> Manipulación del DOM y eventos.</li>
+                    <li><strong>XML/JSON:</strong> Intercambio de información.</li>
+                    <li><strong>ERP:</strong> Introducción a sistemas de gestión.</li>
+                </ul>
+            </div>
+
+            <div class="term">
+                <div class="term-header">
+                    <span class="term-icon">💻</span>
+                    <h4>Sistemas Informáticos</h4>
+                </div>
+                <ul class="syllabus-list">
+                    <li><strong>Representación:</strong> Binario, Octal, Hexadecimal.</li>
+                    <li><strong>Hardware:</strong> Componentes, placa base y periféricos.</li>
+                    <li><strong>Arquitecturas:</strong> Von Neumann vs Harvard.</li>
+                    <li><strong>Lógica:</strong> Puertas lógicas y álgebra de Boole.</li>
+                    <li><strong>Sistemas:</strong> Gestión de procesos en Linux/Windows.</li>
+                    <li><strong>Almacenamiento:</strong> Discos y sistemas RAID.</li>
+                </ul>
+            </div>
+
+            <div class="term">
+                <div class="term-header">
+                    <span class="term-icon">🚀</span>
+                    <h4>Posicionamiento (SEO)</h4>
+                </div>
+                <ul class="syllabus-list">
+                    <li><strong>SEO On-Page:</strong> Semántica, metaetiquetas y keywords.</li>
+                    <li><strong>SEO Off-Page:</strong> Linkbuilding y autoridad.</li>
+                    <li><strong>Herramientas:</strong> Google Analytics y Search Console.</li>
+                    <li><strong>Accesibilidad:</strong> Estándares WAI-ARIA.</li>
+                    <li><strong>Optimización:</strong> Core Web Vitals y rendimiento.</li>
+                </ul>
+            </div>
+
+            <div class="term">
+                <div class="term-header">
+                    <span class="term-icon">⚙️</span>
+                    <h4>Entornos de Desarrollo</h4>
+                </div>
+                <ul class="syllabus-list">
+                    <li><strong>Metodologías Ágiles:</strong> Scrum y Kanban.</li>
+                    <li><strong>Control de Versiones:</strong> Git, GitHub/GitLab.</li>
+                    <li><strong>IDEs:</strong> IntelliJ, Eclipse, VS Code.</li>
+                    <li><strong>Calidad:</strong> Pruebas unitarias (JUnit) y depuración.</li>
+                    <li><strong>UML:</strong> Diagramas de clases y casos de uso.</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <footer>
         <p>Diseñado y desarrollado por Ricardo Matos.</p>
-        <p class="credits">Inspirado en tamalsen.dev</p>
     </footer>
 
     <script src="script.js"></script>
+
 </body>
-
 </html>
-
-
