@@ -121,6 +121,25 @@ body {
 .logo { font-family: var(--font-mono); font-weight: 700; font-size: 20px; color: var(--accent); }
 .dot { color: var(--text-primary); }
 
+.lang-btn {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 195, 0.1);
+}
+.lang-btn:hover {
+    background: rgba(0, 255, 195, 0.1);
+    box-shadow: 0 0 20px rgba(0, 255, 195, 0.3);
+    color: #fff;
+}
+
 .nav-links { list-style: none; display: flex; gap: 25px; align-items: center; justify-content: center; }
 .nav-links li { display: flex; flex-direction: column; align-items: center; }
 .nav-num { font-family: var(--font-mono); font-size: 10px; color: var(--accent); margin-bottom: 2px; opacity: 0.8; }

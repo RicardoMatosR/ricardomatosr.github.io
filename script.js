@@ -3,16 +3,48 @@
    ========================================= */
 document.addEventListener('DOMContentLoaded', () => {
    
+    // --- 0. BILINGUAL SUPPORT ---
+    let currentLang = localStorage.getItem('lang') || 'es';
+    const langBtn = document.getElementById('lang-toggle');
+
+    function updateLanguage() {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[currentLang][key]) {
+                el.innerHTML = translations[currentLang][key];
+            }
+        });
+        if (langBtn) {
+            langBtn.textContent = currentLang === 'es' ? 'EN' : 'ES';
+        }
+    }
+
+    if (langBtn) {
+        langBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            localStorage.setItem('lang', currentLang);
+            updateLanguage();
+            // Reset typing effect on language switch to prevent out-of-bounds/glitches
+            charIndex = 0;
+            isDeleting = false;
+            textElement.textContent = "";
+        });
+    }
+
+    updateLanguage();
+
     // --- 1.1 EFECTO DE ESCRITURA (TYPEWRITER) ---
     const textElement = document.getElementById('typing-text');
-    const words = ["Programador Multiplataforma", "Desarrollador Web", "Administrador de Sistemas", "Diseño Bases de Datos"];
     
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
     let typeSpeed = 100;
+    let typingTimeout;
 
     function type() {
+        const words = translations[currentLang].typing_titles;
+        if (wordIndex >= words.length) wordIndex = 0;
         const currentWord = words[wordIndex];
         
         if (isDeleting) {
@@ -34,7 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
             typeSpeed = 500;
         }
 
-        setTimeout(type, typeSpeed);
+        clearTimeout(typingTimeout);
+        typingTimeout = setTimeout(type, typeSpeed);
     }
     if(textElement) type();
 
@@ -135,7 +168,8 @@ window.cambiarMiembro = function(elementoLi, idInfo) {
 window.copiarEmail = function(email, boton) {
     navigator.clipboard.writeText(email).then(() => {
         let textoOriginal = boton.innerText;
-        boton.innerText = "¡COPIADO!";
+        const currentLang = localStorage.getItem('lang') || 'es';
+        boton.innerText = translations[currentLang].modal_copied_btn;
         boton.style.backgroundColor = "var(--accent)";
         boton.style.color = "#000";
 
