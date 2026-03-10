@@ -2,7 +2,7 @@
    PARTE 1: FUNCIONES QUE SE EJECUTAN AL CARGAR
    ========================================= */
 document.addEventListener('DOMContentLoaded', () => {
-    
+    print()
     // --- 1.1 EFECTO DE ESCRITURA (TYPEWRITER) ---
     const textElement = document.getElementById('typing-text');
     const words = ["Programador Multiplataforma", "Desarrollador Web", "Administrador de Sistemas", "Diseño Bases de Datos"];
@@ -146,3 +146,4 @@ window.copiarEmail = function(email, boton) {
         }, 2000);
     });
 }
+
