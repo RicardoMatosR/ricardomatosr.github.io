@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VQLENTBQF1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VQLENTBQF1');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Matos | Prácticas y Proyectos</title>
+    <meta name="description" content="Echa un vistazo a mis proyectos académicos y prácticas destacadas donde aplico lógica, diseño interactivo y gestión de bases de datos.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="dynamic-bg"></div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">MATOS_DEV<span class="dot">.</span></div>
+            <button id="lang-toggle" class="lang-btn">EN</button>
+        </div>
+
+        <ul class="nav-links">
+            <li><span class="nav-num">01</span><a href="index.html" data-i18n="nav_inicio">// inicio</a></li>
+            <li><span class="nav-num">02</span><a href="about.html" data-i18n="nav_sobre_mi">// sobre_mi</a></li>
+            <li><span class="nav-num">03</span><a href="index.html#expertise" data-i18n="nav_skills">// skills</a></li>
+            <li><span class="nav-num">04</span><a href="about.html#cv" data-i18n="nav_cv">// cv</a></li>
+            <li><span class="nav-num">05</span><a href="projects.html" data-i18n="nav_practicas">// prácticas</a></li>
+            <li><span class="nav-num">06</span><a href="syllabus.html" data-i18n="nav_temario">// temario</a></li>
+            <li><span class="nav-num">DOC</span><a target="_blank" href="archivos/Portfolio Web Ricardo Matos.pdf" class="memoria-link" data-i18n="nav_memoria">MEMORIA</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <div class="apartado_contacto_arriba_derecha">
+                <div class="contenedor_email" style="position: relative;">
+                    <p id="boton_correo" class="texto_correo" title="Haz click para copiar">
+                        ricardomatos04@gmail.com
+                    </p>
+                    <span id="mensaje_copiado" class="alerta_copiado" data-i18n="nav_copiado">¡Correo copiado!</span>
+                </div>
+                
+                <span class="separador_entre_correo_iconos">|</span>
+
+                <div class="mini_iconos">
+                    <a href="https://www.linkedin.com/feed/" target="_blank" title="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="https://github.com/RicardoMatosR" target="_blank" title="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                    <a href="https://www.instagram.com/ricardomaatos_/" target="_blank" title="Instagram" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div style="height: 100px;"></div> <!-- Spacer so content doesn't get hidden behind navbar -->
+
+    <section id="practicas" class="container">
+        <h3 class="section-title"><span>05.</span> <span data-i18n="practicas_title">Prácticas Destacadas</span></h3>
+        <p class="section-desc" data-i18n="practicas_desc">Proyectos académicos donde aplico lógica, diseño y estructuras de datos.</p>
+        
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="img_proyectos/rpg.jpg" alt="RPG Java" onerror="this.src='https://placehold.co/600x400/1a1a1a/00ffc3?text=RPG+Java'">
+                </div>
+                <div class="project-content">
+                    <h4 data-i18n="p_rpg_title">⚔️ RPG: La Leyenda</h4>
+                    <p class="project-cat" data-i18n="p_rpg_cat">Java • POO • Herencia</p>
+                    <div class="project-footer">
+                        <a href="https://github.com/RicardoMatosR/RicardoMatos_PRO1/tree/main/T5/Juego%20Rol" target="_blank" class="footer-action" data-i18n="p_github">Ver Repositorio GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="img_proyectos/pong.jpg" alt="Pong Java" onerror="this.src='https://placehold.co/600x400/1a1a1a/00ffc3?text=Pong+Java'">
+                </div>
+                <div class="project-content">
+                    <h4 data-i18n="p_pong_title">🕹️ Pong Clásico</h4>
+                    <p class="project-cat" data-i18n="p_pong_cat">Java • Gráficos 2D</p>
+                    <div class="project-footer">
+                        <a href="https://github.com/RicardoMatosR/PongGame" target="_blank" class="footer-action" data-i18n="p_github">Ver Repositorio GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="img_proyectos/web_equipo.jpg" alt="Web Equipo" onerror="this.src='https://placehold.co/600x400/1a1a1a/00ffc3?text=Web+Creativa'">
+                </div>
+                <div class="project-content">
+                    <h4 data-i18n="p_web_title">🎨 Web Design Team</h4>
+                    <p class="project-cat" data-i18n="p_web_cat">HTML5 • CSS3 • Creatividad</p>
+                    <div class="project-footer">
+                        <a href="web_navidad/Contacto_Navidad.html" target="_blank" class="footer-action" data-i18n="p_web_link">Visitar Web</a>
+                        <span class="separator">|</span>
+                        <span class="footer-action interactivo" onclick="abrirModal('modal-web', 'pablo')" data-i18n="p_web_team">👥 Ver Equipo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="img_proyectos/bbdd.jpg" alt="Base de Datos" onerror="this.src='https://placehold.co/600x400/1a1a1a/00ffc3?text=Modelo+E-R'">
+                </div>
+                <div class="project-content">
+                    <h4 data-i18n="p_bd_title">🗄️ Arquitectura BDD</h4>
+                    <p class="project-cat" data-i18n="p_bd_cat">Diseño E-R • SQL</p>
+                    <div class="project-footer">
+                        <a href="archivos/05_VUELOS_ER.dia" download class="footer-action" data-i18n="p_bd_link">Descargar</a>
+                        <span class="separator">|</span>
+                        <span class="footer-action interactivo" onclick="abrirModal('modal-bd', 'youseff')" data-i18n="p_web_team">👥 Ver Equipo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal-web" class="modal-overlay" onclick="cerrarSiClickFuera(event)">
+        <div class="modal-caja">
+            <span class="btn-cerrar" onclick="cerrarModal('modal-web')">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-sidebar">
+                    <h3 data-i18n="modal_team_title">Participantes</h3>
+                    <ul>
+                        <li onclick="cambiarMiembro(this, 'pablo')" class="seleccionado">Pablo</li>
+                        <li onclick="cambiarMiembro(this, 'christopher')">Christopher</li>
+                    </ul>
+                </div>
+                <div class="modal-info">
+                    <div id="pablo" class="info-miembro visible">
+                        <h2>Pablo</h2>
+                        <p class="bio" data-i18n="modal_pablo">"Me encargué de la estructura semántica HTML y la accesibilidad."</p>
+                        <button class="btn-copiar" onclick="copiarEmail('pablo@correo.com', this)">📧 pablo@correo.com</button>
+                    </div>
+                    <div id="christopher" class="info-miembro">
+                        <h2>Christopher</h2>
+                        <p class="bio" data-i18n="modal_christopher">"Diseñé las animaciones CSS y el sistema Flexbox."</p>
+                        <button class="btn-copiar" onclick="copiarEmail('christopher@correo.com', this)">📧 christopher@correo.com</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-bd" class="modal-overlay" onclick="cerrarSiClickFuera(event)">
+        <div class="modal-caja">
+            <span class="btn-cerrar" onclick="cerrarModal('modal-bd')">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-sidebar">
+                    <h3 data-i18n="modal_team_title">Participantes</h3>
+                    <ul>
+                        <li onclick="cambiarMiembro(this, 'youseff')" class="seleccionado">Youseff</li>
+                        <li onclick="cambiarMiembro(this, 'stephan')">Stephan</li>
+                    </ul>
+                </div>
+                <div class="modal-info">
+                    <div id="youseff" class="info-miembro visible">
+                        <h2>Youseff</h2>
+                        <p class="bio" data-i18n="modal_youseff">"Diseño del diagrama Entidad-Relación y normalización."</p>
+                        <button class="btn-copiar" onclick="copiarEmail('youseff@correo.com', this)">📧 youseff@correo.com</button>
+                    </div>
+                    <div id="stephan" class="info-miembro">
+                        <h2>Stephan</h2>
+                        <p class="bio" data-i18n="modal_stephan">"Implementación de triggers y procedimientos almacenados."</p>
+                        <button class="btn-copiar" onclick="copiarEmail('stephan@correo.com', this)">📧 stephan@correo.com</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p data-i18n="footer_text">Diseñado y desarrollado por Ricardo Matos.</p>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

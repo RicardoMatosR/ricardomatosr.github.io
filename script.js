@@ -27,7 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Reset typing effect on language switch to prevent out-of-bounds/glitches
             charIndex = 0;
             isDeleting = false;
-            textElement.textContent = "";
+            if (textElement) {
+                textElement.textContent = "";
+            }
         });
     }
 

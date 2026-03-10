@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VQLENTBQF1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VQLENTBQF1');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Matos | Temario de Estudios</title>
+    <meta name="description" content="Consulta el temario de estudios y las áreas de enfoque formativo en las que me especializo como desarrollador de aplicaciones y software.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="dynamic-bg"></div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">MATOS_DEV<span class="dot">.</span></div>
+            <button id="lang-toggle" class="lang-btn">EN</button>
+        </div>
+
+        <ul class="nav-links">
+            <li><span class="nav-num">01</span><a href="index.html" data-i18n="nav_inicio">// inicio</a></li>
+            <li><span class="nav-num">02</span><a href="about.html" data-i18n="nav_sobre_mi">// sobre_mi</a></li>
+            <li><span class="nav-num">03</span><a href="index.html#expertise" data-i18n="nav_skills">// skills</a></li>
+            <li><span class="nav-num">04</span><a href="about.html#cv" data-i18n="nav_cv">// cv</a></li>
+            <li><span class="nav-num">05</span><a href="projects.html" data-i18n="nav_practicas">// prácticas</a></li>
+            <li><span class="nav-num">06</span><a href="syllabus.html" data-i18n="nav_temario">// temario</a></li>
+            <li><span class="nav-num">DOC</span><a target="_blank" href="archivos/Portfolio Web Ricardo Matos.pdf" class="memoria-link" data-i18n="nav_memoria">MEMORIA</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <div class="apartado_contacto_arriba_derecha">
+                <div class="contenedor_email" style="position: relative;">
+                    <p id="boton_correo" class="texto_correo" title="Haz click para copiar">
+                        ricardomatos04@gmail.com
+                    </p>
+                    <span id="mensaje_copiado" class="alerta_copiado" data-i18n="nav_copiado">¡Correo copiado!</span>
+                </div>
+                
+                <span class="separador_entre_correo_iconos">|</span>
+
+                <div class="mini_iconos">
+                    <a href="https://www.linkedin.com/feed/" target="_blank" title="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="https://github.com/RicardoMatosR" target="_blank" title="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                    <a href="https://www.instagram.com/ricardomaatos_/" target="_blank" title="Instagram" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div style="height: 100px;"></div> <!-- Spacer so content doesn't get hidden behind navbar -->
+
+    <section id="temario" class="container">
+        <h3 class="section-title"><span>06.</span> <span data-i18n="temario_title">Temario Curso</span></h3>
+        
+        <div class="syllabus-container">
+            <div class="term">
+                <div class="term-header">
+                    <span class="term-icon">☕</span>
+                    <h4 data-i18n="t_prog">Programación</h4>
+                </div>
+                <ul class="syllabus-list">
+                    <li data-i18n="t_prog_1">1- Introducción a la programación</li>
+                    <li data-i18n="t_prog_2">2- Estructura de un programa informático</li>
+                    <li data-i18n="t_prog_3">3- Estructuras de control y flujo</li>
+                    <li data-i18n="t_prog_4">4- Estructuras de almacenamiento</li>
+                    <li data-i18n="t_prog_5">5- Orientación a Objetos (POO)</li>
+                    <li data-i18n="t_prog_6">6- Herencia y Polimorfismo</li>
+                    <li data-i18n="t_prog_7">7- Uso avanzado de clases</li>
+                    <li data-i18n="t_prog_8">8- Flujos de datos (Streams/Files)</li>
+                    <li data-i18n="t_prog_9">9- Conexión a Bases de Datos (JDBC)</li>
+                    <li data-i18n="t_prog_10">10- Frameworks: Spring Boot</li>
+                </ul>
+            </div>
+
+            <div class="term">
+                <div class="term-header">
+                    <span class="term-icon">🗄️</span>
+                    <h4 data-i18n="t_db">Bases de Datos</h4>
+                </div>
+                <ul class="syllabus-list">
+                    <li data-i18n="t_db_1"><strong>Diseño:</strong> Modelos Entidad-Relación (E/R) y Modelo Relacional.</li>
+                    <li data-i18n="t_db_2"><strong>Normalización:</strong> 1FN, 2FN, 3FN.</li>
+                    <li data-i18n="t_db_3"><strong>SQL:</strong> DDL, DML y consultas complejas (Queries).</li>
+                    <li data-i18n="t_db_4"><strong>MySQL:</strong> Administración y gestión.</li>
+                    <li data-i18n="t_db_5"><strong>PL/SQL:</strong> Triggers y procedimientos.</li>
+                </ul>
+            </div>
+
+            <div class="term">
+                <div class="term-header">
+                    <span class="term-icon">🌐</span>
+                    <h4 data-i18n="t_markup">Lenguajes de Marcas</h4>
+                </div>
+                <ul class="syllabus-list">
+                    <li data-i18n="t_mk_1"><strong>HTML5:</strong> Estructura semántica y DOM.</li>
+                    <li data-i18n="t_mk_2"><strong>CSS3:</strong> Flexbox, Grid y diseño responsivo.</li>
+                    <li data-i18n="t_mk_3"><strong>JavaScript:</strong> Manipulación del DOM y eventos.</li>
+                    <li data-i18n="t_mk_4"><strong>XML/JSON:</strong> Intercambio de información.</li>
+                    <li data-i18n="t_mk_5"><strong>ERP:</strong> Introducción a sistemas de gestión.</li>
+                </ul>
+            </div>
+
+            <div class="term">
+                <div class="term-header">
+                    <span class="term-icon">💻</span>
+                    <h4 data-i18n="t_sys">Sistemas Informáticos</h4>
+                </div>
+                <ul class="syllabus-list">
+                    <li data-i18n="t_sys_1"><strong>Representación:</strong> Binario, Octal, Hexadecimal.</li>
+                    <li data-i18n="t_sys_2"><strong>Hardware:</strong> Componentes, placa base y periféricos.</li>
+                    <li data-i18n="t_sys_3"><strong>Arquitecturas:</strong> Von Neumann vs Harvard.</li>
+                    <li data-i18n="t_sys_4"><strong>Lógica:</strong> Puertas lógicas y álgebra de Boole.</li>
+                    <li data-i18n="t_sys_5"><strong>Sistemas:</strong> Gestión de procesos en Linux/Windows.</li>
+                    <li data-i18n="t_sys_6"><strong>Almacenamiento:</strong> Discos y sistemas RAID.</li>
+                </ul>
+            </div>
+
+            <div class="term">
+                <div class="term-header">
+                    <span class="term-icon">🚀</span>
+                    <h4 data-i18n="t_seo">Posicionamiento (SEO)</h4>
+                </div>
+                <ul class="syllabus-list">
+                    <li data-i18n="t_seo_1"><strong>SEO On-Page:</strong> Semántica, metaetiquetas y keywords.</li>
+                    <li data-i18n="t_seo_2"><strong>SEO Off-Page:</strong> Linkbuilding y autoridad.</li>
+                    <li data-i18n="t_seo_3"><strong>Herramientas:</strong> Google Analytics y Search Console.</li>
+                    <li data-i18n="t_seo_4"><strong>Accesibilidad:</strong> Estándares WAI-ARIA.</li>
+                    <li data-i18n="t_seo_5"><strong>Optimización:</strong> Core Web Vitals y rendimiento.</li>
+                </ul>
+            </div>
+
+            <div class="term">
+                <div class="term-header">
+                    <span class="term-icon">⚙️</span>
+                    <h4 data-i18n="t_dev">Entornos de Desarrollo</h4>
+                </div>
+                <ul class="syllabus-list">
+                    <li data-i18n="t_dev_1"><strong>Metodologías Ágiles:</strong> Scrum y Kanban.</li>
+                    <li data-i18n="t_dev_2"><strong>Control de Versiones:</strong> Git, GitHub/GitLab.</li>
+                    <li data-i18n="t_dev_3"><strong>IDEs:</strong> IntelliJ, Eclipse, VS Code.</li>
+                    <li data-i18n="t_dev_4"><strong>Calidad:</strong> Pruebas unitarias (JUnit) y depuración.</li>
+                    <li data-i18n="t_dev_5"><strong>UML:</strong> Diagramas de clases y casos de uso.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p data-i18n="footer_text">Diseñado y desarrollado por Ricardo Matos.</p>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

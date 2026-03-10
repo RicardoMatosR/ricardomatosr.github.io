@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VQLENTBQF1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VQLENTBQF1');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Matos | Sobre Mí y CV</title>
+    <meta name="description" content="Conoce más sobre mí: estudiante de Desarrollo de Aplicaciones Multiplataforma, mi experiencia, habilidades y mi Curriculum Vitae.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="dynamic-bg"></div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">MATOS_DEV<span class="dot">.</span></div>
+            <button id="lang-toggle" class="lang-btn">EN</button>
+        </div>
+
+        <ul class="nav-links">
+            <li><span class="nav-num">01</span><a href="index.html" data-i18n="nav_inicio">// inicio</a></li>
+            <li><span class="nav-num">02</span><a href="about.html" data-i18n="nav_sobre_mi">// sobre_mi</a></li>
+            <li><span class="nav-num">03</span><a href="index.html#expertise" data-i18n="nav_skills">// skills</a></li>
+            <li><span class="nav-num">04</span><a href="about.html#cv" data-i18n="nav_cv">// cv</a></li>
+            <li><span class="nav-num">05</span><a href="projects.html" data-i18n="nav_practicas">// prácticas</a></li>
+            <li><span class="nav-num">06</span><a href="syllabus.html" data-i18n="nav_temario">// temario</a></li>
+            <li><span class="nav-num">DOC</span><a target="_blank" href="archivos/Portfolio Web Ricardo Matos.pdf" class="memoria-link" data-i18n="nav_memoria">MEMORIA</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <div class="apartado_contacto_arriba_derecha">
+                <div class="contenedor_email" style="position: relative;">
+                    <p id="boton_correo" class="texto_correo" title="Haz click para copiar">
+                        ricardomatos04@gmail.com
+                    </p>
+                    <span id="mensaje_copiado" class="alerta_copiado" data-i18n="nav_copiado">¡Correo copiado!</span>
+                </div>
+                
+                <span class="separador_entre_correo_iconos">|</span>
+
+                <div class="mini_iconos">
+                    <a href="https://www.linkedin.com/feed/" target="_blank" title="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="https://github.com/RicardoMatosR" target="_blank" title="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                    <a href="https://www.instagram.com/ricardomaatos_/" target="_blank" title="Instagram" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div style="height: 100px;"></div> <!-- Spacer so content doesn't get hidden behind navbar -->
+
+    <section id="carta" class="container">
+        <h3 class="section-title"><span>02.</span> <span data-i18n="carta_title">Carta de Presentación</span></h3>
+        <div class="content-box">
+            <p data-i18n="carta_p1">
+                Soy Ricardo Matos Romero, estudiante de <strong>Desarrollo de Aplicaciones Multiplataforma</strong> en CES Juan Pablo II y alumno de la escuela de programación <strong>42 Madrid</strong>. Me defino como un desarrollador apasionado, combinando la formación académica reglada con la metodología práctica y colaborativa de 42.
+            </p>
+            <br>
+            <p data-i18n="carta_p2">
+                Cuento con una sólida base técnica en <strong>Java, JavaScript, SQL</strong> y un fuerte enfoque en desarrollo web con <strong>HTML5 y CSS3</strong>. Disfruto creando interfaces limpias y funcionales, cuidando tanto la lógica como el diseño.
+            </p>
+            <br>
+            <p data-i18n="carta_p3">
+                Mi experiencia laboral en entornos corporativos internacionales, como la sede de <strong>Amazon</strong>, me ha permitido perfeccionar mi capacidad de comunicación en <strong>inglés (Nivel B2)</strong> y trabajar bajo altos estándares de exigencia. Busco mi primera oportunidad como desarrollador para aportar código de calidad y seguir creciendo en un equipo profesional.
+            </p>
+        </div>
+    </section>
+
+    <section id="cv" class="container">
+        <h3 class="section-title"><span>04.</span> <span data-i18n="cv_title">Curriculum Vitae</span></h3>
+        
+        <div class="cv-grid">
+            <div class="cv-item">
+                <h4 data-i18n="cv_edu">🎓 Formación Académica</h4>
+                <div style="margin-bottom: 20px;">
+                    <p data-i18n="cv_edu_1"><strong>CFGS Desarrollo de Aplicaciones Multiplataforma</strong></p>
+                    <p class="institution">CES Juan Pablo II</p>
+                    <span class="date" data-i18n="cv_edu_1_date">2023 - Actualidad</span>
+                </div>
+                <div>
+                    <p data-i18n="cv_edu_2"><strong>Estudiante de Programación</strong></p>
+                    <p class="institution">42 Madrid (Fundación Telefónica)</p>
+                    <span class="date" data-i18n="cv_edu_2_date">2024 - Actualidad</span>
+                </div>
+            </div>
+
+            <div class="cv-item">
+                <h4 data-i18n="cv_stack">💻 Stack Tecnológico</h4>
+                <ul class="tech-list">
+                    <li data-i18n="cv_stack_bk"><strong>Backend:</strong> Java, SQL (MySQL)</li>
+                    <li data-i18n="cv_stack_ft"><strong>Frontend:</strong> JavaScript, HTML5, CSS3</li>
+                    <li data-i18n="cv_stack_vc"><strong>Control de Versiones:</strong> Git & GitHub</li>
+                    <li data-i18n="cv_stack_ide"><strong>IDEs:</strong> IntelliJ IDEA, Visual Studio Code</li>
+                    <li data-i18n="cv_stack_method"><strong>Metodologías:</strong> Scrum</li>
+                </ul>
+            </div>
+
+            <div class="cv-item">
+                <h4 data-i18n="cv_lang">🌍 Idiomas</h4>
+                <p data-i18n="cv_lang_es"><strong>Español:</strong> Nativo</p>
+                <div style="margin-top: 10px;">
+                    <p data-i18n="cv_lang_en"><strong>Inglés:</strong> Nivel B2</p>
+                    <p style="font-size: 12px; color: var(--text-secondary); opacity: 0.8;" data-i18n="cv_lang_en_cefr">
+                        Common European Framework of Reference (CEFR)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a target="_blank" href="CV RICARDO MATOS 2026.pdf" download class="btn-primary" data-i18n="cv_download">
+                📄 Descargar CV en PDF
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p data-i18n="footer_text">Diseñado y desarrollado por Ricardo Matos.</p>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
