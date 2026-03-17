@@ -11,12 +11,12 @@ const translations = {
         "carta_p2": "Cuento con una sólida base técnica en <strong>Java, JavaScript, SQL</strong> y un fuerte enfoque en desarrollo web con <strong>HTML5 y CSS3</strong>. Disfruto creando interfaces limpias y funcionales, cuidando tanto la lógica como el diseño.",
         "carta_p3": "Mi experiencia laboral en entornos corporativos internacionales, como la sede de <strong>Amazon</strong>, me ha permitido perfeccionar mi capacidad de comunicación en <strong>inglés (Nivel B2)</strong> y trabajar bajo altos estándares de exigencia. Busco mi primera oportunidad como desarrollador para aportar código de calidad y seguir creciendo en un equipo profesional.",
         "skills_title": "My Expertise",
-        "skill_sw": "Software<br>Development", "skill_sw_desc": "Experiencia tanto en programación funcional como OOP: Python, Java, JavaScript y C#.",
-        "skill_front": "Frontend Dev<br>React, NextJS", "skill_front_desc": "Apasionado por UI/UX. Creación de interfaces modernas con HTML, CSS, JS y frameworks.",
-        "skill_mobile": "Multiplatform<br>Android, iOS", "skill_mobile_desc": "Habilidad para desarrollar aplicaciones móviles híbridas y soluciones cross-platform.",
+        "skill_sw": "Software<br>Development", "skill_sw_desc": "Experiencia tanto en programación funcional como OOP: <a href='projects.html' class='contextual-link'>Python, Java, JavaScript y C#</a>.",
+        "skill_front": "Frontend Dev<br>React, NextJS", "skill_front_desc": "Apasionado por UI/UX. Creación de <a href='projects.html' class='contextual-link'>interfaces modernas</a> con HTML, CSS, JS y frameworks.",
+        "skill_mobile": "Multiplatform<br>Android, iOS", "skill_mobile_desc": "Habilidad para desarrollar <a href='projects.html' class='contextual-link'>aplicaciones móviles</a> híbridas y soluciones cross-platform.",
         "cv_title": "Curriculum Vitae",
         "cv_edu": "🎓 Formación Académica",
-        "cv_edu_1": "<strong>CFGS Desarrollo de Aplicaciones Multiplataforma</strong>", "cv_edu_1_date": "2023 - Actualidad",
+        "cv_edu_1": "<a href='syllabus.html' class='contextual-link' style='color:inherit;'><strong>CFGS Desarrollo de Aplicaciones Multiplataforma</strong></a>", "cv_edu_1_date": "2023 - Actualidad",
         "cv_edu_2": "<strong>Estudiante de Programación</strong>", "cv_edu_2_date": "2024 - Actualidad",
         "cv_stack": "💻 Stack Tecnológico",
         "cv_stack_bk": "<strong>Backend:</strong> Java, SQL (MySQL)",
@@ -79,7 +79,9 @@ const translations = {
         "t_dev_3": "<strong>IDEs:</strong> IntelliJ, Eclipse, VS Code.",
         "t_dev_4": "<strong>Calidad:</strong> Pruebas unitarias (JUnit) y depuración.",
         "t_dev_5": "<strong>UML:</strong> Diagramas de clases y casos de uso.",
-        "footer_text": "Diseñado y desarrollado por Ricardo Matos."
+        "footer_text": "Diseñado y desarrollado por Ricardo Matos.",
+        "hero_seo_links": "Descubre más <a href='about.html' class='contextual-link'>sobre mi trayectoria</a>, o explora los <a href='projects.html' class='contextual-link'>proyectos prácticos</a> en los que he estado trabajando.",
+        "projects_seo_links": "Aquí presento algunos de mis trabajos. Si te interesa conocer mi stack tecnológico completo, puedes revisar mi <a href='about.html#cv' class='contextual-link'>currículum vitae</a>."
     },
     en: {
         "nav_inicio": "// home", "nav_sobre_mi": "// about_me", "nav_skills": "// skills",
@@ -93,12 +95,12 @@ const translations = {
         "carta_p2": "I have a solid technical foundation in <strong>Java, JavaScript, SQL</strong> and a strong focus on web development with <strong>HTML5 and CSS3</strong>. I enjoy creating clean and functional interfaces, taking care of both logic and design.",
         "carta_p3": "My work experience in international corporate environments, such as <strong>Amazon's</strong> headquarters, has allowed me to polish my communication skills in <strong>English (B2 Level)</strong> and work under high demanding standards. I am seeking my first opportunity as a developer to contribute quality code and continue growing within a professional team.",
         "skills_title": "My Expertise",
-        "skill_sw": "Software<br>Development", "skill_sw_desc": "Experience in both functional and OOP programming: Python, Java, JavaScript and C#.",
-        "skill_front": "Frontend Dev<br>React, NextJS", "skill_front_desc": "Passionate about UI/UX. Creating modern interfaces with HTML, CSS, JS and frameworks.",
-        "skill_mobile": "Multiplatform<br>Android, iOS", "skill_mobile_desc": "Ability to develop hybrid mobile apps and cross-platform solutions.",
+        "skill_sw": "Software<br>Development", "skill_sw_desc": "Experience in both functional and OOP programming: <a href='projects.html' class='contextual-link'>Python, Java, JavaScript and C#</a>.",
+        "skill_front": "Frontend Dev<br>React, NextJS", "skill_front_desc": "Passionate about UI/UX. Creating <a href='projects.html' class='contextual-link'>modern interfaces</a> with HTML, CSS, JS and frameworks.",
+        "skill_mobile": "Multiplatform<br>Android, iOS", "skill_mobile_desc": "Ability to develop hybrid <a href='projects.html' class='contextual-link'>mobile apps</a> and cross-platform solutions.",
         "cv_title": "Curriculum Vitae",
         "cv_edu": "🎓 Education",
-        "cv_edu_1": "<strong>Higher Degree in Multiplatform Application Development</strong>", "cv_edu_1_date": "2023 - Present",
+        "cv_edu_1": "<a href='syllabus.html' class='contextual-link' style='color:inherit;'><strong>Higher Degree in Multiplatform Application Development</strong></a>", "cv_edu_1_date": "2023 - Present",
         "cv_edu_2": "<strong>Programming Student</strong>", "cv_edu_2_date": "2024 - Present",
         "cv_stack": "💻 Tech Stack",
         "cv_stack_bk": "<strong>Backend:</strong> Java, SQL (MySQL)",
@@ -161,6 +163,8 @@ const translations = {
         "t_dev_3": "<strong>IDEs:</strong> IntelliJ, Eclipse, VS Code.",
         "t_dev_4": "<strong>Quality:</strong> Unit testing (JUnit) and debugging.",
         "t_dev_5": "<strong>UML:</strong> Class and use case diagrams.",
-        "footer_text": "Designed and developed by Ricardo Matos."
+        "footer_text": "Designed and developed by Ricardo Matos.",
+        "hero_seo_links": "Discover more <a href='about.html' class='contextual-link'>about my journey</a>, or explore the <a href='projects.html' class='contextual-link'>practical projects</a> I've been working on.",
+        "projects_seo_links": "Here are some of my works. If you are interested in knowing my full technology stack, you can check out my <a href='about.html#cv' class='contextual-link'>resume</a>."
     }
 };
