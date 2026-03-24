@@ -4,6 +4,9 @@
 
 Repositorio del proyecto web de mi portfolio personal, desarrollado para documentar mi progreso, proyectos y plan de estudios en el ciclo de **Desarrollo de Aplicaciones Multiplataforma (DAM)**.
 
+<img width="1920" height="613" alt="image" src="https://github.com/user-attachments/assets/34ba8906-1ec6-418c-9cf0-8c5886eaf7e8" />
+
+
 ---
 
 ## 📋 Índice de Contenidos
