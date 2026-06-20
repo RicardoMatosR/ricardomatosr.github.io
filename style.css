@@ -5,14 +5,12 @@
    3.  Barra de Navegación (Navbar)
    4.  Sección Hero (Inicio)
    5.  Componentes Comunes (Títulos, Botones, Tarjetas)
-   6.  Sección Expertise (My Expertise)
-   7.  Sección CV (Curriculum)
-   8.  Sección Prácticas (Proyectos)
-   9.  Ventanas Modales (Pop-ups Equipo)
-   10. Sección Temario (Syllabus)
-   11. Footer
-   12. Responsive (Móvil)
+   6.  Sección Habilidades (Expertise)
+   7.  Sección Trayectoria (Timeline)
+   8.  Footer
+   9.  Responsive (Móvil)
    ======================================================= */
+
 
 /* =========================================
    1. RESET Y VARIABLES GLOBALES
@@ -23,23 +21,25 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
-    /* --- PALETA DE COLORES MODO OSCURO (HACKER / NEÓN) --- */
-    --bg-base: #000000;             /* Negro puro */
-    --text-primary: #ffffffde;      /* Blanco suave */
-    --text-secondary: #ffffffc8;    /* Gris claro */
-    --accent: #00ffc3;              /* Verde Neón Principal */
-    
-    /* Fondos semitransparentes (Glassmorphism) */
-    --nav-bg: rgba(0, 0, 0, 0.7);
-    --card-bg: rgba(20, 20, 20, 0.6); 
+    --bg-base: #000000;
+    --text-primary: #ffffffde;
+    --text-secondary: #ffffffc8;
+    --accent: #00ffc3;
+
+    /* Glassmorphism */
+    --card-bg: rgba(20, 20, 20, 0.6);
     --border-card: rgba(255, 255, 255, 0.5);
-    
-    /* Colores Animación Fondo */
-    --blob-1: rgba(87, 87, 87, 0);   
-    --blob-2: rgba(105, 105, 105, 0.626);    
-    --blob-3: rgba(53, 53, 53, 0.15);   
-    
+
+    /* Fondo animado */
+    --blob-1: rgba(87, 87, 87, 0);
+    --blob-2: rgba(105, 105, 105, 0.626);
+    --blob-3: rgba(53, 53, 53, 0.15);
+
     /* Fuentes */
     --font-main: 'Inter', sans-serif;
     --font-mono: 'Fira Code', monospace;
@@ -53,7 +53,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Scrollbar personalizada */
+/* Scrollbar */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--text-secondary); border-radius: 4px; }
@@ -94,14 +94,14 @@ body {
 }
 
 @keyframes lavaMove1 {
-    0% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
-    50% { transform: translate(-20%, -30%) rotate(180deg) scale(1.2); }
+    0%   { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+    50%  { transform: translate(-20%, -30%) rotate(180deg) scale(1.2); }
     100% { transform: translate(-60%, -20%) rotate(360deg) scale(0.9); }
 }
 
 @keyframes lavaMove2 {
-    0% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
-    50% { transform: translate(-80%, -60%) rotate(-180deg) scale(1.1); }
+    0%   { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+    50%  { transform: translate(-80%, -60%) rotate(-180deg) scale(1.1); }
     100% { transform: translate(-30%, -70%) rotate(-360deg) scale(1.3); }
 }
 
@@ -112,9 +112,19 @@ body {
 .navbar {
     position: fixed; top: 0; width: 100%;
     padding: 15px 30px;
-    display: flex; align-items: center; justify-content: space-between; 
-    background-color: var(--nav-bg); backdrop-filter: blur(15px); 
-    z-index: 1000; border-bottom: 1px solid var(--border-card);
+    display: flex; align-items: center; justify-content: space-between;
+    background-color: transparent;
+    backdrop-filter: none;
+    z-index: 1000;
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-left { display: flex; align-items: center; gap: 15px; flex: 1; }
@@ -140,12 +150,25 @@ body {
     color: #fff;
 }
 
-.nav-links { list-style: none; display: flex; gap: 25px; align-items: center; justify-content: center; }
-.nav-links li { display: flex; flex-direction: column; align-items: center; }
-.nav-num { font-family: var(--font-mono); font-size: 10px; color: var(--accent); margin-bottom: 2px; opacity: 0.8; }
-.nav-links a { text-decoration: none; font-family: var(--font-mono); font-size: 13px; color: var(--text-primary); transition: color 0.3s; font-weight: 500; }
+.nav-links { list-style: none; display: flex; gap: 30px; align-items: center; justify-content: center; }
+.nav-links li { display: flex; align-items: center; }
+.nav-links a {
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-secondary);
+    transition: color 0.3s;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
 .nav-links a:hover { color: var(--accent); }
-.memoria-link { color: var(--accent) !important; font-weight: bold !important; }
+.nav-slash {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    margin-right: 4px;
+    opacity: 0.85;
+}
 
 /* Contacto y Redes (Derecha) */
 .nav-right { display: flex; justify-content: flex-end; flex: 1; }
@@ -154,7 +177,7 @@ body {
     display: flex; align-items: center; gap: 15px; padding: 8px 20px;
     border: 1px solid var(--accent); border-radius: 50px;
     background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 10px rgba(100, 255, 218, 0.1); 
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.1);
     transition: all 0.3s ease;
 }
 .apartado_contacto_arriba_derecha:hover {
@@ -185,7 +208,8 @@ body {
 }
 .alerta_copiado::before {
     content: ""; position: absolute; top: -4px; left: 50%; transform: translateX(-50%);
-    border-width: 0 4px 4px 4px; border-style: solid; border-color: transparent transparent var(--accent) transparent;
+    border-width: 0 4px 4px 4px; border-style: solid;
+    border-color: transparent transparent var(--accent) transparent;
 }
 .alerta_copiado.mostrar { opacity: 1; visibility: visible; top: 28px; }
 
@@ -199,17 +223,29 @@ body {
     justify-content: center; align-items: center; text-align: center;
     padding: 0 20px;
     padding-top: 15vh;
+    position: relative;
+    isolation: isolate;
 }
 
-.console-badge {
-    font-family: var(--font-mono); font-size: 13px; color: var(--text-secondary);
-    background: rgba(0, 0, 0, 0.4); padding: 8px 16px;
-    border-radius: 6px; border: 1px solid rgba(128, 128, 128, 0.3);
-    margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    display: inline-block;
+/* Glow ambiental detrás del Hero */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        radial-gradient(ellipse 70% 55% at 50% 40%,
+            rgba(0, 80, 55, 0.30) 0%,
+            rgba(0, 50, 35, 0.15) 45%,
+            transparent 75%),
+        radial-gradient(ellipse 40% 30% at 30% 60%,
+            rgba(0, 255, 195, 0.05) 0%,
+            transparent 70%),
+        radial-gradient(ellipse 40% 30% at 70% 30%,
+            rgba(0, 180, 130, 0.06) 0%,
+            transparent 70%);
+    pointer-events: none;
 }
-.console-prompt { color: var(--accent); margin-right: 8px; font-weight: bold; }
-.console-string { color: #ce9178; }
 
 .name {
     font-size: clamp(40px, 7vw, 80px);
@@ -226,10 +262,67 @@ body {
 
 .hero-slogan {
     font-size: 16px; color: var(--text-secondary); max-width: 500px;
-    margin-bottom: 60px; font-weight: 400; opacity: 0.8;
+    margin-bottom: 40px; font-weight: 400; opacity: 0.8;
 }
 
-/* Círculo botando */
+/* Botones CTA del Hero */
+.hero-cta {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-btn-primary {
+    padding: 13px 32px;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+.hero-btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 255, 195, 0.08);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.hero-btn-primary:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 195, 0.25);
+    transform: translateY(-2px);
+}
+.hero-btn-primary:hover::before { opacity: 1; }
+
+.hero-btn-secondary {
+    padding: 13px 32px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: border-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.hero-btn-secondary:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+/* Scroll arrow */
 .scroll-down-link { margin-top: 20px; }
 .circle-arrow {
     width: 50px; height: 50px;
@@ -246,8 +339,8 @@ body {
 }
 @keyframes bounceCircle {
     0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-10px); }
-    60% { transform: translateY(-5px); }
+    40%  { transform: translateY(-10px); }
+    60%  { transform: translateY(-5px); }
 }
 
 
@@ -260,37 +353,41 @@ section { padding: 120px 50px; max-width: 1000px; margin: 0 auto; }
     font-family: var(--font-main); color: var(--text-primary); font-size: 28px;
     font-weight: 700; margin-bottom: 50px; display: flex; align-items: center;
 }
-.section-title span { font-family: var(--font-mono); color: var(--accent); margin-right: 15px; font-size: 20px; font-weight: 400; }
-.section-title::after { content: ""; display: block; flex-grow: 1; height: 1px; background: var(--text-secondary); opacity: 0.2; margin-left: 20px; max-width: 300px; }
+.section-title span {
+    font-family: var(--font-mono); color: var(--accent);
+    margin-right: 15px; font-size: 20px; font-weight: 400;
+}
+.section-title::after {
+    content: ""; display: block; flex-grow: 1; height: 1px;
+    background: var(--text-secondary); opacity: 0.2;
+    margin-left: 20px; max-width: 300px;
+}
 
-/* Estilo Base de las Cajas */
-.content-box, .cv-item, .project-card, .term {
+/* Caja glassmorphism base */
+.content-box {
     background-color: var(--card-bg); backdrop-filter: blur(10px);
     border: 1px solid var(--border-card); padding: 30px;
     border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s, border-color 0.3s;
 }
-.content-box:hover, .cv-item:hover, .project-card:hover, .term:hover {
+.content-box:hover {
     transform: translateY(-5px); border-color: var(--accent);
 }
 
-/* Botones */
+/* Botón primario (usado en sección habilidades) */
 .btn-primary {
     padding: 15px 35px; border: 1px solid var(--accent); color: var(--accent);
     text-decoration: none; border-radius: 4px; font-family: var(--font-mono); font-size: 14px;
     transition: all 0.3s ease; font-weight: 500; background: transparent;
 }
-.btn-primary:hover { background: rgba(0, 255, 195, 0.1); box-shadow: 0 0 15px rgba(0, 255, 195, 0.2); }
-
-.btn-outline {
-    padding: 15px 30px; border: 1px solid var(--text-secondary); color: var(--text-secondary);
-    text-decoration: none; border-radius: 4px; font-family: var(--font-mono); font-size: 14px;
-    transition: 0.3s; font-weight: 500;
+.btn-primary:hover {
+    background: rgba(0, 255, 195, 0.1);
+    box-shadow: 0 0 15px rgba(0, 255, 195, 0.2);
 }
 
 
 /* =========================================
-   6. SECCIÓN EXPERTISE
+   6. SECCIÓN HABILIDADES (EXPERTISE)
    ========================================= */
 .expertise-grid {
     display: grid;
@@ -298,28 +395,35 @@ section { padding: 120px 50px; max-width: 1000px; margin: 0 auto; }
     width: 120%; margin-left: -10%; max-width: 1400px;
     margin-top: 50px; margin-bottom: 50px;
     border: 2px solid rgba(255, 255, 255, 0.8);
-    background-color: transparent; 
 }
 .expert-card {
-    padding: 45px 30px; 
+    padding: 45px 30px;
     border-right: 2px solid rgba(255, 255, 255, 0.8);
     display: flex; flex-direction: column; justify-content: flex-start;
 }
 .expert-card:last-child { border-right: none; }
 .expert-header { margin-bottom: 25px; }
-.icon-expert { margin-bottom: 20px; color: var(--text-primary); transform: scale(1.1); transform-origin: left; }
+.icon-expert {
+    margin-bottom: 20px; color: var(--text-primary);
+    transform: scale(1.1); transform-origin: left;
+}
 .expert-title {
     font-family: var(--font-main); font-size: 22px; font-weight: 800;
-    color: var(--text-primary); line-height: 1.2; position: relative; display: inline-block;
+    color: var(--text-primary); line-height: 1.2;
+    position: relative; display: inline-block;
 }
 .expert-title::after {
     content: ""; display: block; width: 60px; height: 4px;
     margin-top: 10px; border-radius: 2px;
 }
-.underline-pink::after { background-color: #ff4081; box-shadow: 0 0 10px #ff4081; }
-.underline-blue::after { background-color: #448aff; box-shadow: 0 0 10px #448aff; }
+.underline-pink::after   { background-color: #ff4081; box-shadow: 0 0 10px #ff4081; }
+.underline-blue::after   { background-color: #448aff; box-shadow: 0 0 10px #448aff; }
 .underline-orange::after { background-color: #ffab40; box-shadow: 0 0 10px #ffab40; }
-.code-tag { font-family: var(--font-mono); color: var(--text-secondary); font-size: 13px; opacity: 0.7; margin: 10px 0; }
+
+.code-tag {
+    font-family: var(--font-mono); color: var(--text-secondary);
+    font-size: 13px; opacity: 0.7; margin: 10px 0;
+}
 .expert-desc {
     font-size: 15px; color: var(--text-secondary); line-height: 1.6;
     padding-left: 15px; border-left: 3px solid rgba(255, 255, 255, 0.5);
@@ -328,128 +432,149 @@ section { padding: 120px 50px; max-width: 1000px; margin: 0 auto; }
 
 
 /* =========================================
-   7. SECCIÓN CV
+   7. SECCIÓN TRAYECTORIA (TIMELINE)
    ========================================= */
-.cv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-.cv-item h4 { color: var(--text-primary); margin-bottom: 15px; font-size: 18px; }
-.cv-item p, .cv-item li { font-size: 15px; color: var(--text-secondary); }
-.tech-list { list-style: none; margin-top: 15px; }
-.tech-list li::before { content: "▹ "; color: var(--accent); margin-right: 5px; }
-.institution, .date { font-family: var(--font-mono); font-size: 13px; color: var(--accent); display: block; margin-top: 8px; opacity: 0.8; }
+.trayectoria-section { padding-top: 80px; }
 
+.timeline {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 32px;
+}
 
-/* =========================================
-   8. SECCIÓN PRÁCTICAS (PROYECTOS)
-   ========================================= */
-.projects-grid {
+.timeline-item {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px; margin-top: 40px;
+    grid-template-columns: 28px 1fr;
+    gap: 0 24px;
+    align-items: flex-start;
 }
-.project-card {
-    background-color: var(--card-bg);
+
+.timeline-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6px;
+}
+
+.timeline-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--bg-base);
+    border: 2px solid var(--text-secondary);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-dot--accent {
+    border-color: var(--accent);
+    box-shadow: 0 0 10px rgba(0, 255, 195, 0.35);
+}
+
+.timeline-item:hover .timeline-dot {
+    border-color: var(--accent);
+    box-shadow: 0 0 12px rgba(0, 255, 195, 0.3);
+}
+
+.timeline-line {
+    width: 1px;
+    flex-grow: 1;
+    min-height: 40px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.04));
+    margin-top: 4px;
+}
+
+.timeline-card {
+    margin-bottom: 32px;
+    padding: 28px 32px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.timeline-item:last-child .timeline-card { margin-bottom: 0; }
+
+.timeline-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.timeline-badge {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(0, 255, 195, 0.08);
+    border: 1px solid rgba(0, 255, 195, 0.2);
+    padding: 3px 10px;
+    border-radius: 4px;
+}
+
+.timeline-badge--alt {
+    color: #a78bfa;
+    background: rgba(167, 139, 250, 0.08);
+    border-color: rgba(167, 139, 250, 0.2);
+}
+
+.timeline-date {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-secondary);
+    opacity: 0.6;
+}
+
+.timeline-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.timeline-subtitle {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-secondary);
+    opacity: 0.7;
+    margin-bottom: 14px;
+}
+
+.timeline-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 18px;
+}
+
+.timeline-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px; overflow: hidden;
-    display: flex; flex-direction: column;
+    padding: 3px 10px;
+    border-radius: 3px;
+    transition: border-color 0.2s ease, color 0.2s ease;
 }
-.project-image { width: 100%; height: 200px; background-color: #000; }
-.project-image img { width: 100%; height: 100%; object-fit: cover; }
-.project-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
-.project-content h4 { color: var(--text-primary); margin-bottom: 5px; font-size: 18px; }
-.project-cat { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; opacity: 0.7; }
-.project-footer {
-    margin-top: auto; border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 15px; display: flex; gap: 10px;
-    font-size: 12px; font-family: var(--font-mono);
+.timeline-card:hover .tag {
+    border-color: rgba(0, 255, 195, 0.2);
+    color: var(--text-primary);
 }
-.footer-action { color: var(--accent); text-decoration: none; font-weight: bold; cursor: pointer; text-transform: uppercase; }
-.footer-action:hover { color: #fff; }
-.interactivo { cursor: pointer; }
-.separator { opacity: 0.3; }
 
 
 /* =========================================
-   9. VENTANAS MODALES (EQUIPO)
-   ========================================= */
-.modal-overlay {
-    display: none; position: fixed;
-    z-index: 9999; top: 0; left: 0; width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.85); backdrop-filter: blur(5px);
-    justify-content: center; align-items: center;
-}
-.modal-caja {
-    background-color: #151515; width: 90%; max-width: 750px;
-    border: 1px solid var(--accent); border-radius: 10px;
-    box-shadow: 0 0 40px rgba(0, 255, 195, 0.2);
-    position: relative; overflow: hidden;
-    animation: aparecer 0.3s ease;
-}
-@keyframes aparecer {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-.btn-cerrar {
-    position: absolute; top: 10px; right: 20px;
-    font-size: 30px; color: #fff; cursor: pointer; z-index: 10;
-}
-.modal-grid { display: grid; grid-template-columns: 200px 1fr; min-height: 300px; }
-.modal-sidebar { background-color: #0a0a0a; border-right: 1px solid rgba(255,255,255,0.1); padding: 20px; }
-.modal-sidebar h3 { font-size: 14px; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 15px; }
-.modal-sidebar ul { list-style: none; padding: 0; }
-.modal-sidebar li { padding: 10px; color: var(--text-secondary); cursor: pointer; border-radius: 5px; margin-bottom: 5px; }
-.modal-sidebar li:hover { background-color: rgba(255,255,255,0.1); }
-.modal-sidebar li.seleccionado {
-    background-color: rgba(0, 255, 195, 0.15); color: var(--accent);
-    font-weight: bold; border-left: 3px solid var(--accent);
-}
-.modal-info { padding: 30px; display: flex; flex-direction: column; justify-content: center; }
-.info-miembro { display: none; }
-.info-miembro.visible { display: block; animation: fadeIn 0.4s; }
-.info-miembro h2 {
-    color: #fff; font-size: 28px; margin-bottom: 10px;
-    border-bottom: 2px solid var(--accent); display: inline-block;
-}
-.bio {
-    font-style: italic; color: #ccc;
-    background: rgba(255,255,255,0.05); padding: 15px;
-    border-radius: 8px; margin-bottom: 20px;
-}
-.btn-copiar {
-    background: transparent; border: 1px solid var(--accent);
-    color: var(--accent); padding: 10px 20px; cursor: pointer;
-    font-family: monospace; transition: 0.3s;
-}
-.btn-copiar:hover { background: var(--accent); color: #000; }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-
-/* =========================================
-   10. SECCIÓN TEMARIO
-   ========================================= */
-.syllabus-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 30px; }
-.term {
-    display: flex; flex-direction: column;
-    height: 100%;
-}
-.term-header {
-    display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;
-}
-.term-icon { font-size: 24px; }
-.term h4 { color: var(--text-primary); font-size: 18px; font-weight: 700; margin: 0; }
-.syllabus-list { list-style: none; padding-left: 0; margin: 0; }
-.syllabus-list li {
-    margin-bottom: 10px; color: var(--text-secondary); font-size: 13px;
-    line-height: 1.5; position: relative; padding-left: 15px;
-}
-.syllabus-list li::before {
-    content: "•"; color: var(--accent); position: absolute; left: 0; font-weight: bold;
-}
-.syllabus-list strong { color: var(--text-primary); font-weight: 600; }
-
-
-/* =========================================
-   11. FOOTER
+   8. FOOTER
    ========================================= */
 footer {
     text-align: center; padding: 40px 20px;
@@ -459,29 +584,130 @@ footer {
 
 
 /* =========================================
-   12. RESPONSIVE (MÓVIL)
+   9. RESPONSIVE (MÓVIL)
    ========================================= */
 @media (max-width: 950px) {
     /* Navbar */
     .navbar { padding: 15px 20px; flex-direction: column; gap: 15px; }
     .nav-left, .nav-right { width: 100%; justify-content: center; }
     .nav-links { width: 100%; justify-content: center; gap: 15px; flex-wrap: wrap; }
-    
+
     /* Contacto */
-    .texto_correo { display: block; font-size: 11px; } 
+    .texto_correo { display: block; font-size: 11px; }
     .separador_entre_correo_iconos { display: block; margin: 0 8px; }
     .apartado_contacto_arriba_derecha { padding: 8px 15px; justify-content: center; }
-    
+
+    /* Hero */
+    .name { white-space: normal; }
+    .subtitle { white-space: normal; }
+
     /* Expertise */
     .expertise-grid { grid-template-columns: 1fr; width: 100%; margin-left: 0; }
     .expert-card { border-right: none; border-bottom: 2px solid rgba(255, 255, 255, 0.8); }
     .expert-card:last-child { border-bottom: none; }
-    
-    /* Temario */
-    .syllabus-container { grid-template-columns: 1fr; }
-    
-    /* Modales */
-    .modal-grid { grid-template-columns: 1fr; }
-    .modal-sidebar { display: flex; gap: 10px; overflow-x: auto; padding: 10px; }
-    .modal-sidebar h3 { display: none; }
+
+    /* Timeline */
+    .timeline { padding-left: 0; }
+    .timeline-item { grid-template-columns: 20px 1fr; gap: 0 16px; }
+    .timeline-card { padding: 20px; }
+
+    /* Proyectos */
+    .projects-grid-2col { grid-template-columns: 1fr; }
+}
+
+
+/* =========================================
+   10. NAV CV LINK
+   ========================================= */
+.nav-cv-link {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    border: 1px solid rgba(0, 255, 195, 0.35);
+    padding: 3px 9px;
+    border-radius: 4px;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+.nav-cv-link:hover {
+    background: rgba(0, 255, 195, 0.1);
+    box-shadow: 0 0 10px rgba(0, 255, 195, 0.2);
+}
+
+
+/* =========================================
+   11. SECCIÓN PROYECTOS — TARJETAS
+   ========================================= */
+.projects-grid-2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    margin-top: 10px;
+}
+
+.project-card-custom {
+    background-color: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-card);
+    border-radius: 12px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.project-card-custom:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.project-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.project-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    opacity: 0.7;
+}
+.project-github-link:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    opacity: 1;
+}
+
+.project-card-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.project-card-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.project-card-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    padding-top: 16px;
 }

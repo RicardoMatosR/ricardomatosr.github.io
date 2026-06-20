@@ -52,16 +52,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isDeleting) {
             textElement.textContent = currentWord.substring(0, charIndex - 1);
             charIndex--;
-            typeSpeed = 50; 
+            typeSpeed = 30;
         } else {
             textElement.textContent = currentWord.substring(0, charIndex + 1);
             charIndex++;
-            typeSpeed = 150; 
+            typeSpeed = 80;
         }
 
         if (!isDeleting && charIndex === currentWord.length) {
             isDeleting = true;
-            typeSpeed = 2000; 
+            typeSpeed = 1200;
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             wordIndex = (wordIndex + 1) % words.length;
@@ -106,6 +106,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Error al copiar: ', err);
             });
         });
+    }
+
+    // --- 1.4 NAVBAR: TRANSPARENTE EN TOP, BLUR AL HACER SCROLL ---
+    const mainNav = document.getElementById('main-nav');
+    if (mainNav) {
+        const handleNavScroll = () => {
+            if (window.scrollY > 60) {
+                mainNav.classList.add('scrolled');
+            } else {
+                mainNav.classList.remove('scrolled');
+            }
+        };
+        window.addEventListener('scroll', handleNavScroll, { passive: true });
+        handleNavScroll();
     }
 });
 

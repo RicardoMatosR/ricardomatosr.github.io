@@ -28,25 +28,20 @@
 
     <div id="dynamic-bg"></div>
 
-    <nav class="navbar" aria-label="Navegación principal">
+    <nav class="navbar" id="main-nav" aria-label="Navegación principal">
         <div class="nav-left">
             <div class="logo">MATOS_DEV<span class="dot">.</span></div>
             <button id="lang-toggle" class="lang-btn">EN</button>
         </div>
 
         <ul class="nav-links">
-            <li><span class="nav-num">01</span><a href="https://ricardomatosr.github.io/index.html">Inicio</a></li>
-            <li><span class="nav-num">02</span><a href="https://ricardomatosr.github.io/about.html">Sobre mí</a></li>
-            <li><span class="nav-num">03</span><a
-                    href="https://ricardomatosr.github.io/index.html#expertise">Habilidades</a></li>
-            <li><span class="nav-num">04</span><a href="https://ricardomatosr.github.io/about.html#cv">Curriculum
-                    Vitae</a></li>
-            <li><span class="nav-num">05</span><a href="https://ricardomatosr.github.io/projects.html">Proyectos</a>
-            </li>
-            <li><span class="nav-num">06</span><a href="https://ricardomatosr.github.io/syllabus.html">Temario</a></li>
-            <li><span class="nav-num">DOC</span><a
-                    href="https://ricardomatosr.github.io/archivos/Portfolio%20Web%20Ricardo%20Matos.pdf"
-                    target="_blank" class="memoria-link">Memoria</a></li>
+            <li><a href="#inicio"><span class="nav-slash">// </span><span data-i18n="nav_inicio">inicio</span></a></li>
+            <li><a href="#trayectoria"><span class="nav-slash">// </span><span
+                        data-i18n="nav_trayectoria">trayectoria</span></a></li>
+            <li><a href="#habilidades"><span class="nav-slash">// </span><span
+                        data-i18n="nav_habilidades">habilidades</span></a></li>
+            <li><a href="#proyectos"><span class="nav-slash">// </span><span
+                        data-i18n="nav_proyectos">proyectos</span></a></li>
         </ul>
 
         <div class="nav-right">
@@ -61,7 +56,10 @@
                 <span class="separador_entre_correo_iconos">|</span>
 
                 <div class="mini_iconos">
-                    <a href="https://www.linkedin.com/feed/" target="_blank" title="LinkedIn">
+                    <a href="./Ricardo_Matos_CV.pdf" download="Ricardo_Matos_CV.pdf" class="nav-cv-link"
+                        data-i18n-title="nav_cv_download" title="Descargar CV">CV</a>
+                    <a href="https://www.linkedin.com/in/ricardo-matos-romero-397502256/" target="_blank"
+                        title="LinkedIn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
@@ -78,26 +76,12 @@
                             </path>
                         </svg>
                     </a>
-                    <a href="https://www.instagram.com/ricardomaatos_/" target="_blank" title="Instagram"
-                        class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
     <section id="inicio" class="hero">
-
-        <div class="console-badge">
-            <span class="console-prompt">>_</span>
-            System.out.println("<span class="console-string">Portfolio</span>");
-        </div>
 
         <h1 class="name">Ricardo Matos Romero.</h1>
         <h2 class="subtitle">- <span id="typing-text"></span> -</h2>
@@ -106,15 +90,14 @@
             Código limpio. Diseño funcional. Soluciones eficientes.
         </p>
 
-        <div class="hero-seo-text"
-            style="max-width: 800px; margin: 25px auto; text-align: left; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; opacity: 0.9; padding: 0 20px;">
-            <h2 style="font-size: 1.8rem; color: #fff; margin-bottom: 15px;">¡Hola! Soy Ricardo Matos</h2>
-            <p style="margin-bottom: 15px;">Bienvenido a mi espacio digital. Soy estudiante de <strong>Desarrollo de Aplicaciones Multiplataforma (DAM)</strong> y alumno de la escuela de programación <strong>42</strong>.</p>
-            <p style="margin-bottom: 15px;">Me apasiona la tecnología y disfruto creando soluciones eficientes y funcionales. Mi objetivo principal es seguir aprendiendo y aportando valor a través del desarrollo de software de calidad.</p>
-            <p>Descubre más <a href="https://ricardomatosr.github.io/about.html" class="contextual-link">sobre mi trayectoria</a>, o explora los <a href="https://ricardomatosr.github.io/projects.html" class="contextual-link">proyectos prácticos</a> en los que he estado trabajando.</p>
+        <div class="hero-cta">
+            <a href="#proyectos" class="hero-btn-primary" id="btn-ver-proyectos" data-i18n="btn_ver_proyectos">Ver
+                Proyectos</a>
+            <a href="mailto:ricardomatos04@gmail.com" class="hero-btn-secondary" id="btn-contactar"
+                data-i18n="btn_contactar">Contactar</a>
         </div>
 
-        <a href="#carta" class="scroll-down-link" title="Bajar">
+        <a href="#trayectoria" class="scroll-down-link" title="Bajar">
             <div class="circle-arrow">
                 <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
                     <path d="M7 13l5 5 5-5M12 4v14" />
@@ -124,74 +107,230 @@
         </a>
     </section>
 
-    <section id="expertise" class="container">
-        <h3 class="section-title"><span>03.</span> <span data-i18n="skills_title">My Expertise</span></h3>
-        <div class="expertise-grid">
-            <div class="expert-card">
-                <div class="expert-header">
-                    <div class="icon-expert">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
-                    </div>
-                    <h4 class="expert-title underline-pink" data-i18n="skill_sw">Software<br>Development</h4>
+
+    <!-- SECCIÓN: TRAYECTORIA -->
+    <section id="trayectoria" class="container trayectoria-section">
+        <h3 class="section-title"><span>01.</span> <span data-i18n="section_trayectoria">Trayectoria</span></h3>
+
+        <div class="timeline">
+
+            <!-- Entrada 1: DAM -->
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-line"></div>
                 </div>
-                <div class="code-tag">&lt;h3&gt;</div>
-                <p class="expert-desc" data-i18n="skill_sw_desc">Experiencia tanto en programación funcional como OOP:
-                    Python, Java, JavaScript y C#.</p>
-                <div class="code-tag">&lt;/h3&gt;</div>
+                <div class="timeline-card content-box">
+                    <div class="timeline-header">
+                        <span class="timeline-badge" data-i18n="tray_dam_badge">Formación Reglada</span>
+                        <span class="timeline-date" data-i18n="tray_dam_date">2023 — Actualidad</span>
+                    </div>
+                    <h4 class="timeline-title" data-i18n="tray_dam_title">Grado Superior DAM</h4>
+                    <p class="timeline-subtitle" data-i18n="tray_dam_subtitle">Desarrollo de Aplicaciones
+                        Multiplataforma</p>
+                    <p class="timeline-desc" data-i18n="tray_dam_desc">Formación técnica oficial en CES Juan Pablo II,
+                        con enfoque en desarrollo
+                        de aplicaciones para entornos web, móvil y escritorio. Stack principal: Java, SQL, JavaScript,
+                        HTML5 y CSS3.</p>
+                    <div class="timeline-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML5 · CSS3</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="expert-card">
-                <div class="expert-header">
-                    <div class="icon-expert">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="3"></circle>
-                            <path
-                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
-                            </path>
-                        </svg>
-                    </div>
-                    <h4 class="expert-title underline-blue" data-i18n="skill_front">Frontend Dev<br>React, NextJS</h4>
+            <!-- Entrada 2: 42 Madrid -->
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <div class="timeline-dot timeline-dot--accent"></div>
                 </div>
-                <div class="code-tag">&lt;h3&gt;</div>
-                <p class="expert-desc" data-i18n="skill_front_desc">Apasionado por UI/UX. Creación de interfaces
-                    modernas con HTML, CSS, JS y frameworks.</p>
-                <div class="code-tag">&lt;/h3&gt;</div>
+                <div class="timeline-card content-box">
+                    <div class="timeline-header">
+                        <span class="timeline-badge timeline-badge--alt" data-i18n="tray_42_badge">Formación
+                            Intensiva</span>
+                        <span class="timeline-date" data-i18n="tray_42_date">2024 — Actualidad</span>
+                    </div>
+                    <h4 class="timeline-title" data-i18n="tray_42_title">42 Madrid</h4>
+                    <p class="timeline-subtitle" data-i18n="tray_42_subtitle">Escuela de Programación · Fundación
+                        Telefónica</p>
+                    <p class="timeline-desc" data-i18n="tray_42_desc">Metodología peer-to-peer sin profesores, basada en
+                        proyectos reales y
+                        trabajo colaborativo. Enfocada en resolución de problemas complejos, sistemas Unix/Linux, C y
+                        algoritmos de bajo nivel.</p>
+                    <div class="timeline-tags">
+                        <span class="tag">C</span>
+                        <span class="tag">Unix/Linux</span>
+                        <span class="tag">Algoritmos</span>
+                        <span class="tag">Peer-to-peer</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="expert-card">
-                <div class="expert-header">
-                    <div class="icon-expert">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                            <polyline points="2 17 12 22 22 17"></polyline>
-                            <polyline points="2 12 12 17 22 12"></polyline>
-                        </svg>
-                    </div>
-                    <h4 class="expert-title underline-orange" data-i18n="skill_mobile">Multiplatform<br>Android, iOS
-                    </h4>
-                </div>
-                <div class="code-tag">&lt;h3&gt;</div>
-                <p class="expert-desc" data-i18n="skill_mobile_desc">Habilidad para desarrollar aplicaciones móviles
-                    híbridas y soluciones cross-platform.</p>
-                <div class="code-tag">&lt;/h3&gt;</div>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 40px;">
-            <p style="color: var(--text-secondary); margin-bottom: 20px;">¿Quieres ver cómo aplico estas habilidades?
-            </p>
-            <a href="projects.html" class="btn-primary"
-                style="display: inline-block; padding: 12px 30px; background: linear-gradient(135deg, #00ffc3 0%, #00d4ff 100%); color: #1a1a1a; text-decoration: none; border-radius: 5px; font-weight: 600; transition: transform 0.3s;">Ver
-                Mis Proyectos →</a>
         </div>
     </section>
 
+    <!-- SECCIÓN: HABILIDADES -->
+    <section id="habilidades" class="container">
+        <h3 class="section-title"><span>02.</span> <span data-i18n="section_habilidades">Habilidades</span></h3>
+        <div class="expertise-grid">
+
+            <!-- Tarjeta 1: Software Engineering -->
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div class="icon-expert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h4 class="expert-title underline-pink" data-i18n="skill_sw_title">Software<br>Engineering</h4>
+                </div>
+                <div class="code-tag">&lt;h3&gt;</div>
+                <p class="expert-desc" data-i18n="skill_sw_desc">Sólida base en algoritmia, programación funcional y
+                    orientada a objetos (OOP).
+                    Creación de lógica de negocio robusta.</p>
+                <div class="code-tag">&lt;/h3&gt;</div>
+                <div class="timeline-tags" style="margin-top: 12px;">
+                    <span class="tag">C</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Backend & Data Architecture -->
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div class="icon-expert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                        </svg>
+                    </div>
+                    <h4 class="expert-title underline-blue" data-i18n="skill_backend_title">Backend &<br>Data
+                        Architecture</h4>
+                </div>
+                <div class="code-tag">&lt;h3&gt;</div>
+                <p class="expert-desc" data-i18n="skill_backend_desc">Diseño de bases de datos relacionales, modelos
+                    Entidad-Relación e integración de
+                    servicios mediante APIs REST.</p>
+                <div class="code-tag">&lt;/h3&gt;</div>
+                <div class="timeline-tags" style="margin-top: 12px;">
+                    <span class="tag">SQL</span>
+                    <span class="tag">REST API</span>
+                    <span class="tag">JSON</span>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3: Systems & AppSec -->
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div class="icon-expert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="expert-title underline-orange" data-i18n="skill_systems_title">Systems &<br>AppSec</h4>
+                </div>
+                <div class="code-tag">&lt;h3&gt;</div>
+                <p class="expert-desc" data-i18n="skill_systems_desc">Administración de entornos Unix/Linux y desarrollo
+                    de software con mentalidad
+                    orientada a la seguridad (DevSecOps).</p>
+                <div class="code-tag">&lt;/h3&gt;</div>
+                <div class="timeline-tags" style="margin-top: 12px;">
+                    <span class="tag">Unix/Linux</span>
+                    <span class="tag">Bash</span>
+                    <span class="tag">Secure Coding</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN: PROYECTOS -->
+    <section id="proyectos" class="container">
+        <h3 class="section-title"><span>03.</span> <span data-i18n="section_proyectos">Proyectos</span></h3>
+
+        <div class="projects-grid-2col">
+
+            <!-- Proyecto 1: LoL API -->
+            <div class="project-card-custom">
+                <div class="project-card-body">
+                    <div class="project-card-top">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                        </svg>
+                        <a href="AQUÍ_IRÁ_TU_LINK" target="_blank" class="project-github-link" title="Ver en GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                            <span data-i18n="proj_github_link">Ver en GitHub</span>
+                        </a>
+                    </div>
+                    <h4 class="project-card-title" data-i18n="proj_lol_title">League of Legends API Integrator</h4>
+                    <p class="project-card-desc" data-i18n="proj_lol_desc">Aplicación backend conectada a la API oficial
+                        de Riot Games para el
+                        consumo, procesamiento en formato JSON y estructuración de estadísticas de partidas y jugadores
+                        en tiempo real.</p>
+                </div>
+                <div class="project-card-footer">
+                    <div class="timeline-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">REST API</span>
+                        <span class="tag">JSON</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 2: CasinoHub -->
+            <div class="project-card-custom">
+                <div class="project-card-body">
+                    <div class="project-card-top">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                        <a href="AQUÍ_IRÁ_TU_LINK" target="_blank" class="project-github-link" title="Ver en GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                            <span data-i18n="proj_github_link">Ver en GitHub</span>
+                        </a>
+                    </div>
+                    <h4 class="project-card-title" data-i18n="proj_casino_title">CasinoHub Multi-Game</h4>
+                    <p class="project-card-desc" data-i18n="proj_casino_desc">Desarrollo de una arquitectura modular
+                        para integrar la lógica de
+                        múltiples juegos de casino, gestionando el estado y la interacción a través de un frontend
+                        dinámico.</p>
+                </div>
+                <div class="project-card-footer">
+                    <div class="timeline-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML5</span>
+                        <span class="tag">Arquitectura Modular</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <footer>
         <p data-i18n="footer_text">Diseñado y desarrollado por Ricardo Matos.</p>
