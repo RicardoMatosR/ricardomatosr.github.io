@@ -71,7 +71,7 @@ The ecosystem consists of a Single Page architecture supported by modular data f
 
 ---
 
-## 5. Deployment Instructions
+## 6. Deployment Instructions
 
 This project requires no Node.js dependencies or build processes.
 
