@@ -1,82 +1,87 @@
-# 💻 Portfolio Personal - Ricardo Matos
+# 💻 Personal Portfolio - Ricardo Matos
 
-[![Visita el Portfolio](https://img.shields.io/badge/URL-ricardomatosr.github.io-blue?style=for-the-badge)](https://ricardomatosr.github.io/)
+[![Visit Portfolio](https://img.shields.io/badge/URL-ricardomatosr.github.io-050706?style=for-the-badge&logo=googlechrome&logoColor=00ffc3&borderColor=00ffc3)](https://ricardomatosr.github.io/)
 
-Repositorio del proyecto web de mi portfolio personal, desarrollado para documentar mi progreso, proyectos y plan de estudios en el ciclo de **Desarrollo de Aplicaciones Multiplataforma (DAM)**.
+Official repository of my personal web portfolio. A space meticulously designed to document my trajectory as a **Backend Engineer & System Architect**, combining my formal education in **Multiplatform Application Development (DAM)** with the intensive, peer-to-peer methodology of **42 Madrid**.
 
-<img width="1920" height="613" alt="image" src="https://github.com/user-attachments/assets/34ba8906-1ec6-418c-9cf0-8c5886eaf7e8" />
-
-
----
-
-## 📋 Índice de Contenidos
-
-1. [Objetivos del Proyecto](#1-objetivos-del-proyecto)
-2. [Stack Tecnológico](#2-stack-tecnológico)
-3. [Arquitectura del Repositorio](#3-arquitectura-del-repositorio)
-4. [Funcionalidades Clave](#4-funcionalidades-clave)
-5. [Instrucciones de Despliegue](#5-instrucciones-de-despliegue)
-6. [Contacto](#6-contacto)
+<img width="2550" height="1297" alt="image" src="https://github.com/user-attachments/assets/62ed0d6e-a222-4f8a-81ee-2daf31f6bbcb" />
 
 ---
 
-## 1. Objetivos del Proyecto
+## 📋 Table of Contents
 
-El desarrollo de este portfolio cumple con los siguientes objetivos técnicos y académicos:
-- Centralizar y exponer de forma pública los proyectos desarrollados durante el ciclo de DAM.
-- Aplicar buenas prácticas de desarrollo web Frontend (HTML semántico, CSS responsivo y JS modular).
-- Implementar técnicas de internacionalización y optimización SEO básica.
-- Gestionar el control de versiones y el despliegue continuo mediante GitHub Pages.
-
----
-
-## 2. Stack Tecnológico
-
-Proyecto desarrollado íntegramente con tecnologías nativas (Vanilla) para garantizar rendimiento y control sobre el DOM:
-
-* ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white) **Estructura semántica y modular.**
-* ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=flat-square&logo=css3&logoColor=white) **Estilos, Flexbox/Grid y diseño responsivo.**
-* ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat-square&logo=javascript&logoColor=%23F7DF1E) **Lógica de cliente y manipulación del DOM.**
-* ![GitHub Pages](https://img.shields.io/badge/github%20pages-121013?style=flat-square&logo=github&logoColor=white) **Alojamiento estático.**
+1. [Project Objectives](#1-project-objectives)
+2. [Tech Stack](#2-tech-stack)
+3. [Repository Architecture](#3-repository-architecture)
+4. [Key Features](#4-key-features)
+5. [Deployment Instructions](#5-deployment-instructions)
+6. [Contact](#6-contact)
 
 ---
 
-## 3. Arquitectura del Repositorio
+## 1. Project Objectives
 
-Listado de los archivos principales que componen el ecosistema de la web:
-
-- 📄 `index.html` - Página de inicio (Landing).
-- 📄 `about.html` - Perfil técnico y biografía.
-- 📄 `projects.html` - Galería de trabajos.
-- 📄 `syllabus.html` - Desglose del temario de DAM.
-- 🎨 `style.css` - Hoja de estilos global.
-- ⚙️ `script.js` - Controladores principales.
-- 🌐 `translations.js` - Diccionario de datos para i18n.
-- 📄 `CV RICARDO MATOS 2026.pdf` - Documento del currículum.
-- 🔍 `sitemap.xml` / `robots.txt` - Archivos de rastreo para buscadores.
+The development of this portfolio fulfills the following technical and professional goals:
+- **Professional Projection:** Centralize and showcase my backend (Java, Hibernate, Python) and systems (C, Unix/Linux) knowledge through real-world projects and clean code.
+- **Frontend Performance:** Build a high-performance UI ("Zero Dependencies") without relying on bulky external frameworks.
+- **Internationalization (i18n):** Implement a dynamic translation system to adapt the presentation to international corporate environments.
+- **UI/UX Design:** Create an immersive experience using a "minimalist/cyberpunk" aesthetic with deep background gradients and fluid animations.
 
 ---
 
-## 4. Funcionalidades Clave
+## 2. Tech Stack
 
-* **Soporte Multi-idioma:** Sistema dinámico creado en JS (`translations.js`) para cambiar el idioma de la interfaz sin recargar la página.
-* **Responsive Design:** Interfaz fluida adaptable a dispositivos móviles, tablets y escritorio mediante Media Queries.
-* **Optimización para Buscadores:** Implementación de sitemap y robots.txt siguiendo estándares SEO.
-* **Navegación Modular:** División del contenido en múltiples archivos HTML para mejorar el mantenimiento y la escalabilidad.
+This project is built entirely with native (Vanilla) technologies to ensure maximum performance and absolute control over the DOM:
+
+* ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white) **Semantic, accessible, and modular structure.**
+* ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=flat-square&logo=css3&logoColor=white) **Global variables, Flexbox/Grid, CSS animations, and fluid responsive design (`clamp()`).**
+* ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat-square&logo=javascript&logoColor=%23F7DF1E) **Client-side logic, DOM manipulation, and translation mapping.**
+* ![GitHub Pages](https://img.shields.io/badge/github%20pages-121013?style=flat-square&logo=github&logoColor=white) **Continuous Integration and static hosting.**
 
 ---
 
-## 5. Instrucciones de Despliegue
+## 3. Repository Architecture
 
-Este proyecto no requiere instalación de dependencias ni procesos de compilación (build).
+The ecosystem consists of a Single Page architecture supported by modular data files:
 
-### Entorno de desarrollo local:
+- 📄 `index.html` - Main landing page (Hero, Experience, Skills, Projects).
+- 📄 `404.html` - Custom terminal-style error page.
+- 🎨 `style.css` - Global stylesheet (dark theme engine and accent palettes).
+- ⚙️ `script.js` - Main controllers (Typewriter effect, language manager, UI events).
+- 🌐 `translations.js` - JSON-like data dictionary for the i18n system (EN/ES).
+- 📄 `Ricardo_Matos_CV.pdf` - Downloadable resume document.
+
+---
+
+## 4. Key Features
+
+* **Instant Multi-language Support:** Dynamic JS system (`translations.js`) that translates the entire UI instantly without page reloads, using **English** as the default native language.
+* **"Deep-Dark" Aesthetic:** Custom UI featuring a "black hole" radial gradient depth, glowing accents, and smooth timeline animations.
+* **Dynamic Timeline:** Professional trajectory design with interactive markers and cohesive time connections.
+* **Absolute Responsive Design:** Fluid typography and containers adapting perfectly to mobile, tablet, and ultrawide displays.
+* **Zero Dead Code:** Clean, refactored codebase eliminating unnecessary dependencies and orphan functions.
+
+---
+
+## 5. Contact
+
+  LinkedIn: [Ricardo Matos](https://www.linkedin.com/in/ricardo-matos-romero-397502256/)
+  
+  Email: ricardomatosromero04@gmail.com
+
+---
+
+## 6. Deployment Instructions
+
+This project requires no Node.js dependencies or build processes.
+
+### Local Development Environment:
 ```bash
-# 1. Clonar el repositorio
+# 1. Clone the repository
 git clone [https://github.com/RicardoMatosR/ricardomatosr.github.io.git](https://github.com/RicardoMatosR/ricardomatosr.github.io.git)
 
-# 2. Acceder al directorio
+# 2. Navigate to the directory
 cd ricardomatosr.github.io
 
-# 3. Ejecutar
-# Abrir directamente index.html en el navegador o usar un servidor local (ej. Live Server).
+# 3. Execute
+# Open index.html directly in your browser or deploy using a local server (e.g., VS Code Live Server).
