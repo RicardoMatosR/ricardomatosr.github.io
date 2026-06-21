@@ -947,7 +947,7 @@ footer {
 
     /* Projects: single column */
     .projects-grid-2col {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
 }
 
@@ -1119,7 +1119,7 @@ footer {
 
     /* Projects */
     .projects-grid-2col {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 18px;
     }
 
