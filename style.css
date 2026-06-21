@@ -1004,17 +1004,19 @@ footer {
         gap: 10px;
         justify-content: center;
         flex-wrap: wrap;
+        margin-bottom: 10px;
     }
 
     .nav-links a {
-        font-size: 12px;
+        font-size: 0.85rem;
     }
 
     /* Hero */
     .hero {
-        padding-top: 130px;
+        padding-top: 200px;
         padding-bottom: 60px;
         min-height: 100svh;
+        justify-content: flex-start;
     }
 
     .name {
