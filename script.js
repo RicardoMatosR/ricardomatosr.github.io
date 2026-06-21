@@ -4,7 +4,7 @@
 document.addEventListener('DOMContentLoaded', () => {
    
     // --- 0. BILINGUAL SUPPORT ---
-    let currentLang = localStorage.getItem('lang') || 'es';
+    let currentLang = localStorage.getItem('lang') || 'en';
     const langBtn = document.getElementById('lang-toggle');
 
     function updateLanguage() {
@@ -12,6 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const key = el.getAttribute('data-i18n');
             if (translations[currentLang][key]) {
                 el.innerHTML = translations[currentLang][key];
+            }
+        });
+        // Translate title attributes (e.g. CV download tooltip)
+        document.querySelectorAll('[data-i18n-title]').forEach(el => {
+            const key = el.getAttribute('data-i18n-title');
+            if (translations[currentLang][key]) {
+                el.setAttribute('title', translations[currentLang][key]);
             }
         });
         if (langBtn) {
@@ -122,79 +129,5 @@ document.addEventListener('DOMContentLoaded', () => {
         handleNavScroll();
     }
 });
-
-
-/* =========================================
-   PARTE 2: FUNCIONES PARA LAS VENTANAS MODALES
-   (Están fuera para que el HTML las encuentre)
-   ========================================= */
-
-// 2.1 ABRIR VENTANA
-window.abrirModal = function(idModal, idMiembroPorDefecto) {
-    const modal = document.getElementById(idModal);
-    if(modal) {
-        modal.style.display = 'flex'; 
-        document.body.style.overflow = 'hidden'; // Bloquear scroll
-
-        // Activar el primer miembro por defecto
-        const primerLi = modal.querySelector('.modal-sidebar li');
-        if(primerLi) {
-            cambiarMiembro(primerLi, idMiembroPorDefecto);
-        }
-    }
-}
-
-// 2.2 CERRAR VENTANA
-window.cerrarModal = function(idModal) {
-    const modal = document.getElementById(idModal);
-    if(modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Reactivar scroll
-    }
-}
-
-// 2.3 CERRAR SI CLICK FUERA
-window.cerrarSiClickFuera = function(event) {
-    if (event.target.classList.contains('modal-overlay')) {
-        event.target.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-}
-
-// 2.4 CAMBIAR DE MIEMBRO (PESTAÑAS)
-window.cambiarMiembro = function(elementoLi, idInfo) {
-    const modal = elementoLi.closest('.modal-grid');
-    if(!modal) return;
-    
-    // A. Resetear lista izquierda
-    modal.querySelectorAll('.modal-sidebar li').forEach(li => li.classList.remove('seleccionado'));
-    elementoLi.classList.add('seleccionado');
-
-    // B. Resetear info derecha
-    modal.querySelectorAll('.info-miembro').forEach(info => info.classList.remove('visible'));
-    
-    // C. Mostrar info correcta
-    const infoAmostrar = modal.querySelector('#' + idInfo);
-    if(infoAmostrar) {
-        infoAmostrar.classList.add('visible');
-    }
-}
-
-// 2.5 COPIAR CORREO DENTRO DEL MODAL
-window.copiarEmail = function(email, boton) {
-    navigator.clipboard.writeText(email).then(() => {
-        let textoOriginal = boton.innerText;
-        const currentLang = localStorage.getItem('lang') || 'es';
-        boton.innerText = translations[currentLang].modal_copied_btn;
-        boton.style.backgroundColor = "var(--accent)";
-        boton.style.color = "#000";
-
-        setTimeout(() => {
-            boton.innerText = textoOriginal;
-            boton.style.backgroundColor = "transparent";
-            boton.style.color = "var(--accent)";
-        }, 2000);
-    });
-}
 
 

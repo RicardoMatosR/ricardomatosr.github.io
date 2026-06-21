@@ -10,7 +10,7 @@ const translations = {
         "scroll_down": "Bajar",
 
         /* Efecto Typewriter */
-        "typing_titles": ["Backend Developer", "Software Engineer", "Estudiante en 42"],
+        "typing_titles": ["BACKEND ENGINEER", "SYSTEM ARCHITECT", "SOFTWARE DEVELOPER"],
 
         /* Botones Hero */
         "btn_ver_proyectos": "Ver Proyectos",
@@ -22,19 +22,19 @@ const translations = {
         "tray_dam_date": "2023 — Actualidad",
         "tray_dam_title": "Grado Superior DAM",
         "tray_dam_subtitle": "Desarrollo de Aplicaciones Multiplataforma",
-        "tray_dam_desc": "Formación técnica oficial en CES Juan Pablo II, con enfoque en desarrollo de aplicaciones para entornos web, móvil y escritorio. Stack principal: Java, SQL, JavaScript, HTML5 y CSS3.",
+        "tray_dam_desc": "Formación técnica oficial en CES Juan Pablo II. Desarrollo Backend robusto con Java (Hibernate, creación de APIs REST), Python y Kotlin. Diseño avanzado de bases de datos relacionales y no relacionales. Dominio de lenguajes de marcas (HTML5/CSS3) aplicados a la creación de interfaces y páginas web modernas.",
         "tray_42_badge": "Formación Intensiva",
         "tray_42_date": "2024 — Actualidad",
         "tray_42_title": "42 Madrid",
         "tray_42_subtitle": "Escuela de Programación · Fundación Telefónica",
-        "tray_42_desc": "Metodología peer-to-peer sin profesores, basada en proyectos reales y trabajo colaborativo. Enfocada en resolución de problemas complejos, sistemas Unix/Linux, C y algoritmos de bajo nivel.",
+        "tray_42_desc": "Metodología intensiva peer-to-peer sin profesores, basada en proyectos reales y trabajo colaborativo. Dominio de bajo nivel y gestión de memoria con C, algoritmia compleja y sistemas Unix/Linux. Especialización progresiva en Inteligencia Artificial y Machine Learning con Python, apoyado en un uso exhaustivo de Git y GitHub para el control de versiones.",
 
         /* Sección: Habilidades */
         "section_habilidades": "Habilidades",
         "skill_sw_title": "Software<br>Engineering",
         "skill_sw_desc": "Sólida base en algoritmia, programación funcional y orientada a objetos (OOP). Creación de lógica de negocio robusta.",
         "skill_backend_title": "Backend &<br>Data Architecture",
-        "skill_backend_desc": "Diseño de bases de datos relacionales, modelos Entidad-Relación e integración de servicios mediante APIs REST.",
+        "skill_backend_desc": "Diseño de bases de datos relacionales (SQL) y no relacionales (MongoDB), modelos Entidad-Relación e integración de servicios mediante APIs REST.",
         "skill_systems_title": "Systems &<br>AppSec",
         "skill_systems_desc": "Administración de entornos Unix/Linux y desarrollo de software con mentalidad orientada a la seguridad (DevSecOps).",
 
@@ -60,7 +60,7 @@ const translations = {
         "scroll_down": "Scroll Down",
 
         /* Efecto Typewriter */
-        "typing_titles": ["Backend Developer", "Software Engineer", "42 Student"],
+        "typing_titles": ["BACKEND ENGINEER", "SYSTEM ARCHITECT", "SOFTWARE DEVELOPER"],
 
         /* Botones Hero */
         "btn_ver_proyectos": "View Projects",
@@ -72,19 +72,19 @@ const translations = {
         "tray_dam_date": "2023 — Present",
         "tray_dam_title": "Higher Degree in DAM",
         "tray_dam_subtitle": "Multiplatform Application Development",
-        "tray_dam_desc": "Official technical degree at CES Juan Pablo II, focused on building applications for web, mobile and desktop environments. Core stack: Java, SQL, JavaScript, HTML5 and CSS3.",
+        "tray_dam_desc": "Official technical degree at CES Juan Pablo II. Robust Backend development with Java (Hibernate, REST API creation), Python, and Kotlin. Advanced design of relational and non-relational databases. Proficiency in markup languages (HTML5/CSS3) applied to the creation of modern interfaces and web pages.",
         "tray_42_badge": "Intensive Training",
         "tray_42_date": "2024 — Present",
         "tray_42_title": "42 Madrid",
         "tray_42_subtitle": "Coding School · Fundación Telefónica",
-        "tray_42_desc": "Peer-to-peer methodology with no instructors, based on real-world projects and collaborative work. Focused on complex problem-solving, Unix/Linux systems, C and low-level algorithms.",
+        "tray_42_desc": "Intensive peer-to-peer methodology with no instructors, based on real-world projects and collaborative work. Low-level mastery and memory management with C, complex algorithms, and Unix/Linux systems. Progressive specialization in Artificial Intelligence and Machine Learning using Python, supported by extensive use of Git and GitHub for version control.",
 
         /* Sección: Habilidades */
         "section_habilidades": "Skills",
         "skill_sw_title": "Software<br>Engineering",
         "skill_sw_desc": "Strong foundation in algorithms, functional programming and OOP. Building robust, maintainable business logic.",
         "skill_backend_title": "Backend &<br>Data Architecture",
-        "skill_backend_desc": "Relational database design, Entity-Relationship modelling and service integration via REST APIs.",
+        "skill_backend_desc": "Relational (SQL) and non-relational (MongoDB) database design, Entity-Relationship modelling and service integration via REST APIs.",
         "skill_systems_title": "Systems &<br>AppSec",
         "skill_systems_desc": "Unix/Linux environment administration and security-oriented software development (DevSecOps mindset).",
 
