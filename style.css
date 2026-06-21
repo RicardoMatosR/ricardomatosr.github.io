@@ -861,15 +861,20 @@ footer {
 
 
 /* =========================================
-   9. RESPONSIVE (MÓVIL)
+   9. RESPONSIVE — TABLET (≤ 950px)
    ========================================= */
 @media (max-width: 950px) {
 
+    /* Sections */
+    section {
+        padding: 80px 30px;
+    }
+
     /* Navbar */
     .navbar {
-        padding: 15px 20px;
+        padding: 12px 20px;
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
     }
 
     .nav-left,
@@ -881,27 +886,26 @@ footer {
     .nav-links {
         width: 100%;
         justify-content: center;
-        gap: 15px;
+        gap: 12px;
         flex-wrap: wrap;
     }
 
-    /* Contacto */
-    .texto_correo {
-        display: block;
-        font-size: 11px;
-    }
-
-    .separador_entre_correo_iconos {
-        display: block;
-        margin: 0 8px;
-    }
-
+    /* Contacto pill */
     .apartado_contacto_arriba_derecha {
-        padding: 8px 15px;
+        padding: 7px 14px;
+        gap: 10px;
         justify-content: center;
     }
 
-    /* Hero */
+    .texto_correo {
+        font-size: 11px;
+    }
+
+    /* Hero: account for taller stacked navbar */
+    .hero {
+        padding-top: 22vh;
+    }
+
     .name {
         white-space: normal;
         letter-spacing: -1px;
@@ -911,7 +915,7 @@ footer {
         white-space: normal;
     }
 
-    /* Expertise */
+    /* Expertise grid: stack to 1 column */
     .expertise-grid {
         grid-template-columns: 1fr;
         width: 100%;
@@ -941,9 +945,217 @@ footer {
         padding: 20px;
     }
 
-    /* Proyectos */
+    /* Projects: single column */
     .projects-grid-2col {
         grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================
+   9b. RESPONSIVE — MÓVIL (≤ 640px)
+   ========================================= */
+@media (max-width: 640px) {
+
+    /* Sections */
+    section {
+        padding: 70px 18px;
+    }
+
+    /* Navbar: compact row layout */
+    .navbar {
+        padding: 10px 16px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Left: logo + lang button in a row */
+    .nav-left {
+        flex: 0 0 auto;
+        width: auto;
+        justify-content: flex-start;
+    }
+
+    /* Right: hide email, show only icons + CV */
+    .nav-right {
+        flex: 0 0 auto;
+        width: auto;
+        justify-content: flex-end;
+    }
+
+    .texto_correo,
+    .separador_entre_correo_iconos {
+        display: none;
+    }
+
+    .apartado_contacto_arriba_derecha {
+        padding: 6px 12px;
+        gap: 10px;
+        border-radius: 50px;
+    }
+
+    /* Nav links: full width row below logo */
+    .nav-links {
+        order: 3;
+        width: 100%;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    /* Hero */
+    .hero {
+        padding-top: 130px;
+        padding-bottom: 60px;
+        min-height: 100svh;
+    }
+
+    .name {
+        font-size: clamp(2.4rem, 13vw, 4rem);
+        letter-spacing: -1px;
+        white-space: normal;
+        line-height: 1.05;
+    }
+
+    .subtitle {
+        font-size: clamp(18px, 5.5vw, 28px);
+        white-space: normal;
+        margin-bottom: 18px;
+    }
+
+    .hero-slogan {
+        font-size: 0.68rem;
+        letter-spacing: 2.5px;
+        margin-bottom: 28px;
+    }
+
+    /* CTA buttons: stack vertically */
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 40px;
+    }
+
+    .hero-btn-primary,
+    .hero-btn-secondary {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        padding: 12px 24px;
+    }
+
+    /* Section titles */
+    .section-title {
+        font-size: 22px;
+        margin-bottom: 36px;
+    }
+
+    .section-title::after {
+        max-width: 80px;
+    }
+
+    /* Expertise */
+    .expertise-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin-left: 0;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .expert-card {
+        padding: 28px 20px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .expert-card:last-child {
+        border-bottom: none;
+    }
+
+    /* Timeline */
+    .timeline {
+        padding-left: 0;
+    }
+
+    .timeline-item {
+        grid-template-columns: 16px 1fr;
+        gap: 0 12px;
+    }
+
+    .timeline-card {
+        padding: 18px 16px;
+        margin-bottom: 24px;
+    }
+
+    .timeline-title {
+        font-size: 17px;
+    }
+
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    /* Tags: smaller on mobile */
+    .timeline-tags {
+        gap: 6px;
+    }
+
+    .tag {
+        font-size: 10px;
+        padding: 2px 8px;
+    }
+
+    /* Projects */
+    .projects-grid-2col {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .project-card-custom {
+        padding: 20px 18px;
+    }
+}
+
+
+/* =========================================
+   9c. RESPONSIVE — MÓVIL PEQUEÑO (≤ 380px)
+   ========================================= */
+@media (max-width: 380px) {
+
+    .name {
+        font-size: clamp(2rem, 14vw, 3rem);
+        letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+        font-size: clamp(16px, 5vw, 22px);
+    }
+
+    .hero-slogan {
+        font-size: 0.6rem;
+        letter-spacing: 2px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 60px 14px;
     }
 }
 
