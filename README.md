@@ -1,4 +1,4 @@
-# 💻 Personal Portfolio - Ricardo Matos
+# Personal Portfolio - Ricardo Matos
 
 [![Visit Portfolio](https://img.shields.io/badge/URL-ricardomatosr.github.io-050706?style=for-the-badge&logo=googlechrome&logoColor=00ffc3&borderColor=00ffc3)](https://ricardomatosr.github.io/)
 
