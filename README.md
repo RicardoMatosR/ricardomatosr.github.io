@@ -67,7 +67,7 @@ The ecosystem consists of a Single Page architecture supported by modular data f
 
 This project requires no Node.js dependencies or build processes.
 
-6. Contact
+## 6. Contact
 Designed and developed by Ricardo Matos Romero.
 
 🔗 LinkedIn: [Ricardo Matos](https://www.linkedin.com/in/ricardo-matos-romero-397502256/)
