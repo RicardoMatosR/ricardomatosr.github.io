@@ -63,16 +63,17 @@ The ecosystem consists of a Single Page architecture supported by modular data f
 
 ---
 
+## 5. Contact
+
+  LinkedIn: [Ricardo Matos](https://www.linkedin.com/in/ricardo-matos-romero-397502256/)
+  
+  Email: ricardomatosromero04@gmail.com
+
+---
+
 ## 5. Deployment Instructions
 
 This project requires no Node.js dependencies or build processes.
-
-## 6. Contact
-Designed and developed by Ricardo Matos Romero.
-
-🔗 LinkedIn: [Ricardo Matos](https://www.linkedin.com/in/ricardo-matos-romero-397502256/)
-
-📧 Email: ricardomatosromero04@gmail.com
 
 ### Local Development Environment:
 ```bash
