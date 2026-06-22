@@ -27,8 +27,8 @@ html {
 
 :root {
     --bg-base: #050706;
-    --text-primary: #ffffffde;
-    --text-secondary: #ffffffc8;
+    --text-primary: #ffffff;
+    --text-secondary: #f0f0f0;
     --accent: #00ffc3;
 
     /* Glassmorphism */

@@ -41,8 +41,12 @@ const translations = {
         /* Sección: Proyectos */
         "section_proyectos": "Proyectos",
         "proj_github_link": "Ver en GitHub",
-        "proj_lol_title": "League of Legends API Integrator",
-        "proj_lol_desc": "Aplicación backend conectada a la API oficial de Riot Games para el consumo, procesamiento en formato JSON y estructuración de estadísticas de partidas y jugadores en tiempo real.",
+        "proj_lol_title": "League of Legends API Client",
+        "proj_lol_desc": "Cliente API robusto desarrollado en Java bajo una arquitectura MVC limpia para la extracción y procesamiento de estadísticas de League of Legends en tiempo real. El sistema integra múltiples endpoints de Riot Games y Data Dragon, cruzando datos dinámicamente para calcular winrates, historiales de partidas precisos (KDA) y top de maestrías, utilizando GSON para el mapeo de modelos y Maven para la gestión de dependencias.",
+        "proj_hibernate_title": "Motor E-Commerce con Hibernate",
+        "proj_hibernate_desc": "Un sistema de gestión de e-commerce centrado en el backend diseñado para demostrar arquitectura empresarial. Construido desde cero utilizando Java y Hibernate ORM, este proyecto implementa de manera estricta los patrones de diseño MVC y DAO para asegurar un código limpio y escalable. Los logros técnicos clave incluyen un robusto sistema de Control de Acceso Basado en Roles (RBAC) con paneles dinámicos, integración fluida con APIs REST externas (DummyJSON) para poblar el catálogo, y el uso de transacciones ACID de alta seguridad. El algoritmo de compra garantiza la integridad de los datos al ejecutar los cobros y las actualizaciones de stock en una única operación atómica en la base de datos, garantizando pagos seguros y fiables.",
+        "proj_42_title": "42 Cursus",
+        "proj_42_desc": "Repositorio central de mis proyectos en el core cursus de 42. Actualmente desarrollando mi propia implementación de printf y get_next_line (GNL) en C para manejo a bajo nivel de I/O y descriptores de archivo. El próximo desafío será push_swap, enfocado en la optimización de algoritmos de ordenamiento.",
         "proj_casino_title": "CasinoHub Multi-Game",
         "proj_casino_desc": "Desarrollo de una arquitectura modular para integrar la lógica de múltiples juegos de casino, gestionando el estado y la interacción a través de un frontend dinámico.",
 
@@ -91,8 +95,12 @@ const translations = {
         /* Sección: Proyectos */
         "section_proyectos": "Projects",
         "proj_github_link": "View on GitHub",
-        "proj_lol_title": "League of Legends API Integrator",
-        "proj_lol_desc": "Backend application connected to the official Riot Games API for consuming, processing JSON data and structuring real-time match and player statistics.",
+        "proj_lol_title": "League of Legends API Client",
+        "proj_lol_desc": "Robust API client developed in Java using a clean MVC architecture for real-time extraction and processing of League of Legends statistics. The system integrates multiple Riot Games and Data Dragon endpoints, dynamically cross-referencing data to calculate winrates, precise match histories (KDA), and top masteries, utilizing GSON for model mapping and Maven for dependency management.",
+        "proj_hibernate_title": "Hibernate E-Commerce Engine",
+        "proj_hibernate_desc": "A fully functional, backend-driven e-commerce management system designed to demonstrate enterprise architecture. Built from scratch using Java and Hibernate ORM, this project implements strict MVC and DAO design patterns to ensure a clean separation of concerns. Key technical achievements include a robust Role-Based Access Control (RBAC) system with dynamic admin/customer dashboards, seamless integration with external REST APIs (DummyJSON) using HttpClient to populate the catalog, and highly secure ACID transactions. The purchasing algorithm guarantees data integrity by executing wallet deductions and stock updates in a single, atomic database operation, ensuring safe and reliable e-commerce transactions.",
+        "proj_42_title": "42 Cursus",
+        "proj_42_desc": "Central repository for my projects in the 42 core cursus. Currently developing my own implementation of printf and get_next_line (GNL) in C for low-level I/O and file descriptor management. The next challenge will be push_swap, focusing on sorting algorithm optimization.",
         "proj_casino_title": "CasinoHub Multi-Game",
         "proj_casino_desc": "Modular architecture design to integrate the game logic of multiple casino games, managing state and user interaction through a dynamic frontend.",
 
