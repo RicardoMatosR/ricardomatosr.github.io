@@ -784,10 +784,11 @@ footer {
 
     /* Expertise grid: stack to 1 column */
     .expertise-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         width: 100%;
         margin-left: 0;
-        gap: 0;
+        gap: 60px;
     }
 
     /* Experience: single column */
@@ -924,10 +925,11 @@ footer {
 
     /* Expertise */
     .expertise-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         width: 100%;
         margin-left: 0;
-        gap: 0;
+        gap: 50px;
     }
 
     .expert-card {
