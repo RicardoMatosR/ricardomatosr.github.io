@@ -21,8 +21,10 @@
     box-sizing: border-box;
 }
 
-html {
+html, body {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 :root {
@@ -834,6 +836,28 @@ footer {
         max-width: 100% !important;
         margin-bottom: 2rem !important;
         box-sizing: border-box !important;
+    }
+
+    /* Experience and Projects stacking */
+    .experience-list-item,
+    .project-list-item {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 0 !important;
+    }
+
+    .exp-col-left,
+    .project-col-left {
+        width: 100% !important;
+        margin-bottom: 1rem !important;
+        text-align: left !important;
+        padding-right: 0 !important;
+    }
+
+    .exp-col-right,
+    .project-col-right {
+        width: 100% !important;
     }
 }
 
