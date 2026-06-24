@@ -35,10 +35,10 @@
 
         <ul class="nav-links">
             <li><a href="#inicio"><span class="nav-slash">// </span><span data-i18n="nav_inicio">inicio</span></a></li>
-            <li><a href="#trayectoria"><span class="nav-slash">// </span><span
-                        data-i18n="nav_trayectoria">trayectoria</span></a></li>
             <li><a href="#habilidades"><span class="nav-slash">// </span><span
                         data-i18n="nav_habilidades">habilidades</span></a></li>
+            <li><a href="#trayectoria"><span class="nav-slash">// </span><span
+                        data-i18n="nav_trayectoria">trayectoria</span></a></li>
             <li><a href="#proyectos"><span class="nav-slash">// </span><span
                         data-i18n="nav_proyectos">proyectos</span></a></li>
         </ul>
@@ -85,9 +85,6 @@
         <h1 class="name">Ricardo Matos.</h1>
         <h2 class="subtitle">- <span id="typing-text"></span> -</h2>
 
-        <p class="hero-slogan" data-i18n="hero_slogan">
-            Código limpio. Diseño funcional. Soluciones eficientes.
-        </p>
 
         <div class="hero-cta">
             <a href="#proyectos" class="hero-btn-primary" id="btn-ver-proyectos" data-i18n="btn_ver_proyectos">Ver
@@ -107,75 +104,9 @@
     </section>
 
 
-    <!-- SECCIÓN: TRAYECTORIA -->
-    <section id="trayectoria" class="container trayectoria-section">
-        <h3 class="section-title"><span>01.</span> <span data-i18n="section_trayectoria">Trayectoria</span></h3>
-
-        <div class="timeline">
-
-            <!-- Entrada 1: DAM -->
-            <div class="timeline-item">
-                <div class="timeline-marker">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-line"></div>
-                </div>
-                <div class="timeline-card content-box">
-                    <div class="timeline-header">
-                        <span class="timeline-badge" data-i18n="tray_dam_badge">Formación Reglada</span>
-                        <span class="timeline-date" data-i18n="tray_dam_date">Actualidad</span>
-                    </div>
-                    <h4 class="timeline-title" data-i18n="tray_dam_title">Grado Superior DAM</h4>
-                    <p class="timeline-subtitle" data-i18n="tray_dam_subtitle">Desarrollo de Aplicaciones
-                        Multiplataforma</p>
-                    <p class="timeline-desc" data-i18n="tray_dam_desc">Formación técnica oficial en CES Juan Pablo II,
-                        con enfoque en desarrollo
-                        de aplicaciones para entornos web, móvil y escritorio. Stack principal: Java, SQL, JavaScript,
-                        HTML5 y CSS3.</p>
-                    <div class="timeline-tags">
-                        <span class="tag">Java &amp; Kotlin</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">APIs REST</span>
-                        <span class="tag">SQL / MongoDB</span>
-                        <span class="tag">HTML5 / CSS3</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Entrada 2: 42 Madrid -->
-            <div class="timeline-item">
-                <div class="timeline-marker">
-                    <div class="timeline-dot timeline-dot--accent"></div>
-                    <div class="timeline-line"></div>
-                </div>
-                <div class="timeline-card content-box">
-                    <div class="timeline-header">
-                        <span class="timeline-badge timeline-badge--alt" data-i18n="tray_42_badge">Formación
-                            Intensiva</span>
-                        <span class="timeline-date" data-i18n="tray_42_date">Actualidad</span>
-                    </div>
-                    <h4 class="timeline-title" data-i18n="tray_42_title">42 Madrid</h4>
-                    <p class="timeline-subtitle" data-i18n="tray_42_subtitle">Escuela de Programación · Fundación
-                        Telefónica</p>
-                    <p class="timeline-desc" data-i18n="tray_42_desc">Metodología peer-to-peer sin profesores, basada en
-                        proyectos reales y
-                        trabajo colaborativo. Enfocada en resolución de problemas complejos, sistemas Unix/Linux, C y
-                        algoritmos de bajo nivel.</p>
-                    <div class="timeline-tags">
-                        <span class="tag">C</span>
-                        <span class="tag">Python (AI &amp; ML)</span>
-                        <span class="tag">Git &amp; GitHub</span>
-                        <span class="tag">Unix / Linux</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
     <!-- SECCIÓN: HABILIDADES -->
     <section id="habilidades" class="container">
-        <h3 class="section-title"><span>02.</span> <span data-i18n="section_habilidades">Habilidades</span></h3>
+        <h3 class="section-title"><span>01.</span> <span data-i18n="section_habilidades">Habilidades</span></h3>
         <div class="expertise-grid">
 
             <!-- Tarjeta 1: Software Engineering -->
@@ -190,17 +121,8 @@
                     </div>
                     <h4 class="expert-title underline-pink" data-i18n="skill_sw_title">Software<br>Engineering</h4>
                 </div>
-                <div class="code-tag">&lt;p&gt;</div>
-                <p class="expert-desc" data-i18n="skill_sw_desc">Sólida base en algoritmia, programación funcional y
-                    orientada a objetos (OOP).
-                    Creación de lógica de negocio robusta.</p>
-                <div class="code-tag">&lt;/p&gt;</div>
-                <div class="timeline-tags" style="margin-top: 12px;">
-                    <span class="tag">C</span>
-                    <span class="tag">Java &amp; Kotlin</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">JavaScript</span>
-                </div>
+                <p class="expert-desc" data-i18n="skill_sw_desc">Sólida base en algoritmia, programación funcional y orientada a objetos (OOP). Creación de lógica de negocio robusta.</p>
+                <p class="tech-text-inline">C &bull; Java &amp; Kotlin &bull; Python &bull; JavaScript</p>
             </div>
 
             <!-- Tarjeta 2: Backend & Data Architecture -->
@@ -214,23 +136,13 @@
                             <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
                         </svg>
                     </div>
-                    <h4 class="expert-title underline-blue" data-i18n="skill_backend_title">Backend &<br>Data
-                        Architecture</h4>
+                    <h4 class="expert-title underline-blue" data-i18n="skill_backend_title">Backend &<br>Data Architecture</h4>
                 </div>
-                <div class="code-tag">&lt;p&gt;</div>
-                <p class="expert-desc" data-i18n="skill_backend_desc">Diseño de bases de datos relacionales, modelos
-                    Entidad-Relación e integración de
-                    servicios mediante APIs REST.</p>
-                <div class="code-tag">&lt;/p&gt;</div>
-                <div class="timeline-tags" style="margin-top: 12px;">
-                    <span class="tag">SQL</span>
-                    <span class="tag">MongoDB</span>
-                    <span class="tag">REST API</span>
-                    <span class="tag">Hibernate</span>
-                </div>
+                <p class="expert-desc" data-i18n="skill_backend_desc">Diseño de bases de datos relacionales, modelos Entidad-Relación e integración de servicios mediante APIs REST.</p>
+                <p class="tech-text-inline">SQL &bull; MongoDB &bull; REST API &bull; Hibernate</p>
             </div>
 
-            <!-- Tarjeta 3: Systems & AppSec -->
+            <!-- Tarjeta 3: Systems & Environment -->
             <div class="expert-card">
                 <div class="expert-header">
                     <div class="icon-expert">
@@ -239,17 +151,44 @@
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                         </svg>
                     </div>
-                    <h4 class="expert-title underline-orange" data-i18n="skill_systems_title">Systems &<br>AppSec</h4>
+                    <h4 class="expert-title underline-orange" data-i18n="skill_systems_title">Systems &<br>Environment</h4>
                 </div>
-                <div class="code-tag">&lt;p&gt;</div>
-                <p class="expert-desc" data-i18n="skill_systems_desc">Administración de entornos Unix/Linux y desarrollo
-                    de software con mentalidad
-                    orientada a la seguridad (DevSecOps).</p>
-                <div class="code-tag">&lt;/p&gt;</div>
-                <div class="timeline-tags" style="margin-top: 12px;">
-                    <span class="tag">Unix/Linux</span>
-                    <span class="tag">Bash</span>
-                    <span class="tag">Secure Coding</span>
+                <p class="expert-desc" data-i18n="skill_systems_desc">Administración de entornos Unix/Linux, uso avanzado de la terminal y flujos de trabajo colaborativos mediante control de versiones.</p>
+                <p class="tech-text-inline">Unix/Linux &bull; Git &amp; GitHub &bull; Bash &bull; CLI</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN: TRAYECTORIA -->
+    <section id="trayectoria" class="container trayectoria-section">
+        <h3 class="section-title"><span>02.</span> <span data-i18n="section_trayectoria">Trayectoria</span></h3>
+
+        <div class="experience-list">
+
+            <!-- Entrada 1: DAM -->
+            <div class="experience-list-item">
+                <div class="exp-col-left">
+                    <span class="exp-date" data-i18n="tray_dam_date">2025 — 2027</span>
+                </div>
+                <div class="exp-col-right">
+                    <h4 class="exp-title" data-i18n="tray_dam_title">Grado Superior DAM</h4>
+                    <p class="exp-subtitle" data-i18n="tray_dam_subtitle">Desarrollo de Aplicaciones Multiplataforma</p>
+                    <p class="exp-desc" data-i18n="tray_dam_desc">Formación técnica oficial en CES Juan Pablo II, con enfoque en desarrollo de aplicaciones para entornos web, móvil y escritorio.</p>
+                    <p class="tech-text-inline">Java &amp; Kotlin &bull; Python &bull; JavaScript &bull; APIs REST &bull; SQL / MongoDB &bull; HTML5 / CSS3</p>
+                </div>
+            </div>
+
+            <!-- Entrada 2: 42 Madrid -->
+            <div class="experience-list-item">
+                <div class="exp-col-left">
+                    <span class="exp-date" data-i18n="tray_42_date">2026 — Presente</span>
+                </div>
+                <div class="exp-col-right">
+                    <h4 class="exp-title" data-i18n="tray_42_title">42 Madrid</h4>
+                    <p class="exp-subtitle" data-i18n="tray_42_subtitle">Escuela de Programación y Desarrollo de Software &middot; Fundación Telefónica</p>
+                    <p class="exp-desc" data-i18n="tray_42_desc">Metodología peer-to-peer sin profesores, basada en proyectos reales y trabajo colaborativo. Enfocada en resolución de problemas complejos, sistemas Unix/Linux, C y algoritmos de bajo nivel.</p>
+                    <p class="tech-text-inline">C &bull; Python (AI &amp; ML) &bull; Git &amp; GitHub &bull; Unix / Linux</p>
                 </div>
             </div>
 
@@ -260,155 +199,64 @@
     <section id="proyectos" class="container">
         <h3 class="section-title"><span>03.</span> <span data-i18n="section_proyectos">Proyectos</span></h3>
 
-        <div class="projects-grid-2col">
+        <div class="projects-list">
 
             <!-- Proyecto 1: LoL API -->
-            <div class="project-card-custom">
-                <div class="project-card-body">
-                    <div class="project-card-top">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                            stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="6" y1="12" x2="10" y2="12"></line>
-                            <line x1="8" y1="10" x2="8" y2="14"></line>
-                            <line x1="15" y1="13" x2="15.01" y2="13"></line>
-                            <line x1="18" y1="11" x2="18.01" y2="11"></line>
-                            <rect x="2" y="6" width="20" height="12" rx="2"></rect>
-                        </svg>
-                        <a href="https://github.com/RicardoMatosR/League-of-Legends-API-Client" target="_blank"
-                            class="project-github-link" title="Ver en GitHub">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path
-                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                </path>
-                            </svg>
-                            <span data-i18n="proj_github_link">Ver en GitHub</span>
-                        </a>
-                    </div>
-                    <h4 class="project-card-title" data-i18n="proj_lol_title">League of Legends API Integrator</h4>
-                    <p class="project-card-desc" data-i18n="proj_lol_desc">Aplicación backend conectada a la API oficial
-                        de Riot Games para el
-                        consumo, procesamiento en formato JSON y estructuración de estadísticas de partidas y jugadores
-                        en tiempo real.</p>
+            <div class="project-list-item">
+                <div class="project-col-left">
+                    <h4 class="project-title" data-i18n="proj_lol_title">League of Legends API Integrator</h4>
+                    <a href="https://github.com/RicardoMatosR/League-of-Legends-API-Client" target="_blank" class="project-github-link" title="Ver en GitHub">
+                        <span data-i18n="proj_github_link">View on GitHub</span> ↗
+                    </a>
                 </div>
-                <div class="project-card-footer">
-                    <div class="timeline-tags">
-                        <span class="tag">Java</span>
-                        <span class="tag">MVC</span>
-                        <span class="tag">REST API</span>
-                        <span class="tag">Maven</span>
-                    </div>
+                <div class="project-col-right">
+                    <p class="project-desc" data-i18n="proj_lol_desc">Aplicación backend conectada a la API oficial de Riot Games para el consumo, procesamiento en formato JSON y estructuración de estadísticas de partidas y jugadores en tiempo real.</p>
+                    <p class="tech-text-inline">Java &bull; MVC &bull; REST API &bull; Maven</p>
                 </div>
             </div>
+            <hr class="minimal-separator">
 
             <!-- Proyecto 2: Hibernate E-Commerce -->
-            <div class="project-card-custom">
-                <div class="project-card-body">
-                    <div class="project-card-top">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                            stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <path d="M16 10a4 4 0 0 1-8 0"></path>
-                        </svg>
-                        <a href="https://github.com/RicardoMatosR/Hibernate-E-Commerce-Engine" target="_blank"
-                            class="project-github-link" title="Ver en GitHub">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path
-                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                </path>
-                            </svg>
-                            <span data-i18n="proj_github_link">Ver en GitHub</span>
-                        </a>
-                    </div>
-                    <h4 class="project-card-title" data-i18n="proj_hibernate_title">Motor E-Commerce con Hibernate</h4>
-                    <p class="project-card-desc" data-i18n="proj_hibernate_desc">Un sistema de gestión de e-commerce
-                        centrado en el backend diseñado para demostrar arquitectura empresarial...</p>
+            <div class="project-list-item">
+                <div class="project-col-left">
+                    <h4 class="project-title" data-i18n="proj_hibernate_title">Motor E-Commerce con Hibernate</h4>
+                    <a href="https://github.com/RicardoMatosR/Hibernate-E-Commerce-Engine" target="_blank" class="project-github-link" title="Ver en GitHub">
+                        <span data-i18n="proj_github_link">View on GitHub</span> ↗
+                    </a>
                 </div>
-                <div class="project-card-footer">
-                    <div class="timeline-tags">
-                        <span class="tag">Java</span>
-                        <span class="tag">Hibernate</span>
-                        <span class="tag">MVC &amp; DAO</span>
-                        <span class="tag">REST API</span>
-                    </div>
+                <div class="project-col-right">
+                    <p class="project-desc" data-i18n="proj_hibernate_desc">Un sistema de gestión de e-commerce centrado en el backend diseñado para demostrar arquitectura empresarial...</p>
+                    <p class="tech-text-inline">Java &bull; Hibernate &bull; MVC &amp; DAO &bull; REST API</p>
                 </div>
             </div>
+            <hr class="minimal-separator">
 
             <!-- Proyecto 3: 42 Cursus -->
-            <div class="project-card-custom">
-                <div class="project-card-body">
-                    <div class="project-card-top">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                            stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="4 17 10 11 4 5"></polyline>
-                            <line x1="12" y1="19" x2="20" y2="19"></line>
-                        </svg>
-                        <a href="https://github.com/RicardoMatosR/42_Cursus" target="_blank" class="project-github-link"
-                            title="Ver en GitHub">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path
-                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                </path>
-                            </svg>
-                            <span data-i18n="proj_github_link">Ver en GitHub</span>
-                        </a>
-                    </div>
-                    <h4 class="project-card-title" data-i18n="proj_42_title">42 Cursus</h4>
-                    <p class="project-card-desc" data-i18n="proj_42_desc">Repositorio central de mis proyectos en el
-                        core cursus de 42...</p>
+            <div class="project-list-item">
+                <div class="project-col-left">
+                    <h4 class="project-title" data-i18n="proj_42_title">42 Cursus</h4>
+                    <a href="https://github.com/RicardoMatosR/42_Cursus" target="_blank" class="project-github-link" title="Ver en GitHub">
+                        <span data-i18n="proj_github_link">View on GitHub</span> ↗
+                    </a>
                 </div>
-                <div class="project-card-footer">
-                    <div class="timeline-tags">
-                        <span class="tag">C</span>
-                        <span class="tag">Unix / Linux</span>
-                        <span class="tag">Algoritmia</span>
-                    </div>
+                <div class="project-col-right">
+                    <p class="project-desc" data-i18n="proj_42_desc">Repositorio central de mis proyectos en el core cursus de 42...</p>
+                    <p class="tech-text-inline">C &bull; Unix / Linux &bull; Algoritmia</p>
                 </div>
             </div>
+            <hr class="minimal-separator">
 
             <!-- Proyecto 4: CasinoHub -->
-            <div class="project-card-custom">
-                <div class="project-card-body">
-                    <div class="project-card-top">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                            stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                            <circle cx="15.5" cy="15.5" r="1.5"></circle>
-                            <circle cx="15.5" cy="8.5" r="1.5"></circle>
-                            <circle cx="8.5" cy="15.5" r="1.5"></circle>
-                            <circle cx="12" cy="12" r="1.5"></circle>
-                        </svg>
-                        <a href="https://github.com/zhdanskyi/Casino-Project" target="_blank"
-                            class="project-github-link" title="Ver en GitHub">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path
-                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                </path>
-                            </svg>
-                            <span data-i18n="proj_github_link">Ver en GitHub</span>
-                        </a>
-                    </div>
-                    <h4 class="project-card-title" data-i18n="proj_casino_title">CasinoHub Multi-Game</h4>
-                    <p class="project-card-desc" data-i18n="proj_casino_desc">Desarrollo de una arquitectura modular
-                        para integrar la lógica de
-                        múltiples juegos de casino, gestionando el estado y la interacción a través de un frontend
-                        dinámico.</p>
+            <div class="project-list-item">
+                <div class="project-col-left">
+                    <h4 class="project-title" data-i18n="proj_casino_title">CasinoHub Multi-Game</h4>
+                    <a href="https://github.com/zhdanskyi/Casino-Project" target="_blank" class="project-github-link" title="Ver en GitHub">
+                        <span data-i18n="proj_github_link">View on GitHub</span> ↗
+                    </a>
                 </div>
-                <div class="project-card-footer">
-                    <div class="timeline-tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">HTML5</span>
-                        <span class="tag">Arquitectura Modular</span>
-                    </div>
+                <div class="project-col-right">
+                    <p class="project-desc" data-i18n="proj_casino_desc">Desarrollo de una arquitectura modular para integrar la lógica de múltiples juegos de casino, gestionando el estado y la interacción a través de un frontend dinámico.</p>
+                    <p class="tech-text-inline">JavaScript &bull; HTML5 &bull; Arquitectura Modular</p>
                 </div>
             </div>
 
