@@ -838,26 +838,27 @@ footer {
         box-sizing: border-box !important;
     }
 
-    /* Experience and Projects stacking */
-    .experience-list-item,
-    .project-list-item {
+    /* Forzar que los bloques de experiencia y proyectos se apilen en vertical */
+    .experience-list-item, .project-list-item, [class*="list-item"], [class*="card"] { 
         display: flex !important;
         flex-direction: column !important;
+        grid-template-columns: 1fr !important; /* Por si usa Grid */
         width: 100% !important;
         gap: 0 !important;
     }
 
-    .exp-col-left,
-    .project-col-left {
+    /* Forzar que los títulos y las descripciones ocupen todo el ancho y no se pisen */
+    .experience-list-item > div, .project-list-item > div, 
+    .experience-list-item > section, .project-list-item > section,
+    h3, h4, p {
         width: 100% !important;
-        margin-bottom: 1rem !important;
-        text-align: left !important;
-        padding-right: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 
-    .exp-col-right,
-    .project-col-right {
-        width: 100% !important;
+    /* Añadir separación vertical para que respiren */
+    .exp-col-left, .project-col-left, h3, h4 {
+        margin-bottom: 0.8rem !important;
     }
 }
 
