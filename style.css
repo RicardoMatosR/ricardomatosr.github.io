@@ -728,9 +728,9 @@ footer {
 
 
 /* =========================================
-   9. RESPONSIVE — TABLET (≤ 950px)
+   9. RESPONSIVE — TABLET (≤ 1024px)
    ========================================= */
-@media (max-width: 950px) {
+@media (max-width: 1024px) {
 
     /* Sections */
     section {
@@ -784,11 +784,18 @@ footer {
 
     /* Expertise grid: stack to 1 column */
     .expertise-grid {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-left: 0;
-        gap: 60px;
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        gap: 0 !important;
+    }
+
+    .expert-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 3rem !important;
+        box-sizing: border-box !important;
     }
 
     /* Experience: single column */
@@ -810,6 +817,25 @@ footer {
     }
 }
 
+/* =========================================
+   9.5 RESPONSIVE — TABLET/MÓVIL (≤ 768px)
+   ========================================= */
+@media (max-width: 768px) {
+    .expertise-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        gap: 0 !important;
+    }
+
+    .expert-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 2rem !important;
+        box-sizing: border-box !important;
+    }
+}
 
 /* =========================================
    9b. RESPONSIVE — MÓVIL (≤ 640px)
