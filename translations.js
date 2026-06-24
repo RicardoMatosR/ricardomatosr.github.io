@@ -35,7 +35,7 @@ const translations = {
         "skill_sw_desc": "Sólida base en algoritmia, programación funcional y orientada a objetos (OOP). Creación de lógica de negocio robusta.",
         "skill_backend_title": "Backend &<br>Data Architecture",
         "skill_backend_desc": "Diseño de bases de datos relacionales (SQL) y no relacionales (MongoDB), modelos Entidad-Relación e integración de servicios mediante APIs REST.",
-        "skill_systems_title": "Systems &<br>Environment",
+        "skill_systems_title": "Sistemas y<br>Entorno",
         "skill_systems_desc": "Administración de entornos Unix/Linux, uso avanzado de la terminal y flujos de trabajo colaborativos mediante control de versiones.",
 
         /* Sección: Proyectos */
