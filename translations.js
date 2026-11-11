@@ -11,8 +11,8 @@ const translations = {
         "nav_copiado": "¡Correo copiado!",
 
         /* Hero */
-        "hero_role": "<span>Desarrollador Backend</span><span class=\"role-sep\"> · </span><span>Java &amp; Spring Boot</span>",
-        "hero_lead": "Me centro en Java, Spring Boot y bases de datos SQL y NoSQL. Desarrollo con agentes de IA siguiendo Spec-Driven Development: especificación primero, implementación después.",
+        "hero_focus": "Especializado en backend con Java y Spring Boot",
+        "hero_lead": "También trabajo con Python, C y Kotlin, y con bases de datos SQL y NoSQL. Desarrollo con agentes de IA siguiendo Spec-Driven Development: especificación primero, implementación después.",
         "btn_ver_proyectos": "Ver proyectos",
         "btn_contactar": "Contactar",
 
@@ -107,8 +107,8 @@ const translations = {
         "nav_copiado": "Email copied!",
 
         /* Hero */
-        "hero_role": "<span>Backend Developer</span><span class=\"role-sep\"> · </span><span>Java &amp; Spring Boot</span>",
-        "hero_lead": "I focus on Java, Spring Boot and SQL &amp; NoSQL databases. I build with AI agents following Spec-Driven Development: specification first, implementation second.",
+        "hero_focus": "Specialized in backend with Java &amp; Spring Boot",
+        "hero_lead": "I also work with Python, C and Kotlin, and with SQL &amp; NoSQL databases. I build with AI agents following Spec-Driven Development: specification first, implementation second.",
         "btn_ver_proyectos": "View projects",
         "btn_contactar": "Get in touch",
 

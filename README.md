@@ -2,7 +2,7 @@
 
 [![Visit Portfolio](https://img.shields.io/badge/URL-ricardomatosr.github.io-050706?style=for-the-badge&logo=googlechrome&logoColor=00ffc3&borderColor=00ffc3)](https://ricardomatosr.github.io/)
 
-Official repository of my personal web portfolio. A space meticulously designed to document my trajectory as a **Backend Engineer & System Architect**, combining my formal education in **Multiplatform Application Development (DAM)** with the intensive, peer-to-peer methodology of **42 Madrid**.
+Official repository of my personal web portfolio. A space meticulously designed to document my trajectory as a **Software Developer** specialized in backend with Java and Spring Boot, combining my formal education in **Multiplatform Application Development (DAM)** with the intensive, peer-to-peer methodology of **42 Madrid**.
 
 <img width="2541" height="1301" alt="image" src="https://github.com/user-attachments/assets/a125bc32-a1bc-4c79-8a7a-d8dad80f599e" />
 
