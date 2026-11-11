@@ -936,18 +936,6 @@ button {
     color: var(--text-2);
 }
 
-.timeline-next {
-    margin-top: 10px;
-    max-width: 640px;
-    font-size: 15.5px;
-    color: var(--text-2);
-}
-
-.timeline-next strong {
-    font-weight: 500;
-    color: var(--text);
-}
-
 .timeline-body .chips {
     margin-top: 18px;
 }

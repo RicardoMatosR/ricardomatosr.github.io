@@ -52,8 +52,7 @@ const translations = {
         "tray_42_date": "2026 — Actualidad",
         "tray_42_title": "Ingeniería de Software",
         "tray_42_org": "42 Madrid · Fundación Telefónica",
-        "tray_42_desc": "Aprendizaje entre iguales, sin profesores y basado en proyectos. C, gestión de memoria, Unix/Linux y algoritmos: libft, ft_printf, get_next_line y push_swap.",
-        "tray_42_next": "<strong>Próximos contenidos:</strong> Inteligencia Artificial y Machine Learning con Python.",
+        "tray_42_desc": "Aprendizaje entre iguales, sin profesores y basado en proyectos. C y gestión de memoria, Unix/Linux, algoritmos, e Inteligencia Artificial y Machine Learning con Python. Proyectos: libft, ft_printf, get_next_line y push_swap.",
 
         /* Sección: Proyectos */
         "section_proyectos": "Proyectos",
@@ -76,7 +75,7 @@ const translations = {
         "section_logros": "Logros",
         "logros_sub": "Competiciones en equipo.",
         "logro_place": "2.º puesto",
-        "logro_samsung_meta": "Octubre 2026 · 15 equipos de 5 personas · 5 retos en una tarde",
+        "logro_samsung_meta": "Octubre 2026 · 9 equipos y más de 40 participantes · 5 retos de 30 minutos",
         "logro_r1": "5 bugs de un backend en Spring Boot corregidos en su causa raíz, incluida una condición de carrera en el stock.",
         "logro_r2": "Asistente de IA local, sin cloud, que convierte peticiones en intenciones JSON validadas.",
         "logro_r3": "Interfaz adaptada a móviles plegables: cerrado, abierto y modo Flex.",
@@ -148,8 +147,7 @@ const translations = {
         "tray_42_date": "2026 — Present",
         "tray_42_title": "Software Engineering",
         "tray_42_org": "42 Madrid · Fundación Telefónica",
-        "tray_42_desc": "Peer-to-peer, project-based learning with no teachers. C, memory management, Unix/Linux and algorithms: libft, ft_printf, get_next_line and push_swap.",
-        "tray_42_next": "<strong>Coming next:</strong> Artificial Intelligence and Machine Learning with Python.",
+        "tray_42_desc": "Peer-to-peer, project-based learning with no teachers. C and memory management, Unix/Linux, algorithms, and Artificial Intelligence and Machine Learning with Python. Projects: libft, ft_printf, get_next_line and push_swap.",
 
         /* Section: Projects */
         "section_proyectos": "Projects",
@@ -172,7 +170,7 @@ const translations = {
         "section_logros": "Achievements",
         "logros_sub": "Team competitions.",
         "logro_place": "2nd place",
-        "logro_samsung_meta": "October 2026 · 15 teams of 5 · 5 challenges in one afternoon",
+        "logro_samsung_meta": "October 2026 · 9 teams, 40+ participants · 5 thirty-minute challenges",
         "logro_r1": "Fixed 5 bugs in a Spring Boot backend at their root cause, including a stock race condition.",
         "logro_r2": "Local, cloud-free AI assistant that turns requests into validated JSON intents.",
         "logro_r3": "UI adapted to foldable phones: folded, unfolded and Flex mode.",
