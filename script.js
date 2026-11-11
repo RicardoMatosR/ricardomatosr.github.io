@@ -1,133 +1,166 @@
-/* =========================================
-   PARTE 1: FUNCIONES QUE SE EJECUTAN AL CARGAR
-   ========================================= */
 document.addEventListener('DOMContentLoaded', () => {
-   
-    // --- 0. BILINGUAL SUPPORT ---
-    let currentLang = localStorage.getItem('lang') || 'en';
+
+    /* --- 1. IDIOMA (ES / EN) --- */
     const langBtn = document.getElementById('lang-toggle');
 
+    function getStoredLang() {
+        try { return localStorage.getItem('lang'); } catch (e) { return null; }
+    }
+
+    function storeLang(lang) {
+        try { localStorage.setItem('lang', lang); } catch (e) { /* sin almacenamiento */ }
+    }
+
+    const browserLang = (navigator.language || 'es').toLowerCase().startsWith('es') ? 'es' : 'en';
+    let currentLang = getStoredLang() || browserLang;
+    if (!translations[currentLang]) currentLang = 'es';
+
     function updateLanguage() {
+        const dict = translations[currentLang];
+        document.documentElement.lang = currentLang;
+
         document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.getAttribute('data-i18n');
-            if (translations[currentLang][key]) {
-                el.innerHTML = translations[currentLang][key];
-            }
+            const value = dict[el.getAttribute('data-i18n')];
+            if (value) el.innerHTML = value;
         });
-        // Translate title attributes (e.g. CV download tooltip)
         document.querySelectorAll('[data-i18n-title]').forEach(el => {
-            const key = el.getAttribute('data-i18n-title');
-            if (translations[currentLang][key]) {
-                el.setAttribute('title', translations[currentLang][key]);
-            }
+            const value = dict[el.getAttribute('data-i18n-title')];
+            if (value) el.setAttribute('title', value);
         });
+        document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+            const value = dict[el.getAttribute('data-i18n-aria')];
+            if (value) el.setAttribute('aria-label', value);
+        });
+
         if (langBtn) {
-            langBtn.textContent = currentLang === 'es' ? 'EN' : 'ES';
+            langBtn.querySelectorAll('[data-lang]').forEach(opt => {
+                opt.classList.toggle('active', opt.dataset.lang === currentLang);
+            });
         }
     }
 
     if (langBtn) {
         langBtn.addEventListener('click', () => {
             currentLang = currentLang === 'es' ? 'en' : 'es';
-            localStorage.setItem('lang', currentLang);
+            storeLang(currentLang);
             updateLanguage();
-            // Reset typing effect on language switch to prevent out-of-bounds/glitches
-            charIndex = 0;
-            isDeleting = false;
-            if (textElement) {
-                textElement.textContent = "";
-            }
         });
     }
 
     updateLanguage();
 
-    // --- 1.1 EFECTO DE ESCRITURA (TYPEWRITER) ---
-    const textElement = document.getElementById('typing-text');
-    
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typeSpeed = 100;
-    let typingTimeout;
 
-    function type() {
-        const words = translations[currentLang].typing_titles;
-        if (wordIndex >= words.length) wordIndex = 0;
-        const currentWord = words[wordIndex];
-        
-        if (isDeleting) {
-            textElement.textContent = currentWord.substring(0, charIndex - 1);
-            charIndex--;
-            typeSpeed = 30;
-        } else {
-            textElement.textContent = currentWord.substring(0, charIndex + 1);
-            charIndex++;
-            typeSpeed = 80;
-        }
-
-        if (!isDeleting && charIndex === currentWord.length) {
-            isDeleting = true;
-            typeSpeed = 1200;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-            typeSpeed = 500;
-        }
-
-        clearTimeout(typingTimeout);
-        typingTimeout = setTimeout(type, typeSpeed);
-    }
-    if(textElement) type();
+    /* --- 2. NAVBAR: FONDO AL HACER SCROLL --- */
+    const nav = document.getElementById('main-nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
 
 
-    // --- 1.2 SCROLL SUAVE AL HACER CLICK EN LINKS ---
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth'
+    /* --- 3. MENÚ MÓVIL --- */
+    const menuBtn = document.getElementById('menu-btn');
+    const closeMenu = () => {
+        nav.classList.remove('menu-open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+    };
+
+    menuBtn.addEventListener('click', () => {
+        const open = nav.classList.toggle('menu-open');
+        menuBtn.setAttribute('aria-expanded', String(open));
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+    document.addEventListener('click', e => { if (!nav.contains(e.target)) closeMenu(); });
+
+
+    /* --- 4. ENLACE ACTIVO SEGÚN LA SECCIÓN VISIBLE --- */
+    const navLinks = [...document.querySelectorAll('.nav-links a')];
+    const sections = navLinks
+        .map(link => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
+
+    if ('IntersectionObserver' in window) {
+        const sectionObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                navLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
                 });
-            }
+            });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        sections.forEach(section => sectionObserver.observe(section));
+    }
+
+
+    /* --- 5. APARICIÓN SUAVE AL HACER SCROLL --- */
+    const revealItems = [...document.querySelectorAll('[data-reveal]')].filter(el => !el.closest('.hero'));
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+        revealItems.forEach(el => el.classList.add('is-visible'));
+    } else {
+        revealItems.forEach(el => {
+            const siblings = [...el.parentElement.children].filter(c => c.hasAttribute('data-reveal'));
+            el.style.transitionDelay = Math.min(siblings.indexOf(el), 4) * 40 + 'ms';
+        });
+        const revealObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('is-visible');
+                revealObserver.unobserve(entry.target);
+            });
+        }, { rootMargin: '0px 0px -4% 0px', threshold: 0.02 });
+        revealItems.forEach(el => revealObserver.observe(el));
+    }
+
+
+    /* --- 6. FOCO DE LUZ EN LAS TARJETAS --- */
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('pointermove', e => {
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
+            card.style.setProperty('--my', (e.clientY - rect.top) + 'px');
         });
     });
 
 
-    // --- 1.3 BOTÓN COPIAR CORREO (NAVBAR SUPERIOR) ---
-    const botonCorreo = document.getElementById('boton_correo'); 
-    const mensajeAlerta = document.getElementById('mensaje_copiado'); 
-    const miEmail = "ricardomatosromero04@gmail.com"; 
+    /* --- 7. COPIAR CORREO --- */
+    const toast = document.getElementById('toast');
+    const email = 'ricardomatosromero04@gmail.com';
+    let toastTimer;
 
-    if (botonCorreo) {
-        botonCorreo.addEventListener('click', () => {
-            navigator.clipboard.writeText(miEmail).then(() => {
-                mensajeAlerta.classList.add('mostrar');
-                setTimeout(() => {
-                    mensajeAlerta.classList.remove('mostrar');
-                }, 2000);
-            }).catch(err => {
-                console.error('Error al copiar: ', err);
-            });
-        });
+    function showToast() {
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove('show'), 2000);
     }
 
-    // --- 1.4 NAVBAR: TRANSPARENTE EN TOP, BLUR AL HACER SCROLL ---
-    const mainNav = document.getElementById('main-nav');
-    if (mainNav) {
-        const handleNavScroll = () => {
-            if (window.scrollY > 60) {
-                mainNav.classList.add('scrolled');
-            } else {
-                mainNav.classList.remove('scrolled');
-            }
+    // Método clásico, por si el navegador no deja usar navigator.clipboard
+    function legacyCopy(text) {
+        const area = document.createElement('textarea');
+        area.value = text;
+        area.setAttribute('readonly', '');
+        area.style.position = 'fixed';
+        area.style.opacity = '0';
+        document.body.appendChild(area);
+        area.select();
+        let ok = false;
+        try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+        area.remove();
+        return ok;
+    }
+
+    function copyEmail() {
+        const fallback = () => {
+            if (legacyCopy(email)) showToast();
+            else window.location.href = 'mailto:' + email; // último recurso: abrir el correo
         };
-        window.addEventListener('scroll', handleNavScroll, { passive: true });
-        handleNavScroll();
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(email).then(showToast).catch(fallback);
+        } else {
+            fallback();
+        }
     }
+
+    document.querySelectorAll('[data-copy-email]').forEach(btn => btn.addEventListener('click', copyEmail));
 });
-
-

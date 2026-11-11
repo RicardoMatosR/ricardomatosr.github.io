@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <!-- Google tag (gtag.js) -->
@@ -17,291 +17,441 @@
     <meta name="google-site-verification" content="RIMCG837WEBMSL2lpypZWP43nz9c4y_ei8AIn7BRn0g" />
     <meta name="description"
         content="Portfolio de Ricardo Matos Romero, desarrollador backend (Java, Spring Boot, Hibernate) y estudiante de DAM y 42 Madrid. 2.º puesto en el Samsung Dev Challenge 2026.">
-    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#060807">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ricardomatosr.github.io/">
+    <meta property="og:title" content="Ricardo Matos | Backend Developer (Java)">
+    <meta property="og:description"
+        content="Desarrollador backend: Java, Spring Boot, Hibernate y bases de datos SQL y NoSQL. DAM y 42 Madrid.">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0f0d'/%3E%3Crect x='1' y='1' width='62' height='62' rx='13' fill='none' stroke='%232ff5c3' stroke-opacity='.45' stroke-width='2'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='monospace' font-weight='700' font-size='26' fill='%232ff5c3'%3ERM%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Fira+Code:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
 
-    <div id="dynamic-bg"></div>
+    <!-- Iconos (sprite SVG) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="i-server" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="8" rx="2"/><rect x="2" y="13" width="20" height="8" rx="2"/><line x1="6" y1="7" x2="6.01" y2="7"/><line x1="6" y1="17" x2="6.01" y2="17"/></symbol>
+            <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+            <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></symbol>
+            <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+            <symbol id="i-terminal" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></symbol>
+            <symbol id="i-spec" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 11 17 15 13"/></symbol>
+            <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+            <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+            <symbol id="i-arrow-right" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+            <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></symbol>
+            <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></symbol>
+            <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+            <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+            <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+            <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+        </defs>
+    </svg>
 
-    <nav class="navbar" id="main-nav" aria-label="Navegación principal">
-        <div class="nav-left">
-            <div class="logo">MATOS_DEV<span class="dot">.</span></div>
-            <button id="lang-toggle" class="lang-btn">ES</button>
-        </div>
+    <div id="dynamic-bg" aria-hidden="true"></div>
 
-        <ul class="nav-links">
-            <li><a href="#inicio"><span class="nav-slash">// </span><span data-i18n="nav_inicio">inicio</span></a></li>
-            <li><a href="#habilidades"><span class="nav-slash">// </span><span
-                        data-i18n="nav_habilidades">habilidades</span></a></li>
-            <li><a href="#trayectoria"><span class="nav-slash">// </span><span
-                        data-i18n="nav_trayectoria">trayectoria</span></a></li>
-            <li><a href="#logros"><span class="nav-slash">// </span><span
-                        data-i18n="nav_logros">logros</span></a></li>
-            <li><a href="#proyectos"><span class="nav-slash">// </span><span
-                        data-i18n="nav_proyectos">proyectos</span></a></li>
-        </ul>
+    <!-- NAVEGACIÓN -->
+    <header class="navbar" id="main-nav">
+        <div class="nav-inner">
+            <div class="nav-left">
+                <a href="#inicio" class="logo" aria-label="Ricardo Matos">
+                    <span class="logo-mark">RM</span>
+                    <span class="logo-text">Ricardo Matos</span>
+                </a>
+                <button id="lang-toggle" class="lang-switch" type="button"
+                    title="Cambiar idioma / Change language" aria-label="Cambiar idioma / Change language">
+                    <svg class="icon"><use href="#i-globe"/></svg>
+                    <span class="lang-opt" data-lang="es">ES</span>
+                    <span class="lang-opt" data-lang="en">EN</span>
+                </button>
+            </div>
 
-        <div class="nav-right">
-            <div class="apartado_contacto_arriba_derecha">
-                <div class="contenedor_email" style="position: relative;">
-                    <p id="boton_correo" class="texto_correo" title="Haz click para copiar">
-                        ricardomatosromero04@gmail.com
-                    </p>
-                    <span id="mensaje_copiado" class="alerta_copiado" data-i18n="nav_copiado">¡Correo copiado!</span>
-                </div>
+            <nav aria-label="Navegación principal">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#inicio"><span class="nav-slash">//</span> <span data-i18n="nav_inicio">inicio</span></a></li>
+                    <li><a href="#habilidades"><span class="nav-slash">//</span> <span data-i18n="nav_habilidades">habilidades</span></a></li>
+                    <li><a href="#trayectoria"><span class="nav-slash">//</span> <span data-i18n="nav_trayectoria">trayectoria</span></a></li>
+                    <li><a href="#proyectos"><span class="nav-slash">//</span> <span data-i18n="nav_proyectos">proyectos</span></a></li>
+                    <li><a href="#logros"><span class="nav-slash">//</span> <span data-i18n="nav_logros">logros</span></a></li>
+                    <li class="menu-email">
+                        <button type="button" data-copy-email data-i18n-title="copy_title" title="Copiar correo">
+                            <svg class="icon"><use href="#i-copy"/></svg>
+                            <span>ricardomatosromero04@gmail.com</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
 
-                <span class="separador_entre_correo_iconos">|</span>
-
-                <div class="mini_iconos">
-                    <a href="./Ricardo_Matos_CV.pdf" download="Ricardo_Matos_Romero_CV.pdf" class="nav-cv-link"
+            <div class="nav-right">
+                <div class="contact-pill">
+                    <button type="button" class="pill-email" data-copy-email data-i18n-title="copy_title"
+                        title="Copiar correo">ricardomatosromero04@gmail.com</button>
+                    <span class="pill-sep" aria-hidden="true"></span>
+                    <a href="./Ricardo_Matos_CV.pdf" download="Ricardo_Matos_Romero_CV.pdf" class="pill-cv"
                         data-i18n-title="nav_cv_download" title="Descargar CV">CV</a>
-                    <a href="https://www.linkedin.com/in/ricardo-matos-romero/" target="_blank"
-                        title="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                            </path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
+                    <a href="https://www.linkedin.com/in/ricardo-matos-romero/" target="_blank" rel="noopener"
+                        class="pill-icon" title="LinkedIn" aria-label="LinkedIn">
+                        <svg class="icon"><use href="#i-linkedin"/></svg>
                     </a>
-                    <a href="https://github.com/RicardoMatosR" target="_blank" title="GitHub">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                            </path>
-                        </svg>
+                    <a href="https://github.com/RicardoMatosR" target="_blank" rel="noopener" class="pill-icon"
+                        title="GitHub" aria-label="GitHub">
+                        <svg class="icon"><use href="#i-github"/></svg>
                     </a>
                 </div>
+                <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links"
+                    data-i18n-aria="nav_menu" aria-label="Abrir menú">
+                    <span></span><span></span>
+                </button>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <section id="inicio" class="hero">
+    <main>
 
-        <h1 class="name">Ricardo Matos.</h1>
-        <h2 class="subtitle">- <span id="typing-text"></span> -</h2>
+        <!-- HERO -->
+        <section id="inicio" class="hero">
+            <div class="hero-bg" aria-hidden="true"></div>
 
+            <div class="hero-content">
+                <h1 class="name" data-reveal>Ricardo Matos</h1>
 
-        <div class="hero-cta">
-            <a href="#proyectos" class="hero-btn-primary" id="btn-ver-proyectos" data-i18n="btn_ver_proyectos">Ver
-                Proyectos</a>
-            <a href="mailto:ricardomatosromero04@gmail.com" class="hero-btn-secondary" id="btn-contactar"
-                data-i18n="btn_contactar">Contactar</a>
-        </div>
+                <p class="hero-role" data-reveal data-i18n="hero_role"><span>Desarrollador Backend</span><span class="role-sep"> · </span><span>Java &amp; Spring Boot</span></p>
 
-        <a href="#trayectoria" class="scroll-down-link" title="Bajar">
-            <div class="circle-arrow">
-                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
-                    <path d="M7 13l5 5 5-5M12 4v14" />
-                </svg>
+                <p class="hero-lead" data-reveal data-i18n="hero_lead">Me centro en Java, Spring Boot y bases de datos SQL y NoSQL. Desarrollo con agentes de IA siguiendo Spec-Driven Development: especificación primero, implementación después.</p>
+
+                <div class="hero-cta" data-reveal>
+                    <a href="#proyectos" class="btn btn-primary">
+                        <span data-i18n="btn_ver_proyectos">Ver proyectos</span>
+                        <svg class="icon"><use href="#i-arrow-right"/></svg>
+                    </a>
+                    <a href="#contacto" class="btn btn-ghost" data-i18n="btn_contactar">Contactar</a>
+                </div>
             </div>
-            <span class="scroll-text" data-i18n="scroll_down" style="display:none;">Bajar</span>
-        </a>
-    </section>
+        </section>
 
 
-    <!-- SECCIÓN: HABILIDADES -->
-    <section id="habilidades" class="container">
-        <h3 class="section-title"><span>01.</span> <span data-i18n="section_habilidades">Habilidades</span></h3>
-        <div class="expertise-grid">
+        <!-- SECCIÓN: HABILIDADES -->
+        <section id="habilidades" class="section">
+            <div class="section-head" data-reveal>
+                <span class="section-num">01</span>
+                <h2 class="section-title" data-i18n="section_habilidades">Habilidades</h2>
+                <p class="section-sub" data-i18n="habilidades_sub">Tecnologías y forma de trabajar.</p>
+            </div>
 
-            <!-- Tarjeta 1: Software Engineering -->
-            <div class="expert-card">
-                <div class="expert-header">
-                    <div class="icon-expert">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="16 18 22 12 16 6"></polyline>
-                            <polyline points="8 6 2 12 8 18"></polyline>
-                        </svg>
+            <div class="skills-grid">
+
+                <article class="card skill-card" data-reveal>
+                    <div class="card-icon"><svg class="icon"><use href="#i-server"/></svg></div>
+                    <h3 class="card-title" data-i18n="skill_backend_title">Backend</h3>
+                    <p class="card-desc" data-i18n="skill_backend_desc">APIs REST y lógica de negocio con Java y Spring Boot, y persistencia con Hibernate / JPA.</p>
+                    <ul class="chips">
+                        <li class="chip">Spring Boot</li>
+                        <li class="chip">Hibernate / JPA</li>
+                        <li class="chip" data-i18n="chip_rest">APIs REST</li>
+                        <li class="chip">Node.js</li>
+                        <li class="chip">Gson</li>
+                    </ul>
+                </article>
+
+                <article class="card skill-card" data-reveal>
+                    <div class="card-icon"><svg class="icon"><use href="#i-code"/></svg></div>
+                    <h3 class="card-title" data-i18n="skill_lang_title">Lenguajes</h3>
+                    <p class="card-desc" data-i18n="skill_lang_desc">Java como lenguaje principal. C para entender qué pasa en memoria; Python, Kotlin y JavaScript según el proyecto.</p>
+                    <ul class="chips">
+                        <li class="chip">Java</li>
+                        <li class="chip">Python</li>
+                        <li class="chip">C</li>
+                        <li class="chip">Kotlin</li>
+                        <li class="chip">SQL</li>
+                        <li class="chip">JavaScript</li>
+                        <li class="chip">HTML / CSS</li>
+                        <li class="chip">Bash</li>
+                    </ul>
+                </article>
+
+                <article class="card skill-card" data-reveal>
+                    <div class="card-icon"><svg class="icon"><use href="#i-database"/></svg></div>
+                    <h3 class="card-title" data-i18n="skill_db_title">Bases de datos</h3>
+                    <p class="card-desc" data-i18n="skill_db_desc">Modelado Entidad-Relación, consultas SQL y bases de datos de documentos.</p>
+                    <ul class="chips">
+                        <li class="chip">MySQL</li>
+                        <li class="chip">MongoDB</li>
+                        <li class="chip" data-i18n="chip_er">Modelo E-R</li>
+                        <li class="chip" data-i18n="chip_acid">Transacciones ACID</li>
+                    </ul>
+                </article>
+
+                <article class="card skill-card" data-reveal>
+                    <div class="card-icon"><svg class="icon"><use href="#i-layers"/></svg></div>
+                    <h3 class="card-title" data-i18n="skill_arch_title">Arquitectura</h3>
+                    <p class="card-desc" data-i18n="skill_arch_desc">Código organizado por capas y operaciones que no dejan los datos a medias.</p>
+                    <ul class="chips">
+                        <li class="chip" data-i18n="chip_poo">POO</li>
+                        <li class="chip">MVC</li>
+                        <li class="chip" data-i18n="chip_dao">Patrón DAO</li>
+                        <li class="chip" data-i18n="chip_concurrency">Concurrencia</li>
+                        <li class="chip">RBAC</li>
+                    </ul>
+                </article>
+
+                <article class="card skill-card" data-reveal>
+                    <div class="card-icon"><svg class="icon"><use href="#i-terminal"/></svg></div>
+                    <h3 class="card-title" data-i18n="skill_tools_title">Herramientas</h3>
+                    <p class="card-desc" data-i18n="skill_tools_desc">Control de versiones, builds, contenedores y el día a día en la terminal.</p>
+                    <ul class="chips">
+                        <li class="chip">Git &amp; GitHub</li>
+                        <li class="chip">Maven</li>
+                        <li class="chip">Docker</li>
+                        <li class="chip">Linux</li>
+                        <li class="chip">Postman</li>
+                        <li class="chip">Android Studio</li>
+                        <li class="chip">Tailwind CSS</li>
+                    </ul>
+                </article>
+
+                <article class="card skill-card" data-reveal>
+                    <div class="card-icon"><svg class="icon"><use href="#i-spec"/></svg></div>
+                    <h3 class="card-title" data-i18n="skill_ai_title">Desarrollo con IA</h3>
+                    <p class="card-desc" data-i18n="skill_ai_desc">Spec-Driven Development: primero defino qué hay que construir en una especificación, el agente implementa a partir de ella y yo reviso y decido.</p>
+                    <ul class="chips">
+                        <li class="chip">Spec-Driven Development</li>
+                        <li class="chip" data-i18n="chip_agents">Agentes de IA</li>
+                        <li class="chip" data-i18n="chip_review">Revisión de código</li>
+                    </ul>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- SECCIÓN: TRAYECTORIA -->
+        <section id="trayectoria" class="section">
+            <div class="section-head" data-reveal>
+                <span class="section-num">02</span>
+                <h2 class="section-title" data-i18n="section_trayectoria">Trayectoria</h2>
+                <p class="section-sub" data-i18n="trayectoria_sub">Dónde me estoy formando.</p>
+            </div>
+
+            <ol class="timeline">
+                <li class="timeline-item" data-reveal>
+                    <span class="timeline-date" data-i18n="tray_dam_date">2025 — 2027</span>
+                    <div class="timeline-body">
+                        <h3 class="timeline-title" data-i18n="tray_dam_title">Técnico Superior en DAM</h3>
+                        <p class="timeline-org" data-i18n="tray_dam_org">CES Juan Pablo II · Desarrollo de Aplicaciones Multiplataforma</p>
+                        <p class="timeline-desc" data-i18n="tray_dam_desc">Java y Spring Boot, bases de datos relacionales y NoSQL, acceso a datos con Hibernate y desarrollo Android con Kotlin.</p>
+                        <ul class="chips">
+                            <li class="chip">Java</li>
+                            <li class="chip">Spring Boot</li>
+                            <li class="chip">Hibernate</li>
+                            <li class="chip">Kotlin / Android</li>
+                            <li class="chip">MySQL / MongoDB</li>
+                        </ul>
                     </div>
-                    <h4 class="expert-title underline-pink" data-i18n="skill_sw_title">Software<br>Engineering</h4>
-                </div>
-                <p class="expert-desc" data-i18n="skill_sw_desc">Sólida base en algoritmia, programación funcional y orientada a objetos (OOP). Creación de lógica de negocio robusta.</p>
-                <p class="tech-text-inline">C &bull; Java &amp; Kotlin &bull; Python &bull; JavaScript</p>
-            </div>
+                </li>
 
-            <!-- Tarjeta 2: Backend & Data Architecture -->
-            <div class="expert-card">
-                <div class="expert-header">
-                    <div class="icon-expert">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                        </svg>
+                <li class="timeline-item" data-reveal>
+                    <span class="timeline-date" data-i18n="tray_42_date">2026 — Actualidad</span>
+                    <div class="timeline-body">
+                        <h3 class="timeline-title" data-i18n="tray_42_title">Ingeniería de Software</h3>
+                        <p class="timeline-org" data-i18n="tray_42_org">42 Madrid · Fundación Telefónica</p>
+                        <p class="timeline-desc" data-i18n="tray_42_desc">Aprendizaje entre iguales, sin profesores y basado en proyectos. C, gestión de memoria, Unix/Linux y algoritmos: libft, ft_printf, get_next_line y push_swap.</p>
+                        <p class="timeline-next" data-i18n="tray_42_next"><strong>Próximos contenidos:</strong> Inteligencia Artificial y Machine Learning con Python.</p>
+                        <ul class="chips">
+                            <li class="chip">C</li>
+                            <li class="chip">Unix / Linux</li>
+                            <li class="chip">Git</li>
+                            <li class="chip" data-i18n="chip_algo">Algoritmia</li>
+                            <li class="chip" data-i18n="chip_python_ai">Python (IA y ML)</li>
+                        </ul>
                     </div>
-                    <h4 class="expert-title underline-blue" data-i18n="skill_backend_title">Backend &<br>Data Architecture</h4>
-                </div>
-                <p class="expert-desc" data-i18n="skill_backend_desc">Diseño de bases de datos relacionales, modelos Entidad-Relación e integración de servicios mediante APIs REST.</p>
-                <p class="tech-text-inline">Spring Boot &bull; Hibernate &bull; SQL &bull; MongoDB &bull; REST API &bull; Node.js</p>
+                </li>
+            </ol>
+        </section>
+
+
+        <!-- SECCIÓN: PROYECTOS -->
+        <section id="proyectos" class="section">
+            <div class="section-head" data-reveal>
+                <span class="section-num">03</span>
+                <h2 class="section-title" data-i18n="section_proyectos">Proyectos</h2>
+                <p class="section-sub" data-i18n="proyectos_sub">Con el código disponible en GitHub.</p>
             </div>
 
-            <!-- Tarjeta 3: Systems & Environment -->
-            <div class="expert-card">
-                <div class="expert-header">
-                    <div class="icon-expert">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="4 17 10 11 4 5"></polyline>
-                            <line x1="12" y1="19" x2="20" y2="19"></line>
-                        </svg>
+            <div class="projects-list">
+
+                <article class="card project-card" data-reveal>
+                    <div class="project-head">
+                        <span class="project-num">01</span>
+                        <h3 class="project-title">Hibernate E-Commerce Engine</h3>
+                        <a href="https://github.com/RicardoMatosR/Hibernate-E-Commerce-Engine" target="_blank" rel="noopener" class="project-link">
+                            <svg class="icon"><use href="#i-github"/></svg>
+                            <span data-i18n="proj_github_link">Ver código</span>
+                            <svg class="icon icon-sm"><use href="#i-arrow-up-right"/></svg>
+                        </a>
                     </div>
-                    <h4 class="expert-title underline-orange" data-i18n="skill_systems_title">Herramientas e<br>Infraestructura</h4>
-                </div>
-                <p class="expert-desc" data-i18n="skill_systems_desc">Administración de entornos Unix/Linux, uso avanzado de la terminal y flujos de trabajo colaborativos mediante control de versiones.</p>
-                <p class="tech-text-inline">Unix/Linux &bull; Git &amp; GitHub &bull; Docker &bull; Maven &bull; Bash</p>
+                    <p class="project-desc" data-i18n="proj_hib_desc">Backend de tienda online en Java con Hibernate ORM y arquitectura controlador–DAO–modelo.</p>
+                    <ul class="project-points">
+                        <li data-i18n="proj_hib_b1">Acceso por roles (Administrador / Cliente) con un panel distinto para cada uno.</li>
+                        <li data-i18n="proj_hib_b2">Compras con transacciones ACID y rollback automático ante errores, como la falta de stock.</li>
+                        <li data-i18n="proj_hib_b3">Catálogo y stock sincronizados desde la API DummyJSON con HttpClient y Gson.</li>
+                    </ul>
+                    <ul class="chips">
+                        <li class="chip">Java</li>
+                        <li class="chip">Hibernate</li>
+                        <li class="chip">MySQL</li>
+                        <li class="chip">Maven</li>
+                    </ul>
+                </article>
+
+                <article class="card project-card" data-reveal>
+                    <div class="project-head">
+                        <span class="project-num">02</span>
+                        <h3 class="project-title">League of Legends API Client</h3>
+                        <a href="https://github.com/RicardoMatosR/League-of-Legends-API-Client" target="_blank" rel="noopener" class="project-link">
+                            <svg class="icon"><use href="#i-github"/></svg>
+                            <span data-i18n="proj_github_link">Ver código</span>
+                            <svg class="icon icon-sm"><use href="#i-arrow-up-right"/></svg>
+                        </a>
+                    </div>
+                    <p class="project-desc" data-i18n="proj_lol_desc">Cliente en Java de la API oficial de Riot Games para consultar las estadísticas de un jugador.</p>
+                    <ul class="project-points">
+                        <li data-i18n="proj_lol_b1">Rango, winrate, top 3 de campeones por maestría y detalle de la última partida.</li>
+                        <li data-i18n="proj_lol_b2">Arquitectura MVC y mapeo de las respuestas JSON a objetos con Gson.</li>
+                        <li data-i18n="proj_lol_b3">API key fuera del código, en un fichero de configuración.</li>
+                    </ul>
+                    <ul class="chips">
+                        <li class="chip">Java</li>
+                        <li class="chip">HttpClient</li>
+                        <li class="chip">Gson</li>
+                        <li class="chip">Maven</li>
+                    </ul>
+                </article>
+
+                <article class="card project-card" data-reveal>
+                    <div class="project-head">
+                        <span class="project-num">03</span>
+                        <h3 class="project-title">42 Cursus</h3>
+                        <a href="https://github.com/RicardoMatosR/42_Cursus" target="_blank" rel="noopener" class="project-link">
+                            <svg class="icon"><use href="#i-github"/></svg>
+                            <span data-i18n="proj_github_link">Ver código</span>
+                            <svg class="icon icon-sm"><use href="#i-arrow-up-right"/></svg>
+                        </a>
+                    </div>
+                    <p class="project-desc" data-i18n="proj_42_desc">Mis proyectos del core cursus de 42 Madrid, escritos en C.</p>
+                    <ul class="project-points">
+                        <li data-i18n="proj_42_b1">libft: mi propia librería estándar de C.</li>
+                        <li data-i18n="proj_42_b2">ft_printf y get_next_line: salida con formato y lectura a bajo nivel con descriptores de archivo.</li>
+                        <li data-i18n="proj_42_b3">push_swap: ordenar números con dos pilas usando el menor número de operaciones.</li>
+                    </ul>
+                    <ul class="chips">
+                        <li class="chip">C</li>
+                        <li class="chip">Unix / Linux</li>
+                        <li class="chip">Makefile</li>
+                        <li class="chip" data-i18n="chip_algo">Algoritmia</li>
+                    </ul>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- SECCIÓN: LOGROS -->
+        <section id="logros" class="section">
+            <div class="section-head" data-reveal>
+                <span class="section-num">04</span>
+                <h2 class="section-title" data-i18n="section_logros">Logros</h2>
+                <p class="section-sub" data-i18n="logros_sub">Competiciones en equipo.</p>
             </div>
 
+            <div class="awards">
+
+                <article class="card award-card award-main" data-reveal>
+                    <div class="award-summary">
+                        <span class="award-badge">
+                            <svg class="icon"><use href="#i-trophy"/></svg>
+                            <span data-i18n="logro_place">2.º puesto</span>
+                        </span>
+                        <h3 class="award-title">Samsung Dev Challenge 2026</h3>
+                        <p class="award-meta" data-i18n="logro_samsung_meta">Octubre 2026 · 15 equipos de 5 personas · 5 retos en una tarde</p>
+                        <ul class="chips">
+                            <li class="chip">Java</li>
+                            <li class="chip">Spring Boot</li>
+                            <li class="chip">Node.js</li>
+                            <li class="chip">Python</li>
+                            <li class="chip">Tailwind CSS</li>
+                        </ul>
+                    </div>
+                    <ol class="award-rounds">
+                        <li><span class="round-name">Bug Hunt</span><span class="round-desc" data-i18n="logro_r1">5 bugs de un backend en Spring Boot corregidos en su causa raíz, incluida una condición de carrera en el stock.</span></li>
+                        <li><span class="round-name">AI Lab</span><span class="round-desc" data-i18n="logro_r2">Asistente de IA local, sin cloud, que convierte peticiones en intenciones JSON validadas.</span></li>
+                        <li><span class="round-name">UX Arena</span><span class="round-desc" data-i18n="logro_r3">Interfaz adaptada a móviles plegables: cerrado, abierto y modo Flex.</span></li>
+                        <li><span class="round-name">Hack Defense</span><span class="round-desc" data-i18n="logro_r4">CTF de 6 retos encadenados: OSINT, historial de Git, web vulnerable y escalada de privilegios.</span></li>
+                        <li><span class="round-name" data-i18n="logro_r5_name">Prueba final</span><span class="round-desc" data-i18n="logro_r5">Clasificación de notificaciones con reglas deterministas y un LLM solo donde hacía falta, resistente a prompt injection.</span></li>
+                    </ol>
+                </article>
+
+                <article class="card award-card award-compact" data-reveal>
+                    <span class="award-badge">
+                        <svg class="icon"><use href="#i-trophy"/></svg>
+                        <span data-i18n="logro_place">2.º puesto</span>
+                    </span>
+                    <div>
+                        <h3 class="award-title" data-i18n="logro_wayra_title">Reto de Emprendimiento Wayra</h3>
+                        <p class="award-meta" data-i18n="logro_wayra_meta">Mayo 2026 · Fundación Telefónica y 42 Madrid</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- SECCIÓN: CONTACTO -->
+        <section id="contacto" class="section">
+            <div class="section-head" data-reveal>
+                <span class="section-num">05</span>
+                <h2 class="section-title" data-i18n="section_contacto">Contacto</h2>
+                <p class="section-sub" data-i18n="contact_text">¿Tienes una propuesta o quieres hablar de algo que hayas visto aquí? Escríbeme.</p>
+            </div>
+
+            <div class="contact-actions" data-reveal>
+                <button type="button" class="btn btn-primary btn-email" data-copy-email data-i18n-title="copy_title"
+                    title="Copiar correo">
+                    <svg class="icon"><use href="#i-mail"/></svg>
+                    <span>ricardomatosromero04@gmail.com</span>
+                    <svg class="icon icon-copy"><use href="#i-copy"/></svg>
+                </button>
+                <a href="https://www.linkedin.com/in/ricardo-matos-romero/" target="_blank" rel="noopener" class="btn btn-ghost">
+                    <svg class="icon"><use href="#i-linkedin"/></svg>LinkedIn
+                </a>
+                <a href="https://github.com/RicardoMatosR" target="_blank" rel="noopener" class="btn btn-ghost">
+                    <svg class="icon"><use href="#i-github"/></svg>GitHub
+                </a>
+                <a href="./Ricardo_Matos_CV.pdf" download="Ricardo_Matos_Romero_CV.pdf" class="btn btn-ghost">
+                    <svg class="icon"><use href="#i-download"/></svg>
+                    <span data-i18n="btn_cv">Descargar CV</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <span>© 2026 Ricardo Matos</span>
+            <span data-i18n="footer_text">Diseñado y desarrollado por Ricardo Matos.</span>
         </div>
-    </section>
-
-    <!-- SECCIÓN: TRAYECTORIA -->
-    <section id="trayectoria" class="container trayectoria-section">
-        <h3 class="section-title"><span>02.</span> <span data-i18n="section_trayectoria">Trayectoria</span></h3>
-
-        <div class="experience-list">
-
-            <!-- Entrada 1: DAM -->
-            <div class="experience-list-item">
-                <div class="exp-col-left">
-                    <span class="exp-date" data-i18n="tray_dam_date">2025 — 2027</span>
-                </div>
-                <div class="exp-col-right">
-                    <h4 class="exp-title" data-i18n="tray_dam_title">Grado Superior DAM</h4>
-                    <p class="exp-subtitle" data-i18n="tray_dam_subtitle">Desarrollo de Aplicaciones Multiplataforma</p>
-                    <p class="exp-desc" data-i18n="tray_dam_desc">Formación técnica oficial en CES Juan Pablo II, con enfoque en desarrollo de aplicaciones para entornos web, móvil y escritorio.</p>
-                    <p class="tech-text-inline">Java &bull; Spring Boot &bull; Hibernate &bull; Kotlin / Android &bull; SQL / MongoDB &bull; HTML5 / CSS3</p>
-                </div>
-            </div>
-
-            <!-- Entrada 2: 42 Madrid -->
-            <div class="experience-list-item">
-                <div class="exp-col-left">
-                    <span class="exp-date" data-i18n="tray_42_date">2026 — Presente</span>
-                </div>
-                <div class="exp-col-right">
-                    <h4 class="exp-title" data-i18n="tray_42_title">42 Madrid</h4>
-                    <p class="exp-subtitle" data-i18n="tray_42_subtitle">Escuela de Programación y Desarrollo de Software &middot; Fundación Telefónica</p>
-                    <p class="exp-desc" data-i18n="tray_42_desc">Metodología peer-to-peer sin profesores, basada en proyectos reales y trabajo colaborativo. Enfocada en resolución de problemas complejos, sistemas Unix/Linux, C y algoritmos de bajo nivel.</p>
-                    <p class="tech-text-inline">C &bull; Python (AI &amp; ML) &bull; Git &amp; GitHub &bull; Unix / Linux</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SECCIÓN: LOGROS -->
-    <section id="logros" class="container trayectoria-section">
-        <h3 class="section-title"><span>03.</span> <span data-i18n="section_logros">Logros</span></h3>
-
-        <div class="experience-list">
-
-            <!-- Logro 1: Samsung Dev Challenge -->
-            <div class="experience-list-item">
-                <div class="exp-col-left">
-                    <span class="exp-date" data-i18n="logro_samsung_date">Octubre 2026</span>
-                </div>
-                <div class="exp-col-right">
-                    <h4 class="exp-title" data-i18n="logro_samsung_title">2.º puesto · Samsung Dev Challenge 2026</h4>
-                    <p class="exp-subtitle" data-i18n="logro_samsung_subtitle">Hackatón con 15 equipos de 5 personas · 5 retos resueltos en una tarde</p>
-                    <p class="exp-desc" data-i18n="logro_samsung_desc">Corregimos 5 bugs de un backend en Spring Boot desde su causa raíz (incluida una condición de carrera de stock), construimos un asistente de IA local que convierte peticiones en intenciones JSON validadas, adaptamos una interfaz a móviles plegables, superamos un CTF de 6 retos encadenados y, en la prueba final, clasificamos notificaciones combinando reglas deterministas con un LLM resistente a prompt injection.</p>
-                    <p class="tech-text-inline">Java &bull; Spring Boot &bull; Node.js &bull; Python &bull; LLMs &bull; Tailwind CSS &bull; CTF</p>
-                </div>
-            </div>
-
-            <!-- Logro 2: Wayra -->
-            <div class="experience-list-item">
-                <div class="exp-col-left">
-                    <span class="exp-date" data-i18n="logro_wayra_date">Mayo 2026</span>
-                </div>
-                <div class="exp-col-right">
-                    <h4 class="exp-title" data-i18n="logro_wayra_title">2.º puesto · Reto de Emprendimiento Wayra</h4>
-                    <p class="exp-subtitle" data-i18n="logro_wayra_subtitle">Fundación Telefónica y 42 Madrid</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SECCIÓN: PROYECTOS -->
-    <section id="proyectos" class="container">
-        <h3 class="section-title"><span>04.</span> <span data-i18n="section_proyectos">Proyectos</span></h3>
-
-        <div class="projects-list">
-
-            <!-- Proyecto 1: LoL API -->
-            <div class="project-list-item">
-                <div class="project-col-left">
-                    <h4 class="project-title" data-i18n="proj_lol_title">League of Legends API Integrator</h4>
-                    <a href="https://github.com/RicardoMatosR/League-of-Legends-API-Client" target="_blank" class="project-github-link" title="Ver en GitHub">
-                        <span data-i18n="proj_github_link">View on GitHub</span> ↗
-                    </a>
-                </div>
-                <div class="project-col-right">
-                    <p class="project-desc" data-i18n="proj_lol_desc">Aplicación backend conectada a la API oficial de Riot Games para el consumo, procesamiento en formato JSON y estructuración de estadísticas de partidas y jugadores en tiempo real.</p>
-                    <p class="tech-text-inline">Java &bull; MVC &bull; REST API &bull; Maven</p>
-                </div>
-            </div>
-            <hr class="minimal-separator">
-
-            <!-- Proyecto 2: Hibernate E-Commerce -->
-            <div class="project-list-item">
-                <div class="project-col-left">
-                    <h4 class="project-title" data-i18n="proj_hibernate_title">Motor E-Commerce con Hibernate</h4>
-                    <a href="https://github.com/RicardoMatosR/Hibernate-E-Commerce-Engine" target="_blank" class="project-github-link" title="Ver en GitHub">
-                        <span data-i18n="proj_github_link">View on GitHub</span> ↗
-                    </a>
-                </div>
-                <div class="project-col-right">
-                    <p class="project-desc" data-i18n="proj_hibernate_desc">Un sistema de gestión de e-commerce centrado en el backend diseñado para demostrar arquitectura empresarial...</p>
-                    <p class="tech-text-inline">Java &bull; Hibernate &bull; MVC &amp; DAO &bull; REST API</p>
-                </div>
-            </div>
-            <hr class="minimal-separator">
-
-            <!-- Proyecto 3: 42 Cursus -->
-            <div class="project-list-item">
-                <div class="project-col-left">
-                    <h4 class="project-title" data-i18n="proj_42_title">42 Cursus</h4>
-                    <a href="https://github.com/RicardoMatosR/42_Cursus" target="_blank" class="project-github-link" title="Ver en GitHub">
-                        <span data-i18n="proj_github_link">View on GitHub</span> ↗
-                    </a>
-                </div>
-                <div class="project-col-right">
-                    <p class="project-desc" data-i18n="proj_42_desc">Repositorio central de mis proyectos del core cursus de 42: libft, ft_printf, get_next_line y push_swap.</p>
-                    <p class="tech-text-inline">C &bull; Unix / Linux &bull; Algoritmia</p>
-                </div>
-            </div>
-            <hr class="minimal-separator">
-
-            <!-- Proyecto 4: CasinoHub -->
-            <div class="project-list-item">
-                <div class="project-col-left">
-                    <h4 class="project-title" data-i18n="proj_casino_title">CasinoHub Multi-Game</h4>
-                    <a href="https://github.com/zhdanskyi/Casino-Project" target="_blank" class="project-github-link" title="Ver en GitHub">
-                        <span data-i18n="proj_github_link">View on GitHub</span> ↗
-                    </a>
-                </div>
-                <div class="project-col-right">
-                    <p class="project-desc" data-i18n="proj_casino_desc">Desarrollo de una arquitectura modular para integrar la lógica de múltiples juegos de casino, gestionando el estado y la interacción a través de un frontend dinámico.</p>
-                    <p class="tech-text-inline">JavaScript &bull; HTML5 &bull; Arquitectura Modular</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <footer>
-        <p data-i18n="footer_text">Diseñado y desarrollado por Ricardo Matos.</p>
     </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" data-i18n="nav_copiado">¡Correo copiado!</div>
 
     <script src="translations.js"></script>
     <script src="script.js"></script>
