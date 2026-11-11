@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 1.3 BOTÓN COPIAR CORREO (NAVBAR SUPERIOR) ---
     const botonCorreo = document.getElementById('boton_correo'); 
     const mensajeAlerta = document.getElementById('mensaje_copiado'); 
-    const miEmail = "ricardomatos04@gmail.com"; 
+    const miEmail = "ricardomatosromero04@gmail.com"; 
 
     if (botonCorreo) {
         botonCorreo.addEventListener('click', () => {

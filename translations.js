@@ -5,6 +5,17 @@ const translations = {
         "nav_habilidades": "habilidades",
         "nav_proyectos": "proyectos",
         "nav_copiado": "¡Correo copiado!",
+        "nav_logros": "logros",
+
+        /* Sección: Logros */
+        "section_logros": "Logros",
+        "logro_samsung_date": "Octubre 2026",
+        "logro_samsung_title": "2.º puesto · Samsung Dev Challenge 2026",
+        "logro_samsung_subtitle": "Hackatón con 15 equipos de 5 personas · 5 retos resueltos en una tarde",
+        "logro_samsung_desc": "Corregimos 5 bugs de un backend en Spring Boot desde su causa raíz (incluida una condición de carrera de stock), construimos un asistente de IA local que convierte peticiones en intenciones JSON validadas, adaptamos una interfaz a móviles plegables, superamos un CTF de 6 retos encadenados y, en la prueba final, clasificamos notificaciones combinando reglas deterministas con un LLM resistente a prompt injection.",
+        "logro_wayra_date": "Mayo 2026",
+        "logro_wayra_title": "2.º puesto · Reto de Emprendimiento Wayra",
+        "logro_wayra_subtitle": "Fundación Telefónica y 42 Madrid",
         "nav_cv_download": "Descargar CV",
         "hero_slogan": "Código limpio. Diseño funcional. Soluciones eficientes.",
         "scroll_down": "Bajar",
@@ -46,7 +57,7 @@ const translations = {
         "proj_hibernate_title": "Motor E-Commerce con Hibernate",
         "proj_hibernate_desc": "Un sistema de gestión de e-commerce centrado en el backend diseñado para demostrar arquitectura empresarial. Construido desde cero utilizando Java y Hibernate ORM, este proyecto implementa de manera estricta los patrones de diseño MVC y DAO para asegurar un código limpio y escalable. Los logros técnicos clave incluyen un robusto sistema de Control de Acceso Basado en Roles (RBAC) con paneles dinámicos, integración fluida con APIs REST externas (DummyJSON) para poblar el catálogo, y el uso de transacciones ACID de alta seguridad. El algoritmo de compra garantiza la integridad de los datos al ejecutar los cobros y las actualizaciones de stock en una única operación atómica en la base de datos, garantizando pagos seguros y fiables.",
         "proj_42_title": "42 Cursus",
-        "proj_42_desc": "Repositorio central de mis proyectos en el core cursus de 42. Actualmente desarrollando mi propia implementación de printf y get_next_line (GNL) en C para manejo a bajo nivel de I/O y descriptores de archivo. El próximo desafío será push_swap, enfocado en la optimización de algoritmos de ordenamiento.",
+        "proj_42_desc": "Repositorio central de mis proyectos del core cursus de 42 en C: libft (mi propia librería estándar), ft_printf, get_next_line (lectura a bajo nivel con descriptores de archivo) y push_swap (optimización de algoritmos de ordenación).",
         "proj_casino_title": "CasinoHub Multi-Game",
         "proj_casino_desc": "Desarrollo de una arquitectura modular para integrar la lógica de múltiples juegos de casino, gestionando el estado y la interacción a través de un frontend dinámico.",
 
@@ -59,6 +70,17 @@ const translations = {
         "nav_habilidades": "skills",
         "nav_proyectos": "projects",
         "nav_copiado": "Email copied!",
+        "nav_logros": "achievements",
+
+        /* Sección: Logros */
+        "section_logros": "Achievements",
+        "logro_samsung_date": "October 2026",
+        "logro_samsung_title": "2nd place · Samsung Dev Challenge 2026",
+        "logro_samsung_subtitle": "Hackathon with 15 teams of 5 · 5 challenges solved in one afternoon",
+        "logro_samsung_desc": "We fixed 5 bugs in a Spring Boot backend at their root cause (including a stock race condition), built a local AI assistant that turns requests into validated JSON intents, adapted a UI to foldable phones, cleared a 6-stage chained CTF and, in the final round, classified notifications by combining deterministic rules with a prompt-injection-resistant LLM.",
+        "logro_wayra_date": "May 2026",
+        "logro_wayra_title": "2nd place · Wayra Entrepreneurship Challenge",
+        "logro_wayra_subtitle": "Fundación Telefónica & 42 Madrid",
         "nav_cv_download": "Download CV",
         "hero_slogan": "Clean code. Functional design. Efficient solutions.",
         "scroll_down": "Scroll Down",
@@ -100,7 +122,7 @@ const translations = {
         "proj_hibernate_title": "Hibernate E-Commerce Engine",
         "proj_hibernate_desc": "A fully functional, backend-driven e-commerce management system designed to demonstrate enterprise architecture. Built from scratch using Java and Hibernate ORM, this project implements strict MVC and DAO design patterns to ensure a clean separation of concerns. Key technical achievements include a robust Role-Based Access Control (RBAC) system with dynamic admin/customer dashboards, seamless integration with external REST APIs (DummyJSON) using HttpClient to populate the catalog, and highly secure ACID transactions. The purchasing algorithm guarantees data integrity by executing wallet deductions and stock updates in a single, atomic database operation, ensuring safe and reliable e-commerce transactions.",
         "proj_42_title": "42 Cursus",
-        "proj_42_desc": "Central repository for my projects in the 42 core cursus. Currently developing my own implementation of printf and get_next_line (GNL) in C for low-level I/O and file descriptor management. The next challenge will be push_swap, focusing on sorting algorithm optimization.",
+        "proj_42_desc": "Central repository for my 42 core cursus projects in C: libft (my own standard library), ft_printf, get_next_line (low-level I/O with file descriptors) and push_swap (sorting algorithm optimization).",
         "proj_casino_title": "CasinoHub Multi-Game",
         "proj_casino_desc": "Modular architecture design to integrate the game logic of multiple casino games, managing state and user interaction through a dynamic frontend.",
 

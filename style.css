@@ -1116,3 +1116,36 @@ footer {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin: 10px 0;
 }
+/* Ajustes navbar con 5 secciones */
+.nav-links {
+    gap: 22px;
+}
+
+@media (max-width: 1400px) {
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .nav-links .nav-slash {
+        margin-right: 2px;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav-links .nav-slash,
+    .nav-links li:first-child {
+        display: none;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+}

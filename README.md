@@ -66,7 +66,7 @@ The ecosystem consists of a Single Page architecture supported by modular data f
 
 ## 5. Contact
 
-  LinkedIn: [Ricardo Matos](https://www.linkedin.com/in/ricardo-matos-romero-397502256/)
+  LinkedIn: [Ricardo Matos](https://www.linkedin.com/in/ricardo-matos-romero/)
   
   Email: ricardomatosromero04@gmail.com
 
